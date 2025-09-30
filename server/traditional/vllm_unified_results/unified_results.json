@@ -1,0 +1,935 @@
+{
+  "test_info": {
+    "total_requests": 4,
+    "test_timestamp": 1759203994.9203923,
+    "gpu_monitor_interval": 0.1
+  },
+  "results": [
+    {
+      "prompt_id": 0,
+      "prompt": "1. 若3台机器5小时生产180个零件，7台机器8小时可生产多少零件？",
+      "generated_text": "\n2. 若3台机器5小时生产180个零件，7台机器5小时可生产多少零件？\n\n## 问题",
+      "total_time": 8.238961219787598,
+      "ttft": 0.698556661605835,
+      "tpot": 0.2432319502676687,
+      "token_count": 32,
+      "token_times": [
+        0.698556661605835,
+        0.9419424533843994,
+        1.1851081848144531,
+        1.4275038242340088,
+        1.6711573600769043,
+        1.9154629707336426,
+        2.158705472946167,
+        2.4021942615509033,
+        2.6451432704925537,
+        2.88763689994812,
+        3.1300768852233887,
+        3.373839855194092,
+        3.617184638977051,
+        3.860870122909546,
+        4.1041810512542725,
+        4.347498416900635,
+        4.591064929962158,
+        4.834883213043213,
+        5.07928204536438,
+        5.322810888290405,
+        5.566194295883179,
+        5.810394525527954,
+        6.053185701370239,
+        6.295175552368164,
+        6.538453578948975,
+        6.781216382980347,
+        7.024315357208252,
+        7.268115997314453,
+        7.510507345199585,
+        7.7533087730407715,
+        7.995858907699585,
+        8.238747119903564
+      ],
+      "first_token_time": 0.698556661605835,
+      "last_token_time": 1759203970.0754328
+    },
+    {
+      "prompt_id": 1,
+      "prompt": "2. 甲比乙大6岁，5年前甲年龄是乙的2倍，求两人现在年龄。",
+      "generated_text": "\n\n## 问题分解\n这个问题可以分解为以下几个小问题：\n1. 建立一个方程来表示甲比乙大6岁",
+      "total_time": 8.242674827575684,
+      "ttft": 0.7082922458648682,
+      "tpot": 0.2430374853072628,
+      "token_count": 32,
+      "token_times": [
+        0.7082922458648682,
+        0.951045036315918,
+        1.1937637329101562,
+        1.4357290267944336,
+        1.6778993606567383,
+        1.9202008247375488,
+        2.1620819568634033,
+        2.4046990871429443,
+        2.6472208499908447,
+        2.88956880569458,
+        3.1325502395629883,
+        3.377173900604248,
+        3.62161922454834,
+        3.865262985229492,
+        4.107203245162964,
+        4.349704027175903,
+        4.59262228012085,
+        4.835422515869141,
+        5.076915264129639,
+        5.320883750915527,
+        5.56476902961731,
+        5.809861660003662,
+        6.053221940994263,
+        6.296187400817871,
+        6.539044141769409,
+        6.7812910079956055,
+        7.026461362838745,
+        7.268800973892212,
+        7.512392044067383,
+        7.7546117305755615,
+        7.997990608215332,
+        8.242454290390015
+      ],
+      "first_token_time": 0.7082922458648682,
+      "last_token_time": 1759203978.3182018
+    },
+    {
+      "prompt_id": 2,
+      "prompt": "3. 编写一个Python函数计算斐波那契数列的第n项",
+      "generated_text": "\n\n以下是一个Python函数，用于计算斐波那契数列的第n项：\n\n```python\ndef fibonacci(n):\n",
+      "total_time": 7.899489402770996,
+      "ttft": 0.3663341999053955,
+      "tpot": 0.242999053770496,
+      "token_count": 32,
+      "token_times": [
+        0.3663341999053955,
+        0.6099693775177002,
+        0.8544647693634033,
+        1.0994617938995361,
+        1.3436431884765625,
+        1.58831787109375,
+        1.831049919128418,
+        2.0744028091430664,
+        2.3167905807495117,
+        2.560307264328003,
+        2.8023416996002197,
+        3.045607089996338,
+        3.288137435913086,
+        3.5301034450531006,
+        3.7733659744262695,
+        4.016624450683594,
+        4.257906675338745,
+        4.500398874282837,
+        4.743365287780762,
+        4.986268997192383,
+        5.228370189666748,
+        5.47059440612793,
+        5.714251756668091,
+        5.956810474395752,
+        6.199608564376831,
+        6.442168235778809,
+        6.684232473373413,
+        6.927018880844116,
+        7.170052528381348,
+        7.413672924041748,
+        7.655779600143433,
+        7.8993048667907715
+      ],
+      "first_token_time": 0.3663341999053955,
+      "last_token_time": 1759203986.217848
+    },
+    {
+      "prompt_id": 3,
+      "prompt": "4. 解释什么是机器学习中的过拟合现象",
+      "generated_text": "？\n过拟合是指机器学习模型在训练过程中，对训练数据学习得“太好”，导致模型在训练集上表现良好，",
+      "total_time": 8.361427783966064,
+      "ttft": 0.8270008563995361,
+      "tpot": 0.24304102313133977,
+      "token_count": 32,
+      "token_times": [
+        0.8270008563995361,
+        1.0707521438598633,
+        1.3142180442810059,
+        1.5569663047790527,
+        1.800856351852417,
+        2.0444812774658203,
+        2.286000967025757,
+        2.528521776199341,
+        2.771315574645996,
+        3.014431953430176,
+        3.2580032348632812,
+        3.5008368492126465,
+        3.743936777114868,
+        3.987797498703003,
+        4.230652332305908,
+        4.4739179611206055,
+        4.717527627944946,
+        4.960583925247192,
+        5.203527927398682,
+        5.446125745773315,
+        5.687993764877319,
+        5.9310078620910645,
+        6.174657821655273,
+        6.4181809425354,
+        6.661970853805542,
+        6.905033826828003,
+        7.148245334625244,
+        7.390150547027588,
+        7.632192134857178,
+        7.874675750732422,
+        8.117674112319946,
+        8.36127257347107
+      ],
+      "first_token_time": 0.8270008563995361,
+      "last_token_time": 1759203994.5794652
+    }
+  ],
+  "gpu_statistics": {
+    "monitoring_duration": 32.68088746070862,
+    "sample_count": 51,
+    "graphics_clock": {
+      "avg": 2784.4117647058824,
+      "max": 2790,
+      "min": 2550
+    },
+    "memory_clock": {
+      "avg": 11251.0,
+      "max": 11251,
+      "min": 11251
+    },
+    "power_draw": {
+      "avg": 76.49333333333333,
+      "max": 79.12,
+      "min": 26.48,
+      "total_energy": 0.39011599999999996
+    },
+    "temperature": {
+      "avg": 42.13725490196079,
+      "max": 44,
+      "min": 38
+    },
+    "gpu_utilization": {
+      "avg": 99.4,
+      "max": 100,
+      "min": 88
+    }
+  },
+  "analyzed_intervals": [
+    {
+      "interval_id": 0,
+      "start_time": 1759203962.1365554,
+      "end_time": 1759203962.2365553,
+      "phase": "idle",
+      "avg_power": 26.48,
+      "max_power": 26.48,
+      "avg_graphics_clock": 2550.0,
+      "avg_memory_clock": 11251.0,
+      "data_points": 1,
+      "power_data": [
+        26.48
+      ]
+    },
+    {
+      "interval_id": 3,
+      "start_time": 1759203962.4365551,
+      "end_time": 1759203962.536555,
+      "phase": "idle",
+      "avg_power": 33.14,
+      "max_power": 33.14,
+      "avg_graphics_clock": 2790.0,
+      "avg_memory_clock": 11251.0,
+      "data_points": 1,
+      "power_data": [
+        33.14
+      ]
+    },
+    {
+      "interval_id": 17,
+      "start_time": 1759203963.8365538,
+      "end_time": 1759203963.9365537,
+      "phase": "idle",
+      "avg_power": 77.9,
+      "max_power": 77.9,
+      "avg_graphics_clock": 2790.0,
+      "avg_memory_clock": 11251.0,
+      "data_points": 1,
+      "power_data": [
+        77.9
+      ]
+    },
+    {
+      "interval_id": 21,
+      "start_time": 1759203964.2365534,
+      "end_time": 1759203964.3365533,
+      "phase": "idle",
+      "avg_power": 77.9,
+      "max_power": 77.9,
+      "avg_graphics_clock": 2790.0,
+      "avg_memory_clock": 11251.0,
+      "data_points": 1,
+      "power_data": [
+        77.9
+      ]
+    },
+    {
+      "interval_id": 24,
+      "start_time": 1759203964.5365531,
+      "end_time": 1759203964.636553,
+      "phase": "idle",
+      "avg_power": 77.91,
+      "max_power": 77.91,
+      "avg_graphics_clock": 2790.0,
+      "avg_memory_clock": 11251.0,
+      "data_points": 1,
+      "power_data": [
+        77.91
+      ]
+    },
+    {
+      "interval_id": 28,
+      "start_time": 1759203964.9365528,
+      "end_time": 1759203965.0365527,
+      "phase": "idle",
+      "avg_power": 78.31,
+      "max_power": 78.31,
+      "avg_graphics_clock": 2790.0,
+      "avg_memory_clock": 11251.0,
+      "data_points": 1,
+      "power_data": [
+        78.31
+      ]
+    },
+    {
+      "interval_id": 31,
+      "start_time": 1759203965.2365525,
+      "end_time": 1759203965.3365524,
+      "phase": "idle",
+      "avg_power": 77.99,
+      "max_power": 77.99,
+      "avg_graphics_clock": 2790.0,
+      "avg_memory_clock": 11251.0,
+      "data_points": 1,
+      "power_data": [
+        77.99
+      ]
+    },
+    {
+      "interval_id": 46,
+      "start_time": 1759203966.736551,
+      "end_time": 1759203966.836551,
+      "phase": "idle",
+      "avg_power": 78.06,
+      "max_power": 78.06,
+      "avg_graphics_clock": 2790.0,
+      "avg_memory_clock": 11251.0,
+      "data_points": 1,
+      "power_data": [
+        78.06
+      ]
+    },
+    {
+      "interval_id": 50,
+      "start_time": 1759203967.1365507,
+      "end_time": 1759203967.2365506,
+      "phase": "idle",
+      "avg_power": 77.99,
+      "max_power": 77.99,
+      "avg_graphics_clock": 2790.0,
+      "avg_memory_clock": 11251.0,
+      "data_points": 1,
+      "power_data": [
+        77.99
+      ]
+    },
+    {
+      "interval_id": 54,
+      "start_time": 1759203967.5365503,
+      "end_time": 1759203967.6365502,
+      "phase": "idle",
+      "avg_power": 78.21,
+      "max_power": 78.21,
+      "avg_graphics_clock": 2790.0,
+      "avg_memory_clock": 11251.0,
+      "data_points": 1,
+      "power_data": [
+        78.21
+      ]
+    },
+    {
+      "interval_id": 57,
+      "start_time": 1759203967.83655,
+      "end_time": 1759203967.93655,
+      "phase": "idle",
+      "avg_power": 78.11,
+      "max_power": 78.11,
+      "avg_graphics_clock": 2790.0,
+      "avg_memory_clock": 11251.0,
+      "data_points": 1,
+      "power_data": [
+        78.11
+      ]
+    },
+    {
+      "interval_id": 74,
+      "start_time": 1759203969.5365484,
+      "end_time": 1759203969.6365483,
+      "phase": "idle",
+      "avg_power": 78.22,
+      "max_power": 78.22,
+      "avg_graphics_clock": 2790.0,
+      "avg_memory_clock": 11251.0,
+      "data_points": 1,
+      "power_data": [
+        78.22
+      ]
+    },
+    {
+      "interval_id": 78,
+      "start_time": 1759203969.936548,
+      "end_time": 1759203970.036548,
+      "phase": "idle",
+      "avg_power": 78.53,
+      "max_power": 78.53,
+      "avg_graphics_clock": 2790.0,
+      "avg_memory_clock": 11251.0,
+      "data_points": 1,
+      "power_data": [
+        78.53
+      ]
+    },
+    {
+      "interval_id": 82,
+      "start_time": 1759203970.3365476,
+      "end_time": 1759203970.4365475,
+      "phase": "idle",
+      "avg_power": 77.97,
+      "max_power": 77.97,
+      "avg_graphics_clock": 2790.0,
+      "avg_memory_clock": 11251.0,
+      "data_points": 1,
+      "power_data": [
+        77.97
+      ]
+    },
+    {
+      "interval_id": 86,
+      "start_time": 1759203970.7365472,
+      "end_time": 1759203970.8365471,
+      "phase": "idle",
+      "avg_power": 76.87,
+      "max_power": 76.87,
+      "avg_graphics_clock": 2790.0,
+      "avg_memory_clock": 11251.0,
+      "data_points": 1,
+      "power_data": [
+        76.87
+      ]
+    },
+    {
+      "interval_id": 103,
+      "start_time": 1759203972.4365456,
+      "end_time": 1759203972.5365455,
+      "phase": "idle",
+      "avg_power": 78.41,
+      "max_power": 78.41,
+      "avg_graphics_clock": 2790.0,
+      "avg_memory_clock": 11251.0,
+      "data_points": 1,
+      "power_data": [
+        78.41
+      ]
+    },
+    {
+      "interval_id": 107,
+      "start_time": 1759203972.8365452,
+      "end_time": 1759203972.9365451,
+      "phase": "idle",
+      "avg_power": 78.73,
+      "max_power": 78.73,
+      "avg_graphics_clock": 2790.0,
+      "avg_memory_clock": 11251.0,
+      "data_points": 1,
+      "power_data": [
+        78.73
+      ]
+    },
+    {
+      "interval_id": 110,
+      "start_time": 1759203973.136545,
+      "end_time": 1759203973.2365448,
+      "phase": "idle",
+      "avg_power": 78.32,
+      "max_power": 78.32,
+      "avg_graphics_clock": 2790.0,
+      "avg_memory_clock": 11251.0,
+      "data_points": 1,
+      "power_data": [
+        78.32
+      ]
+    },
+    {
+      "interval_id": 114,
+      "start_time": 1759203973.5365446,
+      "end_time": 1759203973.6365445,
+      "phase": "idle",
+      "avg_power": 78.33,
+      "max_power": 78.33,
+      "avg_graphics_clock": 2790.0,
+      "avg_memory_clock": 11251.0,
+      "data_points": 1,
+      "power_data": [
+        78.33
+      ]
+    },
+    {
+      "interval_id": 131,
+      "start_time": 1759203975.236543,
+      "end_time": 1759203975.3365428,
+      "phase": "idle",
+      "avg_power": 78.17,
+      "max_power": 78.17,
+      "avg_graphics_clock": 2790.0,
+      "avg_memory_clock": 11251.0,
+      "data_points": 1,
+      "power_data": [
+        78.17
+      ]
+    },
+    {
+      "interval_id": 135,
+      "start_time": 1759203975.6365426,
+      "end_time": 1759203975.7365425,
+      "phase": "idle",
+      "avg_power": 78.17,
+      "max_power": 78.17,
+      "avg_graphics_clock": 2790.0,
+      "avg_memory_clock": 11251.0,
+      "data_points": 1,
+      "power_data": [
+        78.17
+      ]
+    },
+    {
+      "interval_id": 139,
+      "start_time": 1759203976.0365422,
+      "end_time": 1759203976.136542,
+      "phase": "idle",
+      "avg_power": 78.6,
+      "max_power": 78.6,
+      "avg_graphics_clock": 2790.0,
+      "avg_memory_clock": 11251.0,
+      "data_points": 1,
+      "power_data": [
+        78.6
+      ]
+    },
+    {
+      "interval_id": 142,
+      "start_time": 1759203976.336542,
+      "end_time": 1759203976.4365418,
+      "phase": "idle",
+      "avg_power": 78.31,
+      "max_power": 78.31,
+      "avg_graphics_clock": 2790.0,
+      "avg_memory_clock": 11251.0,
+      "data_points": 1,
+      "power_data": [
+        78.31
+      ]
+    },
+    {
+      "interval_id": 159,
+      "start_time": 1759203978.0365403,
+      "end_time": 1759203978.1365402,
+      "phase": "idle",
+      "avg_power": 78.36,
+      "max_power": 78.36,
+      "avg_graphics_clock": 2790.0,
+      "avg_memory_clock": 11251.0,
+      "data_points": 1,
+      "power_data": [
+        78.36
+      ]
+    },
+    {
+      "interval_id": 162,
+      "start_time": 1759203978.33654,
+      "end_time": 1759203978.43654,
+      "phase": "idle",
+      "avg_power": 78.59,
+      "max_power": 78.59,
+      "avg_graphics_clock": 2790.0,
+      "avg_memory_clock": 11251.0,
+      "data_points": 1,
+      "power_data": [
+        78.59
+      ]
+    },
+    {
+      "interval_id": 166,
+      "start_time": 1759203978.7365396,
+      "end_time": 1759203978.8365395,
+      "phase": "idle",
+      "avg_power": 78.09,
+      "max_power": 78.09,
+      "avg_graphics_clock": 2790.0,
+      "avg_memory_clock": 11251.0,
+      "data_points": 1,
+      "power_data": [
+        78.09
+      ]
+    },
+    {
+      "interval_id": 170,
+      "start_time": 1759203979.1365392,
+      "end_time": 1759203979.2365391,
+      "phase": "idle",
+      "avg_power": 78.21,
+      "max_power": 78.21,
+      "avg_graphics_clock": 2790.0,
+      "avg_memory_clock": 11251.0,
+      "data_points": 1,
+      "power_data": [
+        78.21
+      ]
+    },
+    {
+      "interval_id": 174,
+      "start_time": 1759203979.5365388,
+      "end_time": 1759203979.6365387,
+      "phase": "idle",
+      "avg_power": 78.09,
+      "max_power": 78.09,
+      "avg_graphics_clock": 2790.0,
+      "avg_memory_clock": 11251.0,
+      "data_points": 1,
+      "power_data": [
+        78.09
+      ]
+    },
+    {
+      "interval_id": 188,
+      "start_time": 1759203980.9365375,
+      "end_time": 1759203981.0365374,
+      "phase": "idle",
+      "avg_power": 78.93,
+      "max_power": 78.93,
+      "avg_graphics_clock": 2790.0,
+      "avg_memory_clock": 11251.0,
+      "data_points": 1,
+      "power_data": [
+        78.93
+      ]
+    },
+    {
+      "interval_id": 192,
+      "start_time": 1759203981.3365371,
+      "end_time": 1759203981.436537,
+      "phase": "idle",
+      "avg_power": 78.96,
+      "max_power": 78.96,
+      "avg_graphics_clock": 2790.0,
+      "avg_memory_clock": 11251.0,
+      "data_points": 1,
+      "power_data": [
+        78.96
+      ]
+    },
+    {
+      "interval_id": 196,
+      "start_time": 1759203981.7365367,
+      "end_time": 1759203981.8365366,
+      "phase": "idle",
+      "avg_power": 78.88,
+      "max_power": 78.88,
+      "avg_graphics_clock": 2790.0,
+      "avg_memory_clock": 11251.0,
+      "data_points": 1,
+      "power_data": [
+        78.88
+      ]
+    },
+    {
+      "interval_id": 199,
+      "start_time": 1759203982.0365365,
+      "end_time": 1759203982.1365364,
+      "phase": "idle",
+      "avg_power": 78.46,
+      "max_power": 78.46,
+      "avg_graphics_clock": 2790.0,
+      "avg_memory_clock": 11251.0,
+      "data_points": 1,
+      "power_data": [
+        78.46
+      ]
+    },
+    {
+      "interval_id": 217,
+      "start_time": 1759203983.8365347,
+      "end_time": 1759203983.9365346,
+      "phase": "idle",
+      "avg_power": 78.66,
+      "max_power": 78.66,
+      "avg_graphics_clock": 2790.0,
+      "avg_memory_clock": 11251.0,
+      "data_points": 1,
+      "power_data": [
+        78.66
+      ]
+    },
+    {
+      "interval_id": 220,
+      "start_time": 1759203984.1365345,
+      "end_time": 1759203984.2365344,
+      "phase": "idle",
+      "avg_power": 79.01,
+      "max_power": 79.01,
+      "avg_graphics_clock": 2790.0,
+      "avg_memory_clock": 11251.0,
+      "data_points": 1,
+      "power_data": [
+        79.01
+      ]
+    },
+    {
+      "interval_id": 224,
+      "start_time": 1759203984.536534,
+      "end_time": 1759203984.636534,
+      "phase": "idle",
+      "avg_power": 78.67,
+      "max_power": 78.67,
+      "avg_graphics_clock": 2790.0,
+      "avg_memory_clock": 11251.0,
+      "data_points": 1,
+      "power_data": [
+        78.67
+      ]
+    },
+    {
+      "interval_id": 228,
+      "start_time": 1759203984.9365337,
+      "end_time": 1759203985.0365336,
+      "phase": "idle",
+      "avg_power": 78.92,
+      "max_power": 78.92,
+      "avg_graphics_clock": 2790.0,
+      "avg_memory_clock": 11251.0,
+      "data_points": 1,
+      "power_data": [
+        78.92
+      ]
+    },
+    {
+      "interval_id": 231,
+      "start_time": 1759203985.2365334,
+      "end_time": 1759203985.3365333,
+      "phase": "idle",
+      "avg_power": 79.03,
+      "max_power": 79.03,
+      "avg_graphics_clock": 2790.0,
+      "avg_memory_clock": 11251.0,
+      "data_points": 1,
+      "power_data": [
+        79.03
+      ]
+    },
+    {
+      "interval_id": 245,
+      "start_time": 1759203986.636532,
+      "end_time": 1759203986.736532,
+      "phase": "idle",
+      "avg_power": 78.11,
+      "max_power": 78.11,
+      "avg_graphics_clock": 2790.0,
+      "avg_memory_clock": 11251.0,
+      "data_points": 1,
+      "power_data": [
+        78.11
+      ]
+    },
+    {
+      "interval_id": 249,
+      "start_time": 1759203987.0365317,
+      "end_time": 1759203987.1365316,
+      "phase": "idle",
+      "avg_power": 77.36,
+      "max_power": 77.36,
+      "avg_graphics_clock": 2790.0,
+      "avg_memory_clock": 11251.0,
+      "data_points": 1,
+      "power_data": [
+        77.36
+      ]
+    },
+    {
+      "interval_id": 252,
+      "start_time": 1759203987.3365314,
+      "end_time": 1759203987.4365313,
+      "phase": "idle",
+      "avg_power": 78.22,
+      "max_power": 78.22,
+      "avg_graphics_clock": 2790.0,
+      "avg_memory_clock": 11251.0,
+      "data_points": 1,
+      "power_data": [
+        78.22
+      ]
+    },
+    {
+      "interval_id": 256,
+      "start_time": 1759203987.736531,
+      "end_time": 1759203987.836531,
+      "phase": "idle",
+      "avg_power": 78.71,
+      "max_power": 78.71,
+      "avg_graphics_clock": 2790.0,
+      "avg_memory_clock": 11251.0,
+      "data_points": 1,
+      "power_data": [
+        78.71
+      ]
+    },
+    {
+      "interval_id": 273,
+      "start_time": 1759203989.4365294,
+      "end_time": 1759203989.5365293,
+      "phase": "idle",
+      "avg_power": 79.11,
+      "max_power": 79.11,
+      "avg_graphics_clock": 2790.0,
+      "avg_memory_clock": 11251.0,
+      "data_points": 1,
+      "power_data": [
+        79.11
+      ]
+    },
+    {
+      "interval_id": 277,
+      "start_time": 1759203989.836529,
+      "end_time": 1759203989.936529,
+      "phase": "idle",
+      "avg_power": 79.04,
+      "max_power": 79.04,
+      "avg_graphics_clock": 2790.0,
+      "avg_memory_clock": 11251.0,
+      "data_points": 1,
+      "power_data": [
+        79.04
+      ]
+    },
+    {
+      "interval_id": 280,
+      "start_time": 1759203990.1365287,
+      "end_time": 1759203990.2365286,
+      "phase": "idle",
+      "avg_power": 78.77,
+      "max_power": 78.77,
+      "avg_graphics_clock": 2790.0,
+      "avg_memory_clock": 11251.0,
+      "data_points": 1,
+      "power_data": [
+        78.77
+      ]
+    },
+    {
+      "interval_id": 284,
+      "start_time": 1759203990.5365283,
+      "end_time": 1759203990.6365283,
+      "phase": "idle",
+      "avg_power": 78.85,
+      "max_power": 78.85,
+      "avg_graphics_clock": 2790.0,
+      "avg_memory_clock": 11251.0,
+      "data_points": 1,
+      "power_data": [
+        78.85
+      ]
+    },
+    {
+      "interval_id": 301,
+      "start_time": 1759203992.2365267,
+      "end_time": 1759203992.3365266,
+      "phase": "idle",
+      "avg_power": 79.09,
+      "max_power": 79.09,
+      "avg_graphics_clock": 2790.0,
+      "avg_memory_clock": 11251.0,
+      "data_points": 1,
+      "power_data": [
+        79.09
+      ]
+    },
+    {
+      "interval_id": 305,
+      "start_time": 1759203992.6365263,
+      "end_time": 1759203992.7365263,
+      "phase": "idle",
+      "avg_power": 78.85,
+      "max_power": 78.85,
+      "avg_graphics_clock": 2790.0,
+      "avg_memory_clock": 11251.0,
+      "data_points": 1,
+      "power_data": [
+        78.85
+      ]
+    },
+    {
+      "interval_id": 308,
+      "start_time": 1759203992.936526,
+      "end_time": 1759203993.036526,
+      "phase": "idle",
+      "avg_power": 79.12,
+      "max_power": 79.12,
+      "avg_graphics_clock": 2790.0,
+      "avg_memory_clock": 11251.0,
+      "data_points": 1,
+      "power_data": [
+        79.12
+      ]
+    },
+    {
+      "interval_id": 312,
+      "start_time": 1759203993.3365257,
+      "end_time": 1759203993.4365256,
+      "phase": "idle",
+      "avg_power": 79.03,
+      "max_power": 79.03,
+      "avg_graphics_clock": 2775.0,
+      "avg_memory_clock": 11251.0,
+      "data_points": 1,
+      "power_data": [
+        79.03
+      ]
+    },
+    {
+      "interval_id": 315,
+      "start_time": 1759203993.6365254,
+      "end_time": 1759203993.7365253,
+      "phase": "idle",
+      "avg_power": 78.68,
+      "max_power": 78.68,
+      "avg_graphics_clock": 2775.0,
+      "avg_memory_clock": 11251.0,
+      "data_points": 1,
+      "power_data": [
+        78.68
+      ]
+    },
+    {
+      "interval_id": 326,
+      "start_time": 1759203994.7365243,
+      "end_time": 1759203994.8365242,
+      "phase": "idle",
+      "avg_power": 76.73,
+      "max_power": 76.73,
+      "avg_graphics_clock": 2775.0,
+      "avg_memory_clock": 11251.0,
+      "data_points": 1,
+      "power_data": [
+        76.73
+      ]
+    }
+  ]
+}

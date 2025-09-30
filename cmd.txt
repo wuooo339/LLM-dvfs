@@ -1,0 +1,50 @@
+# 在 GPU 0 上启动 Producer
+export LD_LIBRARY_PATH="/usr/lib/x86_64-linux-gnu:$LD_LIBRARY_PATH"
+export TRITON_CACHE_DIR="/tmp/triton_cache"
+export CUDA_LAUNCH_BLOCKING=1
+CUDA_VISIBLE_DEVICES=0 vllm serve /share-data/wzk-1/model/deepseek-v2-lite \
+    --port 8100 \
+    --max-model-len 512 \
+    --gpu-memory-utilization 0.95 \
+    --cpu-offload-gb 20 \
+    --trust-remote-code \
+    --enforce-eager \
+    --kv-transfer-config \
+    '{
+      "kv_connector": "P2pNcclConnector",
+      "kv_role": "kv_producer",
+      "kv_rank": 0,
+      "kv_parallel_size": 2,
+      "kv_connector_extra_config": {
+        "http_port": 29800,
+        "local_node_id": "producer",
+        "peer_nodes": ["consumer:29801"],
+        "mem_pool_size_gb": 2
+      }
+    }'
+
+
+# 在 GPU 1 上启动 Consumer  
+export LD_LIBRARY_PATH="/usr/lib/x86_64-linux-gnu:$LD_LIBRARY_PATH"
+export TRITON_CACHE_DIR="/tmp/triton_cache"
+export CUDA_LAUNCH_BLOCKING=1
+CUDA_VISIBLE_DEVICES=1 vllm serve /share-data/wzk-1/model/deepseek-v2-lite \
+    --port 8101 \
+    --max-model-len 512 \
+    --gpu-memory-utilization 0.95 \
+    --trust-remote-code \
+    --enforce-eager \
+    --cpu-offload-gb 20 \
+    --kv-transfer-config \
+    '{
+      "kv_connector": "P2pNcclConnector",
+      "kv_role": "kv_consumer", 
+      "kv_rank": 1,
+      "kv_parallel_size": 2,
+      "kv_connector_extra_config": {
+        "http_port": 29801,
+        "local_node_id": "consumer",
+        "peer_nodes": ["producer:29800"],
+        "mem_pool_size_gb": 2
+      }
+    }'
