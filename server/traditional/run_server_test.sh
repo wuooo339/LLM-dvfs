@@ -16,7 +16,7 @@ else
     echo "  ./start_vllm_server.sh"
     echo ""
     echo "或者手动运行:"
-    echo "  vllm serve /share-data/wzk-1/model/deepseek-v2-lite \\"
+    echo "  vllm serve /share-data/wzk-1/model/DeepSeek-R1-Distill-Qwen-32B \\"
     echo "    --host 0.0.0.0 \\"
     echo "    --port 8000 \\"
     echo "    --cpu-offload-gb 20 \\"

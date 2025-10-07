@@ -1,0 +1,2500 @@
+⚠️  datasets库未安装，将使用内置示例数据
+   安装命令: pip install datasets
+🧠 BIG-Bench Hard (BBH) 数据集测试
+==================================================
+✅ VLLM 服务器运行正常
+🧠 开始BBH数据集测试...
+📚 使用内置BBH任务示例数据...
+📚 加载了 10 个BBH任务
+🔢 将测试 10 条数据（上限 10）
+开始监控GPU 0，采样间隔: 0.1s
+
+=== 请求 1/10 - 任务: disambiguation_qa ===
+📝 Prompt (length=2154):
+
+Task: 消歧问答任务
+Task Name: disambiguation_qa
+
+Instructions: Please solve the following problem step by step. Think carefully and provide a clear, logical answer.
+
+Problem: The word 'bark' can refer to the sound a dog makes or the outer covering of a tree. In the sentence 'The dog's bark woke me up', what does 'bark' mean?
+
+Please provide your answer and explain your reasoning process.
+
+
+Additional Context:
+This is a complex reasoning task that requires careful analysis. You should:
+1. Read the problem carefully
+2. Identify the key information
+3. Apply logical reasoning
+4. Consider alternative interpretations
+5. Provide a well-reasoned answer
+
+The problem involves multiple steps of reasoning and may require you to consider various factors before arriving at the correct answer. Take your time to think through each step carefully.
+
+Remember to:
+- Break down complex problems into smaller parts
+- Consider all given information
+- Apply logical rules consistently
+- Check your reasoning for errors
+- Provide clear explanations for your answer
+
+Now, please solve the problem:
+
+
+Additional reasoning guidelines:
+- Pay attention to details in the problem statement
+- Consider edge cases and exceptions
+- Use systematic approaches to problem-solving
+- Verify your answer makes logical sense
+- Consider alternative interpretations of the problem
+
+The key to solving this type of problem is to be methodical and thorough in your analysis.
+
+
+Additional reasoning guidelines:
+- Pay attention to details in the problem statement
+- Consider edge cases and exceptions
+- Use systematic approaches to problem-solving
+- Verify your answer makes logical sense
+- Consider alternative interpretations of the problem
+
+The key to solving this type of problem is to be methodical and thorough in your analysis.
+
+
+Additional reasoning guidelines:
+- Pay attention to details in the problem statement
+- Consider edge cases and exceptions
+- Use systematic approaches to problem-solving
+- Verify your answer makes logical sense
+- Consider alternative interpretations of the problem
+
+The key to solving this type of problem is to be methodical and thorough in your analysis.
+
+    Token 1: '</think>' @ 26.3118s
+    Token 2: '\n\n' @ 48.5726s
+    Token 3: 'In' @ 51.7983s
+    Token 4: ' the' @ 55.0219s
+    Token 5: ' sentence' @ 58.2457s
+    Token 6: ' '' @ 61.4655s
+    Token 7: 'The' @ 64.6872s
+    Token 8: ' dog' @ 67.9141s
+    Token 9: ''s' @ 71.1364s
+    Token 10: ' bark' @ 74.3562s
+    Token 11: ' woke' @ 77.5785s
+    Token 12: ' me' @ 80.8014s
+    Token 13: ' up' @ 84.0215s
+    Token 14: '',' @ 87.2436s
+    Token 15: ' the' @ 90.4662s
+    Token 16: ' word' @ 93.6889s
+    Token 17: ' '' @ 96.9120s
+    Token 18: 'b' @ 100.1304s
+    Token 19: 'ark' @ 103.3505s
+    Token 20: ''' @ 106.5767s
+    Token 21: ' refers' @ 109.8005s
+    Token 22: ' to' @ 113.0192s
+    Token 23: ' the' @ 116.2426s
+    Token 24: ' sound' @ 119.4699s
+    Token 25: ' a' @ 122.6961s
+    Token 26: ' dog' @ 125.9184s
+    Token 27: ' makes' @ 129.1371s
+    Token 28: '.' @ 132.3599s
+    Token 29: ' \n\n' @ 135.5864s
+    Token 30: '**' @ 138.8089s
+    Token 31: 'Reason' @ 142.0329s
+    Token 32: 'ing' @ 145.2574s
+    Token 33: ':' @ 148.4829s
+    Token 34: '**\n' @ 151.7060s
+    Token 35: '1' @ 154.9267s
+    Token 36: '.' @ 158.1547s
+    Token 37: ' **' @ 161.3777s
+    Token 38: 'Ident' @ 164.6109s
+    Token 39: 'ify' @ 167.8456s
+    Token 40: ' the' @ 171.0686s
+    Token 41: ' context' @ 174.2951s
+    Token 42: ':**' @ 177.5236s
+    Token 43: ' The' @ 180.7456s
+    Token 44: ' sentence' @ 184.0239s
+    Token 45: ' mentions' @ 187.1995s
+    Token 46: ' '' @ 190.4202s
+    Token 47: 'the' @ 193.6415s
+    Token 48: ' dog' @ 196.8689s
+    Token 49: ''s' @ 200.0945s
+    Token 50: ' bark' @ 203.3158s
+    Token 51: ','' @ 206.5408s
+    Token 52: ' which' @ 209.7696s
+    Token 53: ' directly' @ 212.9960s
+    Token 54: ' associates' @ 216.2209s
+    Token 55: ' '' @ 219.4572s
+    Token 56: 'b' @ 222.6816s
+    Token 57: 'ark' @ 225.9132s
+    Token 58: ''' @ 229.1367s
+    Token 59: ' with' @ 232.3615s
+    Token 60: ' a' @ 235.5929s
+    Token 61: ' dog' @ 238.8187s
+    Token 62: '.\n' @ 242.0492s
+    Token 63: '2' @ 245.2728s
+    Token 64: '.' @ 248.5015s
+    Token 65: ' **' @ 251.7271s
+    Token 66: 'Under' @ 254.9533s
+    Token 67: 'stand' @ 258.1849s
+    Token 68: ' meanings' @ 261.4060s
+    Token 69: ' of' @ 264.6361s
+    Token 70: ' '' @ 267.8651s
+    Token 71: 'b' @ 271.0904s
+    Token 72: 'ark' @ 274.3245s
+    Token 73: '':' @ 277.5476s
+    Token 74: '**' @ 280.7768s
+    Token 75: ' The' @ 284.0088s
+    Token 76: ' word' @ 287.2330s
+    Token 77: ' '' @ 290.4560s
+    Token 78: 'b' @ 293.6844s
+    Token 79: 'ark' @ 296.9058s
+    Token 80: ''' @ 300.1365s
+    Token 81: ' can' @ 303.3603s
+    Token 82: ' mean' @ 306.5856s
+    Token 83: ' either' @ 309.8134s
+    Token 84: ' the' @ 313.0420s
+    Token 85: ' sound' @ 316.2734s
+    Token 86: ' a' @ 319.4967s
+    Token 87: ' dog' @ 322.7297s
+    Token 88: ' makes' @ 325.9540s
+    Token 89: ' or' @ 329.1991s
+    Token 90: ' the' @ 332.4347s
+    Token 91: ' outer' @ 335.6586s
+    Token 92: ' covering' @ 338.8921s
+    Token 93: ' of' @ 342.1217s
+    Token 94: ' a' @ 345.3442s
+    Token 95: ' tree' @ 348.5744s
+    Token 96: '.\n' @ 351.8000s
+    Token 97: '3' @ 355.0318s
+    Token 98: '.' @ 358.2625s
+    Token 99: ' **' @ 361.4895s
+    Token 100: 'Apply' @ 364.7211s
+    Token 101: ' context' @ 367.9416s
+    Token 102: ' to' @ 371.1714s
+    Token 103: ' meaning' @ 374.4003s
+    Token 104: ':**' @ 377.6292s
+    Token 105: ' Since' @ 380.8606s
+    Token 106: ' the' @ 384.0809s
+    Token 107: ' sentence' @ 387.3112s
+    Token 108: ' is' @ 390.5286s
+    Token 109: ' about' @ 393.7604s
+    Token 110: ' a' @ 396.9853s
+    Token 111: ' dog' @ 400.2151s
+    Token 112: ',' @ 403.4374s
+    Token 113: ' it' @ 406.6682s
+    Token 114: ''s' @ 409.8972s
+    Token 115: ' logical' @ 413.1241s
+    Token 116: ' to' @ 416.3545s
+    Token 117: ' interpret' @ 419.5741s
+    Token 118: ' '' @ 422.8036s
+    Token 119: 'b' @ 426.0299s
+    Token 120: 'ark' @ 429.2584s
+    Token 121: ''' @ 432.4850s
+    Token 122: ' as' @ 435.7129s
+    Token 123: ' the' @ 438.9445s
+    Token 124: ' sound' @ 442.1633s
+    Token 125: ' the' @ 445.3942s
+    Token 126: ' dog' @ 448.6165s
+    Token 127: ' makes' @ 451.8482s
+    Token 128: '.\n' @ 455.0756s
+    Token 129: '4' @ 458.3003s
+    Token 130: '.' @ 461.5327s
+    Token 131: ' **' @ 464.7542s
+    Token 132: 'Elim' @ 467.9834s
+    Token 133: 'inate' @ 471.2034s
+    Token 134: ' alternative' @ 474.4339s
+    Token 135: ' interpretations' @ 477.6588s
+    Token 136: ':**' @ 480.8858s
+    Token 137: ' The' @ 484.1242s
+    Token 138: ' other' @ 487.3499s
+    Token 139: ' meaning' @ 490.5842s
+    Token 140: ' (' @ 493.8144s
+    Token 141: 'tree' @ 497.0397s
+    Token 142: ''s' @ 500.2726s
+    Token 143: ' outer' @ 503.4980s
+    Token 144: ' covering' @ 506.7271s
+    Token 145: ')' @ 509.9534s
+    Token 146: ' doesn' @ 513.1835s
+    Token 147: ''t' @ 516.4167s
+    Token 148: ' fit' @ 519.6410s
+    Token 149: ' in' @ 522.8726s
+    Token 150: ' this' @ 526.0930s
+    Token 151: ' context' @ 529.3223s
+    Token 152: '.\n\n' @ 532.5494s
+    Token 153: 'Thus' @ 535.7777s
+    Token 154: ',' @ 539.0100s
+    Token 155: ' '' @ 542.2302s
+    Token 156: 'b' @ 545.4575s
+    Token 157: 'ark' @ 548.6823s
+    Token 158: ''' @ 551.9091s
+    Token 159: ' in' @ 555.1365s
+    Token 160: ' this' @ 558.3611s
+    Token 161: ' sentence' @ 561.5917s
+    Token 162: ' means' @ 564.8107s
+    Token 163: ' the' @ 568.0399s
+    Token 164: ' sound' @ 571.2688s
+    Token 165: ' a' @ 574.4972s
+    Token 166: ' dog' @ 577.7258s
+    Token 167: ' makes' @ 580.9532s
+    Token 168: '.' @ 584.1850s
+  完成: 总时间=587.4086s, TTFT=26.3118s, TPOT=3.3406s, Tokens=168
+
+=== 请求 2/10 - 任务: disambiguation_qa ===
+📝 Prompt (length=2157):
+
+Task: 消歧问答任务
+Task Name: disambiguation_qa
+
+Instructions: Please solve the following problem step by step. Think carefully and provide a clear, logical answer.
+
+Problem: The word 'bank' can refer to a financial institution or the side of a river. In the sentence 'I went to the bank to deposit money', what does 'bank' mean?
+
+Please provide your answer and explain your reasoning process.
+
+
+Additional Context:
+This is a complex reasoning task that requires careful analysis. You should:
+1. Read the problem carefully
+2. Identify the key information
+3. Apply logical reasoning
+4. Consider alternative interpretations
+5. Provide a well-reasoned answer
+
+The problem involves multiple steps of reasoning and may require you to consider various factors before arriving at the correct answer. Take your time to think through each step carefully.
+
+Remember to:
+- Break down complex problems into smaller parts
+- Consider all given information
+- Apply logical rules consistently
+- Check your reasoning for errors
+- Provide clear explanations for your answer
+
+Now, please solve the problem:
+
+
+Additional reasoning guidelines:
+- Pay attention to details in the problem statement
+- Consider edge cases and exceptions
+- Use systematic approaches to problem-solving
+- Verify your answer makes logical sense
+- Consider alternative interpretations of the problem
+
+The key to solving this type of problem is to be methodical and thorough in your analysis.
+
+
+Additional reasoning guidelines:
+- Pay attention to details in the problem statement
+- Consider edge cases and exceptions
+- Use systematic approaches to problem-solving
+- Verify your answer makes logical sense
+- Consider alternative interpretations of the problem
+
+The key to solving this type of problem is to be methodical and thorough in your analysis.
+
+
+Additional reasoning guidelines:
+- Pay attention to details in the problem statement
+- Consider edge cases and exceptions
+- Use systematic approaches to problem-solving
+- Verify your answer makes logical sense
+- Consider alternative interpretations of the problem
+
+The key to solving this type of problem is to be methodical and thorough in your analysis.
+
+    Token 1: '</think>' @ 67.6808s
+    Token 2: '\n\n' @ 93.5182s
+    Token 3: 'The' @ 96.7342s
+    Token 4: ' word' @ 99.9474s
+    Token 5: ' '' @ 103.1664s
+    Token 6: 'bank' @ 106.3909s
+    Token 7: ''' @ 109.6047s
+    Token 8: ' in' @ 112.8169s
+    Token 9: ' the' @ 116.0404s
+    Token 10: ' sentence' @ 119.2604s
+    Token 11: ' '' @ 122.4804s
+    Token 12: 'I' @ 125.7002s
+    Token 13: ' went' @ 128.9142s
+    Token 14: ' to' @ 132.1304s
+    Token 15: ' the' @ 135.3454s
+    Token 16: ' bank' @ 138.5633s
+    Token 17: ' to' @ 141.7796s
+    Token 18: ' deposit' @ 145.0012s
+    Token 19: ' money' @ 148.2222s
+    Token 20: ''' @ 151.4412s
+    Token 21: ' refers' @ 154.6607s
+    Token 22: ' to' @ 157.8811s
+    Token 23: ' a' @ 161.0996s
+    Token 24: ' financial' @ 164.3193s
+    Token 25: ' institution' @ 167.5410s
+    Token 26: '.\n\n' @ 170.7614s
+    Token 27: '**' @ 173.9801s
+    Token 28: 'Step' @ 177.1974s
+    Token 29: '-by' @ 180.4148s
+    Token 30: '-' @ 183.6352s
+    Token 31: 'Step' @ 186.8556s
+    Token 32: ' Explanation' @ 190.0754s
+    Token 33: ':' @ 193.2953s
+    Token 34: '**\n\n' @ 196.5101s
+    Token 35: '1' @ 199.7294s
+    Token 36: '.' @ 202.9497s
+    Token 37: ' **' @ 206.1683s
+    Token 38: 'Ident' @ 209.3884s
+    Token 39: 'ify' @ 212.6077s
+    Token 40: ' the' @ 215.8269s
+    Token 41: ' Amb' @ 219.0456s
+    Token 42: 'igu' @ 222.2647s
+    Token 43: 'ity' @ 225.4841s
+    Token 44: ':' @ 228.7064s
+    Token 45: '**\n' @ 231.9243s
+    Token 46: '  ' @ 235.1434s
+    Token 47: ' -' @ 238.3617s
+    Token 48: ' The' @ 241.5805s
+    Token 49: ' word' @ 244.8026s
+    Token 50: ' '' @ 248.0203s
+    Token 51: 'bank' @ 251.2394s
+    Token 52: ''' @ 254.4582s
+    Token 53: ' has' @ 257.6812s
+    Token 54: ' two' @ 260.9013s
+    Token 55: ' common' @ 264.1215s
+    Token 56: ' meanings' @ 267.3435s
+    Token 57: ':' @ 270.5644s
+    Token 58: ' a' @ 273.7858s
+    Token 59: ' financial' @ 277.0084s
+    Token 60: ' institution' @ 280.2294s
+    Token 61: ' where' @ 283.4522s
+    Token 62: ' people' @ 286.6753s
+    Token 63: ' deposit' @ 289.8967s
+    Token 64: ' money' @ 293.1168s
+    Token 65: ',' @ 296.3365s
+    Token 66: ' and' @ 299.5567s
+    Token 67: ' the' @ 302.7766s
+    Token 68: ' side' @ 305.9924s
+    Token 69: ' of' @ 309.2067s
+    Token 70: ' a' @ 312.4222s
+    Token 71: ' river' @ 315.6407s
+    Token 72: '.\n\n' @ 318.8613s
+    Token 73: '2' @ 322.0817s
+    Token 74: '.' @ 325.3039s
+    Token 75: ' **' @ 328.5236s
+    Token 76: 'An' @ 331.7425s
+    Token 77: 'alyze' @ 334.9604s
+    Token 78: ' the' @ 338.1806s
+    Token 79: ' Sentence' @ 341.3987s
+    Token 80: ' Context' @ 344.6186s
+    Token 81: ':' @ 347.8393s
+    Token 82: '**\n' @ 351.0593s
+    Token 83: '  ' @ 354.2812s
+    Token 84: ' -' @ 357.5004s
+    Token 85: ' The' @ 360.7207s
+    Token 86: ' sentence' @ 363.9417s
+    Token 87: ' is' @ 367.1588s
+    Token 88: ':' @ 370.3732s
+    Token 89: ' "' @ 373.5892s
+    Token 90: 'I' @ 376.8047s
+    Token 91: ' went' @ 380.0194s
+    Token 92: ' to' @ 383.2352s
+    Token 93: ' the' @ 386.4553s
+    Token 94: ' bank' @ 389.6757s
+    Token 95: ' to' @ 392.8967s
+    Token 96: ' deposit' @ 396.1178s
+    Token 97: ' money' @ 399.3373s
+    Token 98: '."\n' @ 402.5576s
+    Token 99: '  ' @ 405.7773s
+    Token 100: ' -' @ 408.9977s
+    Token 101: ' The' @ 412.2167s
+    Token 102: ' phrase' @ 415.4344s
+    Token 103: ' "' @ 418.6554s
+    Token 104: 'deposit' @ 421.8758s
+    Token 105: ' money' @ 425.0938s
+    Token 106: '"' @ 428.3152s
+    Token 107: ' is' @ 431.5324s
+    Token 108: ' a' @ 434.7528s
+    Token 109: ' key' @ 437.9727s
+    Token 110: ' clue' @ 441.1945s
+    Token 111: '.\n\n' @ 444.4113s
+    Token 112: '3' @ 447.6306s
+    Token 113: '.' @ 450.8521s
+    Token 114: ' **' @ 454.0724s
+    Token 115: 'Consider' @ 457.2909s
+    Token 116: ' the' @ 460.5111s
+    Token 117: ' Phrase' @ 463.7313s
+    Token 118: ' "' @ 466.9524s
+    Token 119: 'Deposit' @ 470.1743s
+    Token 120: ' Money' @ 473.3935s
+    Token 121: '":' @ 476.6115s
+    Token 122: '**\n' @ 479.8302s
+    Token 123: '  ' @ 483.0501s
+    Token 124: ' -' @ 486.2687s
+    Token 125: ' Depos' @ 489.4884s
+    Token 126: 'iting' @ 492.7093s
+    Token 127: ' money' @ 495.9290s
+    Token 128: ' is' @ 499.1483s
+    Token 129: ' an' @ 502.3667s
+    Token 130: ' action' @ 505.5855s
+    Token 131: ' typically' @ 508.8059s
+    Token 132: ' associated' @ 512.0256s
+    Token 133: ' with' @ 515.2462s
+    Token 134: ' a' @ 518.4644s
+    Token 135: ' financial' @ 521.6834s
+    Token 136: ' institution' @ 524.9024s
+    Token 137: '.\n' @ 528.1220s
+    Token 138: '  ' @ 531.3409s
+    Token 139: ' -' @ 534.5623s
+    Token 140: ' In' @ 537.7807s
+    Token 141: ' the' @ 541.0010s
+    Token 142: ' context' @ 544.2180s
+    Token 143: ' of' @ 547.4423s
+    Token 144: ' a' @ 550.6633s
+    Token 145: ' river' @ 553.8829s
+    Token 146: 'bank' @ 557.1023s
+    Token 147: ',' @ 560.3247s
+    Token 148: ' deposit' @ 563.5448s
+    Token 149: 'ing' @ 566.7654s
+    Token 150: ' money' @ 569.9857s
+    Token 151: ' doesn' @ 573.2053s
+    Token 152: ''t' @ 576.4258s
+    Token 153: ' make' @ 579.6473s
+    Token 154: ' sense' @ 582.8676s
+    Token 155: '.\n\n' @ 586.0882s
+    Token 156: '4' @ 589.3089s
+    Token 157: '.' @ 592.5299s
+    Token 158: ' **' @ 595.7515s
+    Token 159: 'Elim' @ 598.9713s
+    Token 160: 'inate' @ 602.1921s
+    Token 161: ' Alternative' @ 605.4128s
+    Token 162: ' Interpret' @ 608.6284s
+    Token 163: 'ations' @ 611.8437s
+    Token 164: ':' @ 615.0593s
+    Token 165: '**\n' @ 618.2751s
+    Token 166: '  ' @ 621.4897s
+    Token 167: ' -' @ 624.7052s
+    Token 168: ' If' @ 627.9204s
+    Token 169: ' '' @ 631.1452s
+    Token 170: 'bank' @ 634.3649s
+    Token 171: ''' @ 637.5865s
+    Token 172: ' referred' @ 640.8071s
+    Token 173: ' to' @ 644.0264s
+    Token 174: ' the' @ 647.2467s
+    Token 175: ' river' @ 650.4661s
+    Token 176: ''s' @ 653.6883s
+    Token 177: ' side' @ 656.9060s
+    Token 178: ',' @ 660.1255s
+    Token 179: ' the' @ 663.3453s
+    Token 180: ' sentence' @ 666.5635s
+    Token 181: ' would' @ 669.7867s
+    Token 182: ' be' @ 673.0106s
+    Token 183: ' nons' @ 676.2307s
+    Token 184: 'ens' @ 679.4528s
+    Token 185: 'ical' @ 682.6714s
+    Token 186: ' because' @ 685.8907s
+    Token 187: ' one' @ 689.1123s
+    Token 188: ' doesn' @ 692.3322s
+    Token 189: ''t' @ 695.5523s
+    Token 190: ' deposit' @ 698.7717s
+    Token 191: ' money' @ 701.9920s
+    Token 192: ' at' @ 705.2139s
+    Token 193: ' a' @ 708.4365s
+    Token 194: ' river' @ 711.6584s
+    Token 195: 'bank' @ 714.8787s
+    Token 196: '.\n\n' @ 718.0964s
+    Token 197: '5' @ 721.3160s
+    Token 198: '.' @ 724.5380s
+    Token 199: ' **' @ 727.7594s
+    Token 200: 'Conclusion' @ 730.9795s
+    Token 201: ':' @ 734.2003s
+    Token 202: '**\n' @ 737.4204s
+    Token 203: '  ' @ 740.6408s
+    Token 204: ' -' @ 743.8616s
+    Token 205: ' The' @ 747.0807s
+    Token 206: ' context' @ 750.3032s
+    Token 207: ' provided' @ 753.5243s
+    Token 208: ' by' @ 756.7472s
+    Token 209: ' the' @ 759.9692s
+    Token 210: ' phrase' @ 763.1923s
+    Token 211: ' "' @ 766.4149s
+    Token 212: 'deposit' @ 769.6348s
+    Token 213: ' money' @ 772.8559s
+    Token 214: '"' @ 776.0763s
+    Token 215: ' clearly' @ 779.2966s
+    Token 216: ' points' @ 782.5186s
+    Token 217: ' to' @ 785.7392s
+    Token 218: ' the' @ 788.9609s
+    Token 219: ' financial' @ 792.1801s
+    Token 220: ' institution' @ 795.4010s
+    Token 221: ' meaning' @ 798.6212s
+    Token 222: ' of' @ 801.8417s
+    Token 223: ' '' @ 805.0624s
+    Token 224: 'bank' @ 808.2837s
+    Token 225: ''.\n\n' @ 811.5056s
+    Token 226: '**' @ 814.7283s
+    Token 227: 'Answer' @ 817.9491s
+    Token 228: ':' @ 821.1712s
+    Token 229: '**\n' @ 824.3945s
+    Token 230: 'In' @ 827.6161s
+    Token 231: ' the' @ 830.8366s
+    Token 232: ' given' @ 834.0575s
+    Token 233: ' sentence' @ 837.2773s
+    Token 234: ',' @ 840.4987s
+    Token 235: ' '' @ 843.7185s
+    Token 236: 'bank' @ 846.9386s
+    Token 237: ''' @ 850.1583s
+    Token 238: ' refers' @ 853.3788s
+    Token 239: ' to' @ 856.5981s
+    Token 240: ' a' @ 859.8203s
+    Token 241: ' financial' @ 863.0409s
+    Token 242: ' institution' @ 866.2614s
+    Token 243: '.' @ 869.4812s
+    Token 244: ' The' @ 872.7014s
+    Token 245: ' context' @ 875.9228s
+    Token 246: ' of' @ 879.1457s
+    Token 247: ' deposit' @ 882.3656s
+    Token 248: 'ing' @ 885.5887s
+    Token 249: ' money' @ 888.8075s
+    Token 250: ' indicates' @ 892.0277s
+    Token 251: ' that' @ 895.2481s
+    Token 252: ' the' @ 898.4703s
+    Token 253: ' speaker' @ 901.6906s
+    Token 254: ' is' @ 904.9106s
+    Token 255: ' talking' @ 908.1313s
+    Token 256: ' about' @ 911.3548s
+    Token 257: ' a' @ 914.5759s
+    Token 258: ' place' @ 917.7951s
+    Token 259: ' where' @ 921.0146s
+    Token 260: ' financial' @ 924.2363s
+    Token 261: ' transactions' @ 927.4581s
+    Token 262: ' occur' @ 930.6785s
+    Token 263: ',' @ 933.9005s
+    Token 264: ' not' @ 937.1227s
+    Token 265: ' the' @ 940.3443s
+    Token 266: ' side' @ 943.5709s
+    Token 267: ' of' @ 946.7928s
+    Token 268: ' a' @ 950.0175s
+    Token 269: ' river' @ 953.2421s
+    Token 270: '.' @ 956.4633s
+  完成: 总时间=959.6865s, TTFT=67.6808s, TPOT=3.3040s, Tokens=270
+
+=== 请求 3/10 - 任务: causal_judgment ===
+📝 Prompt (length=2137):
+
+Task: 因果判断任务
+Task Name: causal_judgment
+
+Instructions: Please solve the following problem step by step. Think carefully and provide a clear, logical answer.
+
+Problem: A woman named Sarah is driving her car on a rainy day. She hits a patch of ice and crashes into a tree. What was the cause of the crash?
+
+Please provide your answer and explain your reasoning process.
+
+
+Additional Context:
+This is a complex reasoning task that requires careful analysis. You should:
+1. Read the problem carefully
+2. Identify the key information
+3. Apply logical reasoning
+4. Consider alternative interpretations
+5. Provide a well-reasoned answer
+
+The problem involves multiple steps of reasoning and may require you to consider various factors before arriving at the correct answer. Take your time to think through each step carefully.
+
+Remember to:
+- Break down complex problems into smaller parts
+- Consider all given information
+- Apply logical rules consistently
+- Check your reasoning for errors
+- Provide clear explanations for your answer
+
+Now, please solve the problem:
+
+
+Additional reasoning guidelines:
+- Pay attention to details in the problem statement
+- Consider edge cases and exceptions
+- Use systematic approaches to problem-solving
+- Verify your answer makes logical sense
+- Consider alternative interpretations of the problem
+
+The key to solving this type of problem is to be methodical and thorough in your analysis.
+
+
+Additional reasoning guidelines:
+- Pay attention to details in the problem statement
+- Consider edge cases and exceptions
+- Use systematic approaches to problem-solving
+- Verify your answer makes logical sense
+- Consider alternative interpretations of the problem
+
+The key to solving this type of problem is to be methodical and thorough in your analysis.
+
+
+Additional reasoning guidelines:
+- Pay attention to details in the problem statement
+- Consider edge cases and exceptions
+- Use systematic approaches to problem-solving
+- Verify your answer makes logical sense
+- Consider alternative interpretations of the problem
+
+The key to solving this type of problem is to be methodical and thorough in your analysis.
+
+  处理流式响应时出错: HTTPConnectionPool(host='localhost', port=8000): Read timed out.
+  完成: 总时间=120.0243s, TTFT=0.0000s, TPOT=0.0000s, Tokens=0
+
+=== 请求 4/10 - 任务: causal_judgment ===
+📝 Prompt (length=2159):
+
+Task: 因果判断任务
+Task Name: causal_judgment
+
+Instructions: Please solve the following problem step by step. Think carefully and provide a clear, logical answer.
+
+Problem: A man named John goes to a restaurant and orders a hamburger. The hamburger is poisoned. John eats the hamburger and dies. What was the cause of John's death?
+
+Please provide your answer and explain your reasoning process.
+
+
+Additional Context:
+This is a complex reasoning task that requires careful analysis. You should:
+1. Read the problem carefully
+2. Identify the key information
+3. Apply logical reasoning
+4. Consider alternative interpretations
+5. Provide a well-reasoned answer
+
+The problem involves multiple steps of reasoning and may require you to consider various factors before arriving at the correct answer. Take your time to think through each step carefully.
+
+Remember to:
+- Break down complex problems into smaller parts
+- Consider all given information
+- Apply logical rules consistently
+- Check your reasoning for errors
+- Provide clear explanations for your answer
+
+Now, please solve the problem:
+
+
+Additional reasoning guidelines:
+- Pay attention to details in the problem statement
+- Consider edge cases and exceptions
+- Use systematic approaches to problem-solving
+- Verify your answer makes logical sense
+- Consider alternative interpretations of the problem
+
+The key to solving this type of problem is to be methodical and thorough in your analysis.
+
+
+Additional reasoning guidelines:
+- Pay attention to details in the problem statement
+- Consider edge cases and exceptions
+- Use systematic approaches to problem-solving
+- Verify your answer makes logical sense
+- Consider alternative interpretations of the problem
+
+The key to solving this type of problem is to be methodical and thorough in your analysis.
+
+
+Additional reasoning guidelines:
+- Pay attention to details in the problem statement
+- Consider edge cases and exceptions
+- Use systematic approaches to problem-solving
+- Verify your answer makes logical sense
+- Consider alternative interpretations of the problem
+
+The key to solving this type of problem is to be methodical and thorough in your analysis.
+
+  处理流式响应时出错: HTTPConnectionPool(host='localhost', port=8000): Read timed out.
+  完成: 总时间=120.0575s, TTFT=0.0000s, TPOT=0.0000s, Tokens=0
+
+=== 请求 5/10 - 任务: multistep_arithmetic ===
+📝 Prompt (length=2117):
+
+Task: 多步算术任务
+Task Name: multistep_arithmetic
+
+Instructions: Please solve the following problem step by step. Think carefully and provide a clear, logical answer.
+
+Problem: A store has 50 items. They sell 15 items in the morning and 20 items in the afternoon. How many items are left?
+
+Please provide your answer and explain your reasoning process.
+
+
+Additional Context:
+This is a complex reasoning task that requires careful analysis. You should:
+1. Read the problem carefully
+2. Identify the key information
+3. Apply logical reasoning
+4. Consider alternative interpretations
+5. Provide a well-reasoned answer
+
+The problem involves multiple steps of reasoning and may require you to consider various factors before arriving at the correct answer. Take your time to think through each step carefully.
+
+Remember to:
+- Break down complex problems into smaller parts
+- Consider all given information
+- Apply logical rules consistently
+- Check your reasoning for errors
+- Provide clear explanations for your answer
+
+Now, please solve the problem:
+
+
+Additional reasoning guidelines:
+- Pay attention to details in the problem statement
+- Consider edge cases and exceptions
+- Use systematic approaches to problem-solving
+- Verify your answer makes logical sense
+- Consider alternative interpretations of the problem
+
+The key to solving this type of problem is to be methodical and thorough in your analysis.
+
+
+Additional reasoning guidelines:
+- Pay attention to details in the problem statement
+- Consider edge cases and exceptions
+- Use systematic approaches to problem-solving
+- Verify your answer makes logical sense
+- Consider alternative interpretations of the problem
+
+The key to solving this type of problem is to be methodical and thorough in your analysis.
+
+
+Additional reasoning guidelines:
+- Pay attention to details in the problem statement
+- Consider edge cases and exceptions
+- Use systematic approaches to problem-solving
+- Verify your answer makes logical sense
+- Consider alternative interpretations of the problem
+
+The key to solving this type of problem is to be methodical and thorough in your analysis.
+
+  处理流式响应时出错: HTTPConnectionPool(host='localhost', port=8000): Read timed out.
+  完成: 总时间=120.1057s, TTFT=0.0000s, TPOT=0.0000s, Tokens=0
+
+=== 请求 6/10 - 任务: multistep_arithmetic ===
+📝 Prompt (length=2120):
+
+Task: 多步算术任务
+Task Name: multistep_arithmetic
+
+Instructions: Please solve the following problem step by step. Think carefully and provide a clear, logical answer.
+
+Problem: Sarah has 12 apples. She gives 3 apples to her friend and buys 7 more apples. How many apples does Sarah have now?
+
+Please provide your answer and explain your reasoning process.
+
+
+Additional Context:
+This is a complex reasoning task that requires careful analysis. You should:
+1. Read the problem carefully
+2. Identify the key information
+3. Apply logical reasoning
+4. Consider alternative interpretations
+5. Provide a well-reasoned answer
+
+The problem involves multiple steps of reasoning and may require you to consider various factors before arriving at the correct answer. Take your time to think through each step carefully.
+
+Remember to:
+- Break down complex problems into smaller parts
+- Consider all given information
+- Apply logical rules consistently
+- Check your reasoning for errors
+- Provide clear explanations for your answer
+
+Now, please solve the problem:
+
+
+Additional reasoning guidelines:
+- Pay attention to details in the problem statement
+- Consider edge cases and exceptions
+- Use systematic approaches to problem-solving
+- Verify your answer makes logical sense
+- Consider alternative interpretations of the problem
+
+The key to solving this type of problem is to be methodical and thorough in your analysis.
+
+
+Additional reasoning guidelines:
+- Pay attention to details in the problem statement
+- Consider edge cases and exceptions
+- Use systematic approaches to problem-solving
+- Verify your answer makes logical sense
+- Consider alternative interpretations of the problem
+
+The key to solving this type of problem is to be methodical and thorough in your analysis.
+
+
+Additional reasoning guidelines:
+- Pay attention to details in the problem statement
+- Consider edge cases and exceptions
+- Use systematic approaches to problem-solving
+- Verify your answer makes logical sense
+- Consider alternative interpretations of the problem
+
+The key to solving this type of problem is to be methodical and thorough in your analysis.
+
+    Token 1: '</think>' @ 109.3910s
+    Token 2: '\n\n' @ 112.6114s
+    Token 3: 'Sarah' @ 115.8334s
+    Token 4: ' starts' @ 119.0542s
+    Token 5: ' with' @ 122.2756s
+    Token 6: ' ' @ 125.4950s
+    Token 7: '1' @ 128.7170s
+    Token 8: '2' @ 131.9376s
+    Token 9: ' apples' @ 135.1560s
+    Token 10: '.' @ 138.3789s
+    Token 11: ' She' @ 141.6003s
+    Token 12: ' gives' @ 144.8213s
+    Token 13: ' away' @ 148.0429s
+    Token 14: ' ' @ 151.2621s
+    Token 15: '3' @ 154.4844s
+    Token 16: ',' @ 157.7072s
+    Token 17: ' which' @ 160.9301s
+    Token 18: ' leaves' @ 164.1514s
+    Token 19: ' her' @ 167.3723s
+    Token 20: ' with' @ 170.5924s
+    Token 21: ' ' @ 173.8132s
+    Token 22: '9' @ 177.0343s
+    Token 23: ' apples' @ 180.2535s
+    Token 24: '.' @ 183.4763s
+    Token 25: ' Then' @ 186.6942s
+    Token 26: ',' @ 189.9152s
+    Token 27: ' she' @ 193.1351s
+    Token 28: ' buys' @ 196.3549s
+    Token 29: ' ' @ 199.5728s
+    Token 30: '7' @ 202.7912s
+    Token 31: ' more' @ 206.0123s
+    Token 32: ',' @ 209.2324s
+    Token 33: ' bringing' @ 212.4523s
+    Token 34: ' the' @ 215.6711s
+    Token 35: ' total' @ 218.8902s
+    Token 36: ' to' @ 222.1102s
+    Token 37: ' ' @ 225.3334s
+    Token 38: '1' @ 228.5559s
+    Token 39: '6' @ 231.7754s
+    Token 40: ' apples' @ 234.9953s
+    Token 41: '.' @ 238.2153s
+    Token 42: ' Therefore' @ 241.4343s
+    Token 43: ',' @ 244.6542s
+    Token 44: ' Sarah' @ 247.8763s
+    Token 45: ' now' @ 251.0975s
+    Token 46: ' has' @ 254.3166s
+    Token 47: ' ' @ 257.5372s
+    Token 48: '1' @ 260.7573s
+    Token 49: '6' @ 263.9792s
+    Token 50: ' apples' @ 267.2018s
+    Token 51: '.' @ 270.4236s
+    Token 52: ' \n\n' @ 273.6453s
+    Token 53: '**' @ 276.8658s
+    Token 54: 'Step' @ 280.0862s
+    Token 55: '-by' @ 283.3066s
+    Token 56: '-' @ 286.5273s
+    Token 57: 'Step' @ 289.7471s
+    Token 58: ' Explanation' @ 292.9679s
+    Token 59: ':' @ 296.1883s
+    Token 60: '**\n\n' @ 299.4067s
+    Token 61: '1' @ 302.6272s
+    Token 62: '.' @ 305.8487s
+    Token 63: ' **' @ 309.0734s
+    Token 64: 'Initial' @ 312.2942s
+    Token 65: ' Count' @ 315.5154s
+    Token 66: ':**' @ 318.7365s
+    Token 67: ' Sarah' @ 321.9573s
+    Token 68: ' has' @ 325.1767s
+    Token 69: ' ' @ 328.3973s
+    Token 70: '1' @ 331.6165s
+    Token 71: '2' @ 334.8376s
+    Token 72: ' apples' @ 338.0571s
+    Token 73: '.\n' @ 341.2753s
+    Token 74: '2' @ 344.4996s
+    Token 75: '.' @ 347.7217s
+    Token 76: ' **' @ 350.9417s
+    Token 77: 'Giving' @ 354.1646s
+    Token 78: ' App' @ 357.3822s
+    Token 79: 'les' @ 360.6025s
+    Token 80: ' Away' @ 363.8232s
+    Token 81: ':**' @ 367.0440s
+    Token 82: ' She' @ 370.2629s
+    Token 83: ' gives' @ 373.4812s
+    Token 84: ' ' @ 376.7024s
+    Token 85: '3' @ 379.9225s
+    Token 86: ' apples' @ 383.1412s
+    Token 87: ' to' @ 386.3613s
+    Token 88: ' her' @ 389.5812s
+    Token 89: ' friend' @ 392.8012s
+    Token 90: '.\n' @ 396.0219s
+    Token 91: '  ' @ 399.2436s
+    Token 92: ' -' @ 402.4666s
+    Token 93: ' Calculation' @ 405.6866s
+    Token 94: ':' @ 408.9079s
+    Token 95: ' ' @ 412.1312s
+    Token 96: '1' @ 415.3534s
+    Token 97: '2' @ 418.5769s
+    Token 98: ' -' @ 421.7976s
+    Token 99: ' ' @ 425.0194s
+    Token 100: '3' @ 428.2381s
+    Token 101: ' =' @ 431.4571s
+    Token 102: ' ' @ 434.6788s
+    Token 103: '9' @ 437.9006s
+    Token 104: ' apples' @ 441.1231s
+    Token 105: ' remaining' @ 444.3470s
+    Token 106: '.\n' @ 447.5704s
+    Token 107: '3' @ 450.7938s
+    Token 108: '.' @ 454.0143s
+    Token 109: ' **' @ 457.2357s
+    Token 110: 'Buying' @ 460.4586s
+    Token 111: ' More' @ 463.6819s
+    Token 112: ' App' @ 466.9004s
+    Token 113: 'les' @ 470.1176s
+    Token 114: ':**' @ 473.3376s
+    Token 115: ' She' @ 476.5540s
+    Token 116: ' buys' @ 479.7736s
+    Token 117: ' ' @ 482.9947s
+    Token 118: '7' @ 486.2157s
+    Token 119: ' additional' @ 489.4358s
+    Token 120: ' apples' @ 492.6542s
+    Token 121: '.\n' @ 495.8759s
+    Token 122: '  ' @ 499.0952s
+    Token 123: ' -' @ 502.3136s
+    Token 124: ' Calculation' @ 505.5322s
+    Token 125: ':' @ 508.7512s
+    Token 126: ' ' @ 511.9702s
+    Token 127: '9' @ 515.1917s
+    Token 128: ' +' @ 518.4124s
+    Token 129: ' ' @ 521.6316s
+    Token 130: '7' @ 524.8517s
+    Token 131: ' =' @ 528.0714s
+    Token 132: ' ' @ 531.2910s
+    Token 133: '1' @ 534.5114s
+    Token 134: '6' @ 537.7304s
+    Token 135: ' apples' @ 540.9502s
+    Token 136: '.\n' @ 544.1681s
+    Token 137: '4' @ 547.3898s
+    Token 138: '.' @ 550.6111s
+    Token 139: ' **' @ 553.8308s
+    Token 140: 'Final' @ 557.0526s
+    Token 141: ' Count' @ 560.2710s
+    Token 142: ':**' @ 563.4889s
+    Token 143: ' Sarah' @ 566.7079s
+    Token 144: ' now' @ 569.9296s
+    Token 145: ' has' @ 573.1494s
+    Token 146: ' ' @ 576.3696s
+    Token 147: '1' @ 579.5894s
+    Token 148: '6' @ 582.8072s
+    Token 149: ' apples' @ 586.0288s
+    Token 150: '.\n\n' @ 589.2497s
+    Token 151: '**' @ 592.4643s
+    Token 152: 'Answer' @ 595.6766s
+    Token 153: ':**' @ 598.8906s
+    Token 154: ' Sarah' @ 602.1041s
+    Token 155: ' has' @ 605.3173s
+    Token 156: ' ' @ 608.5312s
+    Token 157: '1' @ 611.7446s
+    Token 158: '6' @ 614.9592s
+    Token 159: ' apples' @ 618.1720s
+    Token 160: ' now' @ 621.3856s
+    Token 161: '.' @ 624.6003s
+  完成: 总时间=627.8146s, TTFT=109.3910s, TPOT=3.2201s, Tokens=161
+
+=== 请求 7/10 - 任务: ruin_names ===
+📝 Prompt (length=2058):
+
+Task: 名字推理任务
+Task Name: ruin_names
+
+Instructions: Please solve the following problem step by step. Think carefully and provide a clear, logical answer.
+
+Problem: What word can be formed by rearranging the letters in 'HEART'?
+
+Please provide your answer and explain your reasoning process.
+
+
+Additional Context:
+This is a complex reasoning task that requires careful analysis. You should:
+1. Read the problem carefully
+2. Identify the key information
+3. Apply logical reasoning
+4. Consider alternative interpretations
+5. Provide a well-reasoned answer
+
+The problem involves multiple steps of reasoning and may require you to consider various factors before arriving at the correct answer. Take your time to think through each step carefully.
+
+Remember to:
+- Break down complex problems into smaller parts
+- Consider all given information
+- Apply logical rules consistently
+- Check your reasoning for errors
+- Provide clear explanations for your answer
+
+Now, please solve the problem:
+
+
+Additional reasoning guidelines:
+- Pay attention to details in the problem statement
+- Consider edge cases and exceptions
+- Use systematic approaches to problem-solving
+- Verify your answer makes logical sense
+- Consider alternative interpretations of the problem
+
+The key to solving this type of problem is to be methodical and thorough in your analysis.
+
+
+Additional reasoning guidelines:
+- Pay attention to details in the problem statement
+- Consider edge cases and exceptions
+- Use systematic approaches to problem-solving
+- Verify your answer makes logical sense
+- Consider alternative interpretations of the problem
+
+The key to solving this type of problem is to be methodical and thorough in your analysis.
+
+
+Additional reasoning guidelines:
+- Pay attention to details in the problem statement
+- Consider edge cases and exceptions
+- Use systematic approaches to problem-solving
+- Verify your answer makes logical sense
+- Consider alternative interpretations of the problem
+
+The key to solving this type of problem is to be methodical and thorough in your analysis.
+
+    Token 1: '</think>' @ 28.9554s
+    Token 2: '\n\n' @ 32.1716s
+    Token 3: 'To' @ 35.5113s
+    Token 4: ' solve' @ 38.7220s
+    Token 5: ' the' @ 41.9356s
+    Token 6: ' problem' @ 45.1480s
+    Token 7: ' of' @ 48.3603s
+    Token 8: ' rearr' @ 51.5734s
+    Token 9: 'anging' @ 54.7885s
+    Token 10: ' the' @ 58.0025s
+    Token 11: ' letters' @ 61.2163s
+    Token 12: ' in' @ 64.4309s
+    Token 13: ' '' @ 67.6438s
+    Token 14: 'HE' @ 70.8579s
+    Token 15: 'ART' @ 74.0726s
+    Token 16: ''' @ 77.2876s
+    Token 17: ' to' @ 80.5015s
+    Token 18: ' form' @ 83.7156s
+    Token 19: ' a' @ 86.9286s
+    Token 20: ' word' @ 90.1420s
+    Token 21: ',' @ 93.3556s
+    Token 22: ' let' @ 96.5684s
+    Token 23: ''s' @ 99.7828s
+    Token 24: ' proceed' @ 102.9969s
+    Token 25: ' step' @ 106.2106s
+    Token 26: ' by' @ 109.4258s
+    Token 27: ' step' @ 112.6395s
+    Token 28: '.\n\n' @ 115.8524s
+    Token 29: '1' @ 119.0669s
+    Token 30: '.' @ 122.2809s
+    Token 31: ' **' @ 125.4955s
+    Token 32: 'Ident' @ 128.7109s
+    Token 33: 'ify' @ 131.9250s
+    Token 34: ' the' @ 135.1385s
+    Token 35: ' Letters' @ 138.3514s
+    Token 36: '**:' @ 141.5645s
+    Token 37: ' The' @ 144.7795s
+    Token 38: ' word' @ 147.9928s
+    Token 39: ' '' @ 151.2055s
+    Token 40: 'HE' @ 154.4194s
+    Token 41: 'ART' @ 157.6337s
+    Token 42: ''' @ 160.8485s
+    Token 43: ' consists' @ 164.0635s
+    Token 44: ' of' @ 167.2784s
+    Token 45: ' the' @ 170.4918s
+    Token 46: ' letters' @ 173.7054s
+    Token 47: ' H' @ 176.9185s
+    Token 48: ',' @ 180.1329s
+    Token 49: ' E' @ 183.3469s
+    Token 50: ',' @ 186.5604s
+    Token 51: ' A' @ 189.7734s
+    Token 52: ',' @ 192.9879s
+    Token 53: ' R' @ 196.2069s
+    Token 54: ',' @ 199.4217s
+    Token 55: ' T' @ 202.6353s
+    Token 56: '.\n\n' @ 205.8504s
+    Token 57: '2' @ 209.0658s
+    Token 58: '.' @ 212.2789s
+    Token 59: ' **' @ 215.4944s
+    Token 60: 'Consider' @ 218.7088s
+    Token 61: ' Possible' @ 221.9265s
+    Token 62: ' Words' @ 225.1430s
+    Token 63: '**:' @ 228.3598s
+    Token 64: ' We' @ 231.5759s
+    Token 65: ' need' @ 234.7904s
+    Token 66: ' to' @ 238.0068s
+    Token 67: ' think' @ 241.2224s
+    Token 68: ' of' @ 244.4399s
+    Token 69: ' common' @ 247.6568s
+    Token 70: ' English' @ 250.8724s
+    Token 71: ' words' @ 254.0875s
+    Token 72: ' that' @ 257.3041s
+    Token 73: ' can' @ 260.5206s
+    Token 74: ' be' @ 263.7384s
+    Token 75: ' formed' @ 266.9516s
+    Token 76: ' using' @ 270.1658s
+    Token 77: ' these' @ 273.3804s
+    Token 78: ' letters' @ 276.5929s
+    Token 79: '.' @ 279.8068s
+    Token 80: ' \n\n' @ 283.0216s
+    Token 81: '3' @ 286.2350s
+    Token 82: '.' @ 289.4496s
+    Token 83: ' **' @ 292.6629s
+    Token 84: 'Check' @ 295.8768s
+    Token 85: ' for' @ 299.0906s
+    Token 86: ' Valid' @ 302.3045s
+    Token 87: ' Words' @ 305.5183s
+    Token 88: '**:' @ 308.7315s
+    Token 89: ' Let' @ 311.9460s
+    Token 90: ''s' @ 315.1587s
+    Token 91: ' list' @ 318.3756s
+    Token 92: ' some' @ 321.5905s
+    Token 93: ' possibilities' @ 324.8055s
+    Token 94: ':\n' @ 328.0226s
+    Token 95: '  ' @ 331.2372s
+    Token 96: ' -' @ 334.4519s
+    Token 97: ' **' @ 337.6665s
+    Token 98: 'H' @ 340.8814s
+    Token 99: 'ATE' @ 344.0956s
+    Token 100: '**:' @ 347.3114s
+    Token 101: ' Yes' @ 350.5256s
+    Token 102: ',' @ 353.7403s
+    Token 103: ' H' @ 356.9557s
+    Token 104: ',' @ 360.1685s
+    Token 105: ' A' @ 363.3828s
+    Token 106: ',' @ 366.6008s
+    Token 107: ' T' @ 369.8155s
+    Token 108: ',' @ 373.0289s
+    Token 109: ' E' @ 376.2436s
+    Token 110: ' are' @ 379.4584s
+    Token 111: ' all' @ 382.6727s
+    Token 112: ' present' @ 385.8867s
+    Token 113: '.\n' @ 389.0987s
+    Token 114: '  ' @ 392.3125s
+    Token 115: ' -' @ 395.5267s
+    Token 116: ' **' @ 398.7398s
+    Token 117: 'RATE' @ 401.9555s
+    Token 118: '**:' @ 405.1701s
+    Token 119: ' R' @ 408.3839s
+    Token 120: ',' @ 411.6007s
+    Token 121: ' A' @ 414.8155s
+    Token 122: ',' @ 418.0316s
+    Token 123: ' T' @ 421.2459s
+    Token 124: ',' @ 424.4598s
+    Token 125: ' E' @ 427.6742s
+    Token 126: ' are' @ 430.8885s
+    Token 127: ' present' @ 434.1068s
+    Token 128: '.\n' @ 437.3246s
+    Token 129: '  ' @ 440.5420s
+    Token 130: ' -' @ 443.7578s
+    Token 131: ' **' @ 446.9720s
+    Token 132: 'E' @ 450.1876s
+    Token 133: 'ART' @ 453.4028s
+    Token 134: 'H' @ 456.6176s
+    Token 135: '**:' @ 459.8327s
+    Token 136: ' This' @ 463.1726s
+    Token 137: ' is' @ 466.5127s
+    Token 138: ' a' @ 469.8526s
+    Token 139: ' valid' @ 473.1914s
+    Token 140: ' word' @ 476.5324s
+    Token 141: ',' @ 479.8723s
+    Token 142: ' but' @ 483.2109s
+    Token 143: ' it' @ 486.5518s
+    Token 144: ''s' @ 489.8913s
+    Token 145: ' an' @ 493.2304s
+    Token 146: ' alternative' @ 496.5695s
+    Token 147: ' spelling' @ 499.9083s
+    Token 148: ' of' @ 503.2474s
+    Token 149: ' '' @ 506.5885s
+    Token 150: 'E' @ 509.9274s
+    Token 151: 'ARTH' @ 513.2677s
+    Token 152: ''' @ 516.6073s
+    Token 153: ' which' @ 519.9476s
+    Token 154: ' is' @ 523.2897s
+    Token 155: ' also' @ 526.6292s
+    Token 156: ' valid' @ 529.9678s
+    Token 157: '.\n\n' @ 533.3074s
+    Token 158: '4' @ 536.6467s
+    Token 159: '.' @ 539.9864s
+    Token 160: ' **' @ 543.3254s
+    Token 161: 'Evaluate' @ 546.6650s
+    Token 162: ' the' @ 550.0036s
+    Token 163: ' Most' @ 553.3434s
+    Token 164: ' Likely' @ 556.6844s
+    Token 165: ' Answer' @ 560.0244s
+    Token 166: '**:' @ 563.3635s
+    Token 167: ' Among' @ 566.7024s
+    Token 168: ' these' @ 570.0420s
+    Token 169: ',' @ 573.3814s
+    Token 170: ' '' @ 576.7205s
+    Token 171: 'H' @ 580.0599s
+    Token 172: 'ATE' @ 583.3985s
+    Token 173: ''' @ 586.7394s
+    Token 174: ' and' @ 590.0785s
+    Token 175: ' '' @ 593.4167s
+    Token 176: 'RATE' @ 596.7565s
+    Token 177: ''' @ 600.0965s
+    Token 178: ' are' @ 603.4366s
+    Token 179: ' both' @ 606.7754s
+    Token 180: ' common' @ 610.1155s
+    Token 181: '.' @ 613.4546s
+    Token 182: ' However' @ 616.7935s
+    Token 183: ',' @ 620.1323s
+    Token 184: ' since' @ 623.4715s
+    Token 185: ' the' @ 626.8115s
+    Token 186: ' task' @ 630.1518s
+    Token 187: ' is' @ 633.4917s
+    Token 188: ' to' @ 636.8309s
+    Token 189: ' find' @ 640.1724s
+    Token 190: ' a' @ 643.5170s
+    Token 191: ' word' @ 646.8585s
+    Token 192: ',' @ 650.1976s
+    Token 193: ' both' @ 653.5366s
+    Token 194: ' are' @ 656.8752s
+    Token 195: ' correct' @ 660.2137s
+    Token 196: '.' @ 663.5528s
+    Token 197: ' But' @ 666.8916s
+    Token 198: ' if' @ 670.2306s
+    Token 199: ' we' @ 673.5698s
+    Token 200: ' consider' @ 676.9110s
+    Token 201: ' the' @ 680.2507s
+    Token 202: ' most' @ 683.5905s
+    Token 203: ' straightforward' @ 686.9289s
+    Token 204: ' answer' @ 690.2674s
+    Token 205: ',' @ 693.6055s
+    Token 206: ' '' @ 696.9445s
+    Token 207: 'H' @ 700.2841s
+    Token 208: 'ATE' @ 703.6225s
+    Token 209: ''' @ 706.9609s
+    Token 210: ' is' @ 710.3005s
+    Token 211: ' a' @ 713.6397s
+    Token 212: ' strong' @ 716.9785s
+    Token 213: ' candidate' @ 720.3178s
+    Token 214: '.\n\n' @ 723.6568s
+    Token 215: '**' @ 726.9968s
+    Token 216: 'Answer' @ 730.3393s
+    Token 217: '**:' @ 733.6793s
+    Token 218: ' The' @ 737.0184s
+    Token 219: ' word' @ 740.3575s
+    Token 220: ' that' @ 743.6973s
+    Token 221: ' can' @ 747.0374s
+    Token 222: ' be' @ 750.3777s
+    Token 223: ' formed' @ 753.7163s
+    Token 224: ' by' @ 757.0553s
+    Token 225: ' rearr' @ 760.3944s
+    Token 226: 'anging' @ 763.7345s
+    Token 227: ' the' @ 767.0743s
+    Token 228: ' letters' @ 770.4128s
+    Token 229: ' in' @ 773.7523s
+    Token 230: ' '' @ 777.0934s
+    Token 231: 'HE' @ 780.4333s
+    Token 232: 'ART' @ 783.7724s
+    Token 233: ''' @ 787.1116s
+    Token 234: ' is' @ 790.4514s
+    Token 235: ' "' @ 793.7928s
+    Token 236: 'H' @ 797.1338s
+    Token 237: 'ATE' @ 800.4748s
+    Token 238: '."' @ 803.8144s
+    Token 239: ' \n\n' @ 807.1518s
+    Token 240: '**' @ 810.4918s
+    Token 241: 'Explanation' @ 813.8314s
+    Token 242: '**:' @ 817.1705s
+    Token 243: ' By' @ 820.5078s
+    Token 244: ' systematically' @ 823.8474s
+    Token 245: ' checking' @ 827.1874s
+    Token 246: ' the' @ 830.5263s
+    Token 247: ' letters' @ 833.8646s
+    Token 248: ' and' @ 837.2050s
+    Token 249: ' possible' @ 840.5455s
+    Token 250: ' combinations' @ 843.8862s
+    Token 251: ',' @ 847.2248s
+    Token 252: ' we' @ 850.5656s
+    Token 253: ' determine' @ 853.9066s
+    Token 254: ' that' @ 857.2475s
+    Token 255: ' '' @ 860.5875s
+    Token 256: 'H' @ 863.9260s
+    Token 257: 'ATE' @ 867.2639s
+    Token 258: ''' @ 870.6026s
+    Token 259: ' is' @ 873.9417s
+    Token 260: ' a' @ 877.2816s
+    Token 261: ' valid' @ 880.6203s
+    Token 262: ' and' @ 883.9598s
+    Token 263: ' common' @ 887.2988s
+    Token 264: ' word' @ 890.6399s
+    Token 265: ' formed' @ 893.9805s
+    Token 266: ' from' @ 897.3203s
+    Token 267: ' the' @ 900.6605s
+    Token 268: ' letters' @ 903.9998s
+    Token 269: ' in' @ 907.3387s
+    Token 270: ' '' @ 910.6775s
+    Token 271: 'HE' @ 914.0164s
+    Token 272: 'ART' @ 917.3563s
+    Token 273: '.'' @ 920.6945s
+  完成: 总时间=924.0355s, TTFT=28.9554s, TPOT=3.2785s, Tokens=273
+
+=== 请求 8/10 - 任务: ruin_names ===
+📝 Prompt (length=2059):
+
+Task: 名字推理任务
+Task Name: ruin_names
+
+Instructions: Please solve the following problem step by step. Think carefully and provide a clear, logical answer.
+
+Problem: If you rearrange the letters in 'LISTEN', what word do you get?
+
+Please provide your answer and explain your reasoning process.
+
+
+Additional Context:
+This is a complex reasoning task that requires careful analysis. You should:
+1. Read the problem carefully
+2. Identify the key information
+3. Apply logical reasoning
+4. Consider alternative interpretations
+5. Provide a well-reasoned answer
+
+The problem involves multiple steps of reasoning and may require you to consider various factors before arriving at the correct answer. Take your time to think through each step carefully.
+
+Remember to:
+- Break down complex problems into smaller parts
+- Consider all given information
+- Apply logical rules consistently
+- Check your reasoning for errors
+- Provide clear explanations for your answer
+
+Now, please solve the problem:
+
+
+Additional reasoning guidelines:
+- Pay attention to details in the problem statement
+- Consider edge cases and exceptions
+- Use systematic approaches to problem-solving
+- Verify your answer makes logical sense
+- Consider alternative interpretations of the problem
+
+The key to solving this type of problem is to be methodical and thorough in your analysis.
+
+
+Additional reasoning guidelines:
+- Pay attention to details in the problem statement
+- Consider edge cases and exceptions
+- Use systematic approaches to problem-solving
+- Verify your answer makes logical sense
+- Consider alternative interpretations of the problem
+
+The key to solving this type of problem is to be methodical and thorough in your analysis.
+
+
+Additional reasoning guidelines:
+- Pay attention to details in the problem statement
+- Consider edge cases and exceptions
+- Use systematic approaches to problem-solving
+- Verify your answer makes logical sense
+- Consider alternative interpretations of the problem
+
+The key to solving this type of problem is to be methodical and thorough in your analysis.
+
+    Token 1: '</think>' @ 22.6790s
+    Token 2: '\n\n' @ 26.0184s
+    Token 3: 'To' @ 29.3589s
+    Token 4: ' solve' @ 32.6978s
+    Token 5: ' the' @ 36.0368s
+    Token 6: ' problem' @ 39.3768s
+    Token 7: ' of' @ 42.7157s
+    Token 8: ' rearr' @ 46.0569s
+    Token 9: 'anging' @ 49.3959s
+    Token 10: ' the' @ 52.7339s
+    Token 11: ' letters' @ 56.0727s
+    Token 12: ' in' @ 59.4113s
+    Token 13: ' '' @ 62.7502s
+    Token 14: 'LIST' @ 66.0883s
+    Token 15: 'EN' @ 69.4279s
+    Token 16: ''' @ 72.7681s
+    Token 17: ' to' @ 76.1085s
+    Token 18: ' form' @ 79.4484s
+    Token 19: ' a' @ 82.7880s
+    Token 20: ' new' @ 86.1281s
+    Token 21: ' word' @ 89.4680s
+    Token 22: ',' @ 92.8069s
+    Token 23: ' I' @ 96.1459s
+    Token 24: ' will' @ 99.4838s
+    Token 25: ' follow' @ 102.8229s
+    Token 26: ' a' @ 106.1615s
+    Token 27: ' systematic' @ 109.5015s
+    Token 28: ' approach' @ 112.8433s
+    Token 29: ':\n\n' @ 116.1827s
+    Token 30: '1' @ 119.5219s
+    Token 31: '.' @ 122.8608s
+    Token 32: ' **' @ 126.2010s
+    Token 33: 'Break' @ 129.5405s
+    Token 34: ' Down' @ 132.8809s
+    Token 35: ' the' @ 136.2199s
+    Token 36: ' Problem' @ 139.5586s
+    Token 37: '**:' @ 142.8976s
+    Token 38: ' The' @ 146.2366s
+    Token 39: ' task' @ 149.5758s
+    Token 40: ' is' @ 152.9143s
+    Token 41: ' to' @ 156.2545s
+    Token 42: ' rearr' @ 159.5944s
+    Token 43: 'ange' @ 162.9332s
+    Token 44: ' the' @ 166.2716s
+    Token 45: ' letters' @ 169.6114s
+    Token 46: ' of' @ 172.9502s
+    Token 47: ' the' @ 176.2889s
+    Token 48: ' word' @ 179.6285s
+    Token 49: ' '' @ 182.9675s
+    Token 50: 'LIST' @ 186.3091s
+    Token 51: 'EN' @ 189.6481s
+    Token 52: ''' @ 192.9874s
+    Token 53: ' to' @ 196.3274s
+    Token 54: ' form' @ 199.6674s
+    Token 55: ' a' @ 203.0090s
+    Token 56: ' different' @ 206.3486s
+    Token 57: ' word' @ 209.6886s
+    Token 58: '.' @ 213.0280s
+    Token 59: ' This' @ 216.3679s
+    Token 60: ' is' @ 219.7059s
+    Token 61: ' a' @ 223.0448s
+    Token 62: ' type' @ 226.3840s
+    Token 63: ' of' @ 229.7252s
+    Token 64: ' an' @ 233.0670s
+    Token 65: 'agram' @ 236.4082s
+    Token 66: '.\n\n' @ 239.7469s
+    Token 67: '2' @ 243.0861s
+    Token 68: '.' @ 246.4257s
+    Token 69: ' **' @ 249.7653s
+    Token 70: 'List' @ 253.1048s
+    Token 71: ' the' @ 256.4458s
+    Token 72: ' Letters' @ 259.7858s
+    Token 73: '**:' @ 263.1240s
+    Token 74: ' First' @ 266.4630s
+    Token 75: ',' @ 269.8006s
+    Token 76: ' I' @ 273.1391s
+    Token 77: ' will' @ 276.4778s
+    Token 78: ' list' @ 279.8168s
+    Token 79: ' out' @ 283.1549s
+    Token 80: ' all' @ 286.4937s
+    Token 81: ' the' @ 289.8318s
+    Token 82: ' letters' @ 293.1703s
+    Token 83: ' in' @ 296.5084s
+    Token 84: ' '' @ 299.8471s
+    Token 85: 'LIST' @ 303.1857s
+    Token 86: 'EN' @ 306.5248s
+    Token 87: '':\n' @ 309.8639s
+    Token 88: '  ' @ 313.2037s
+    Token 89: ' -' @ 316.5412s
+    Token 90: ' L' @ 319.8807s
+    Token 91: ',' @ 323.2191s
+    Token 92: ' I' @ 326.5589s
+    Token 93: ',' @ 329.8968s
+    Token 94: ' S' @ 333.2359s
+    Token 95: ',' @ 336.5748s
+    Token 96: ' T' @ 339.9125s
+    Token 97: ',' @ 343.2506s
+    Token 98: ' E' @ 346.5887s
+    Token 99: ',' @ 349.9277s
+    Token 100: ' N' @ 353.2668s
+    Token 101: '\n\n' @ 356.6049s
+    Token 102: '3' @ 359.9436s
+    Token 103: '.' @ 363.2826s
+    Token 104: ' **' @ 366.6218s
+    Token 105: 'Ident' @ 369.9609s
+    Token 106: 'ify' @ 373.2987s
+    Token 107: ' Possible' @ 376.6366s
+    Token 108: ' Words' @ 379.9742s
+    Token 109: '**:' @ 383.3140s
+    Token 110: ' Next' @ 386.6526s
+    Token 111: ',' @ 389.9905s
+    Token 112: ' I' @ 393.3308s
+    Token 113: ' will' @ 396.6687s
+    Token 114: ' think' @ 400.0070s
+    Token 115: ' of' @ 403.3456s
+    Token 116: ' words' @ 406.6838s
+    Token 117: ' that' @ 410.0228s
+    Token 118: ' can' @ 413.3627s
+    Token 119: ' be' @ 416.7008s
+    Token 120: ' formed' @ 420.0391s
+    Token 121: ' using' @ 423.3773s
+    Token 122: ' these' @ 426.7159s
+    Token 123: ' letters' @ 430.0546s
+    Token 124: '.' @ 433.3917s
+    Token 125: ' Since' @ 436.7308s
+    Token 126: ' '' @ 440.0708s
+    Token 127: 'LIST' @ 443.4097s
+    Token 128: 'EN' @ 446.7493s
+    Token 129: ''' @ 450.0882s
+    Token 130: ' has' @ 453.4252s
+    Token 131: ' six' @ 456.7637s
+    Token 132: ' letters' @ 460.1027s
+    Token 133: ',' @ 463.4419s
+    Token 134: ' the' @ 466.7807s
+    Token 135: ' target' @ 470.1189s
+    Token 136: ' word' @ 473.4582s
+    Token 137: ' should' @ 476.7977s
+    Token 138: ' also' @ 480.1358s
+    Token 139: ' be' @ 483.4758s
+    Token 140: ' a' @ 486.8148s
+    Token 141: ' six' @ 490.1539s
+    Token 142: '-letter' @ 493.4916s
+    Token 143: ' word' @ 496.8297s
+    Token 144: '.\n\n' @ 500.1698s
+    Token 145: '4' @ 503.5081s
+    Token 146: '.' @ 506.8474s
+    Token 147: ' **' @ 510.1851s
+    Token 148: 'Consider' @ 513.5247s
+    Token 149: ' Common' @ 516.8641s
+    Token 150: ' An' @ 520.2042s
+    Token 151: 'agrams' @ 523.5437s
+    Token 152: '**:' @ 526.8822s
+    Token 153: ' A' @ 530.2217s
+    Token 154: ' common' @ 533.5609s
+    Token 155: ' an' @ 536.8998s
+    Token 156: 'agram' @ 540.2399s
+    Token 157: ' for' @ 543.5790s
+    Token 158: ' '' @ 546.9181s
+    Token 159: 'LIST' @ 550.2577s
+    Token 160: 'EN' @ 553.5958s
+    Token 161: ''' @ 556.9346s
+    Token 162: ' is' @ 560.2747s
+    Token 163: ' '' @ 563.6127s
+    Token 164: 'S' @ 566.9510s
+    Token 165: 'ILE' @ 570.2891s
+    Token 166: 'NT' @ 573.6268s
+    Token 167: ''.' @ 576.9653s
+    Token 168: ' Let' @ 580.3041s
+    Token 169: ''s' @ 583.6416s
+    Token 170: ' verify' @ 586.9802s
+    Token 171: ' if' @ 590.3186s
+    Token 172: ' this' @ 593.6577s
+    Token 173: ' uses' @ 596.9978s
+    Token 174: ' all' @ 600.3360s
+    Token 175: ' the' @ 603.6740s
+    Token 176: ' letters' @ 607.0137s
+    Token 177: ':\n' @ 610.3526s
+    Token 178: '  ' @ 613.6916s
+    Token 179: ' -' @ 617.0295s
+    Token 180: ' S' @ 620.3675s
+    Token 181: ',' @ 623.7048s
+    Token 182: ' I' @ 627.0436s
+    Token 183: ',' @ 630.3808s
+    Token 184: ' L' @ 633.7208s
+    Token 185: ',' @ 637.0577s
+    Token 186: ' E' @ 640.3971s
+    Token 187: ',' @ 643.7358s
+    Token 188: ' N' @ 647.0752s
+    Token 189: ',' @ 650.4134s
+    Token 190: ' T' @ 653.7510s
+    Token 191: '\n\n' @ 657.0906s
+    Token 192: '  ' @ 660.4301s
+    Token 193: ' Compar' @ 663.7698s
+    Token 194: 'ing' @ 667.1082s
+    Token 195: ' this' @ 670.4477s
+    Token 196: ' with' @ 673.7857s
+    Token 197: ' the' @ 677.1247s
+    Token 198: ' letters' @ 680.4638s
+    Token 199: ' in' @ 683.8037s
+    Token 200: ' '' @ 687.1421s
+    Token 201: 'LIST' @ 690.4828s
+    Token 202: 'EN' @ 693.8208s
+    Token 203: '',' @ 697.1582s
+    Token 204: ' all' @ 700.4968s
+    Token 205: ' letters' @ 703.8358s
+    Token 206: ' match' @ 707.1746s
+    Token 207: ' exactly' @ 710.5131s
+    Token 208: '.\n\n' @ 713.8527s
+    Token 209: '5' @ 717.1928s
+    Token 210: '.' @ 720.5317s
+    Token 211: ' **' @ 723.8719s
+    Token 212: 'Check' @ 727.2110s
+    Token 213: ' for' @ 730.5509s
+    Token 214: ' Other' @ 733.8907s
+    Token 215: ' Poss' @ 737.2301s
+    Token 216: 'ibilities' @ 740.5690s
+    Token 217: '**:' @ 743.9087s
+    Token 218: ' To' @ 747.2475s
+    Token 219: ' ensure' @ 750.5857s
+    Token 220: ' there' @ 753.9257s
+    Token 221: ' are' @ 757.2660s
+    Token 222: ' no' @ 760.6038s
+    Token 223: ' other' @ 763.9438s
+    Token 224: ' valid' @ 767.2817s
+    Token 225: ' words' @ 770.6201s
+    Token 226: ',' @ 773.9597s
+    Token 227: ' I' @ 777.2988s
+    Token 228: ' can' @ 780.6391s
+    Token 229: ' consider' @ 783.9777s
+    Token 230: ' other' @ 787.3167s
+    Token 231: ' combinations' @ 790.6557s
+    Token 232: '.' @ 793.9948s
+    Token 233: ' However' @ 797.3358s
+    Token 234: ',' @ 800.6757s
+    Token 235: ' '' @ 804.0141s
+    Token 236: 'S' @ 807.3531s
+    Token 237: 'ILE' @ 810.6927s
+    Token 238: 'NT' @ 814.0327s
+    Token 239: ''' @ 817.3716s
+    Token 240: ' is' @ 820.7098s
+    Token 241: ' the' @ 824.0493s
+    Token 242: ' most' @ 827.3891s
+    Token 243: ' straightforward' @ 830.7278s
+    Token 244: ' and' @ 834.0676s
+    Token 245: ' commonly' @ 837.4060s
+    Token 246: ' recognized' @ 840.7437s
+    Token 247: ' an' @ 844.0826s
+    Token 248: 'agram' @ 847.4207s
+    Token 249: ' of' @ 850.7608s
+    Token 250: ' '' @ 854.1010s
+    Token 251: 'LIST' @ 857.4401s
+    Token 252: 'EN' @ 860.7798s
+    Token 253: ''.\n\n' @ 864.1187s
+    Token 254: '6' @ 867.4577s
+    Token 255: '.' @ 870.7961s
+    Token 256: ' **' @ 874.1346s
+    Token 257: 'Verify' @ 877.4737s
+    Token 258: ' the' @ 880.8126s
+    Token 259: ' Answer' @ 884.1507s
+    Token 260: '**:' @ 887.4889s
+    Token 261: ' Double' @ 890.8260s
+    Token 262: '-check' @ 894.1651s
+    Token 263: 'ing' @ 897.5028s
+    Token 264: ' the' @ 900.8415s
+    Token 265: ' letters' @ 904.1801s
+    Token 266: ' confirms' @ 907.5198s
+    Token 267: ' that' @ 910.8596s
+    Token 268: ' '' @ 914.1987s
+    Token 269: 'S' @ 917.5367s
+    Token 270: 'ILE' @ 920.8766s
+    Token 271: 'NT' @ 924.2149s
+    Token 272: ''' @ 927.5528s
+    Token 273: ' uses' @ 930.8912s
+    Token 274: ' each' @ 934.2287s
+    Token 275: ' letter' @ 937.5686s
+    Token 276: ' from' @ 940.9067s
+    Token 277: ' '' @ 944.2462s
+    Token 278: 'LIST' @ 947.5848s
+    Token 279: 'EN' @ 950.9237s
+    Token 280: ''' @ 954.2630s
+    Token 281: ' exactly' @ 957.6016s
+    Token 282: ' once' @ 960.9421s
+    Token 283: ' without' @ 964.2806s
+    Token 284: ' any' @ 967.6198s
+    Token 285: ' additions' @ 970.9587s
+    Token 286: ' or' @ 974.2977s
+    Token 287: ' o' @ 977.6366s
+    Token 288: 'missions' @ 980.9767s
+    Token 289: '.\n\n' @ 984.3156s
+    Token 290: '**' @ 987.6547s
+    Token 291: 'Answer' @ 990.9937s
+    Token 292: '**:' @ 994.3330s
+    Token 293: ' The' @ 997.6717s
+    Token 294: ' word' @ 1001.0091s
+    Token 295: ' obtained' @ 1004.3491s
+    Token 296: ' by' @ 1007.6892s
+    Token 297: ' rearr' @ 1011.0291s
+    Token 298: 'anging' @ 1014.3698s
+    Token 299: ' the' @ 1017.7092s
+    Token 300: ' letters' @ 1021.0498s
+    Token 301: ' in' @ 1024.3888s
+    Token 302: ' '' @ 1027.7277s
+    Token 303: 'LIST' @ 1031.0678s
+    Token 304: 'EN' @ 1034.4059s
+    Token 305: ''' @ 1037.7458s
+    Token 306: ' is' @ 1041.0849s
+    Token 307: ' '' @ 1044.4247s
+    Token 308: 'S' @ 1047.7647s
+    Token 309: 'ILE' @ 1051.1037s
+    Token 310: 'NT' @ 1054.4421s
+    Token 311: ''.' @ 1057.7821s
+  完成: 总时间=1061.1209s, TTFT=22.6790s, TPOT=3.3390s, Tokens=311
+
+=== 请求 9/10 - 任务: navigate ===
+📝 Prompt (length=2142):
+
+Task: 导航任务
+Task Name: navigate
+
+Instructions: Please solve the following problem step by step. Think carefully and provide a clear, logical answer.
+
+Problem: You are at point A. To get to point B, you need to go 3 blocks north, then 2 blocks east, then 1 block south. What direction should you start walking?
+
+Please provide your answer and explain your reasoning process.
+
+
+Additional Context:
+This is a complex reasoning task that requires careful analysis. You should:
+1. Read the problem carefully
+2. Identify the key information
+3. Apply logical reasoning
+4. Consider alternative interpretations
+5. Provide a well-reasoned answer
+
+The problem involves multiple steps of reasoning and may require you to consider various factors before arriving at the correct answer. Take your time to think through each step carefully.
+
+Remember to:
+- Break down complex problems into smaller parts
+- Consider all given information
+- Apply logical rules consistently
+- Check your reasoning for errors
+- Provide clear explanations for your answer
+
+Now, please solve the problem:
+
+
+Additional reasoning guidelines:
+- Pay attention to details in the problem statement
+- Consider edge cases and exceptions
+- Use systematic approaches to problem-solving
+- Verify your answer makes logical sense
+- Consider alternative interpretations of the problem
+
+The key to solving this type of problem is to be methodical and thorough in your analysis.
+
+
+Additional reasoning guidelines:
+- Pay attention to details in the problem statement
+- Consider edge cases and exceptions
+- Use systematic approaches to problem-solving
+- Verify your answer makes logical sense
+- Consider alternative interpretations of the problem
+
+The key to solving this type of problem is to be methodical and thorough in your analysis.
+
+
+Additional reasoning guidelines:
+- Pay attention to details in the problem statement
+- Consider edge cases and exceptions
+- Use systematic approaches to problem-solving
+- Verify your answer makes logical sense
+- Consider alternative interpretations of the problem
+
+The key to solving this type of problem is to be methodical and thorough in your analysis.
+
+    Token 1: '</think>' @ 3.2207s
+    Token 2: '\n\n' @ 6.5585s
+    Token 3: 'To' @ 9.8965s
+    Token 4: ' determine' @ 13.2355s
+    Token 5: ' the' @ 16.5736s
+    Token 6: ' starting' @ 19.9136s
+    Token 7: ' direction' @ 23.2516s
+    Token 8: ' from' @ 26.5890s
+    Token 9: ' point' @ 29.9268s
+    Token 10: ' A' @ 33.2657s
+    Token 11: ' to' @ 36.6040s
+    Token 12: ' reach' @ 39.9436s
+    Token 13: ' point' @ 43.2810s
+    Token 14: ' B' @ 46.6196s
+    Token 15: ',' @ 49.9568s
+    Token 16: ' follow' @ 53.2956s
+    Token 17: ' these' @ 56.6350s
+    Token 18: ' steps' @ 59.9739s
+    Token 19: ':\n\n' @ 63.3142s
+    Token 20: '1' @ 66.6530s
+    Token 21: '.' @ 69.9920s
+    Token 22: ' **' @ 73.3337s
+    Token 23: 'Under' @ 76.6750s
+    Token 24: 'stand' @ 80.0145s
+    Token 25: ' the' @ 83.3546s
+    Token 26: ' Directions' @ 86.6936s
+    Token 27: ':' @ 90.0335s
+    Token 28: '**\n' @ 93.3726s
+    Token 29: '  ' @ 96.7138s
+    Token 30: ' -' @ 100.0546s
+    Token 31: ' **' @ 103.3960s
+    Token 32: 'North' @ 106.7357s
+    Token 33: ':**' @ 110.0746s
+    Token 34: ' Moving' @ 113.4138s
+    Token 35: ' upwards' @ 116.7538s
+    Token 36: ' on' @ 120.0920s
+    Token 37: ' a' @ 123.4325s
+    Token 38: ' map' @ 126.7736s
+    Token 39: '.\n' @ 130.1161s
+    Token 40: '  ' @ 133.4575s
+    Token 41: ' -' @ 136.7976s
+    Token 42: ' **' @ 140.1378s
+    Token 43: 'East' @ 143.4768s
+    Token 44: ':**' @ 146.8168s
+    Token 45: ' Moving' @ 150.1576s
+    Token 46: ' to' @ 153.4962s
+    Token 47: ' the' @ 156.8355s
+    Token 48: ' right' @ 160.1741s
+    Token 49: '.\n' @ 163.5146s
+    Token 50: '  ' @ 166.8545s
+    Token 51: ' -' @ 170.1949s
+    Token 52: ' **' @ 173.5356s
+    Token 53: 'South' @ 176.8751s
+    Token 54: ':**' @ 180.2147s
+    Token 55: ' Moving' @ 183.5547s
+    Token 56: ' downwards' @ 186.8947s
+    Token 57: '.\n\n' @ 190.2343s
+    Token 58: '2' @ 193.5747s
+    Token 59: '.' @ 196.9137s
+    Token 60: ' **' @ 200.2529s
+    Token 61: 'Break' @ 203.5915s
+    Token 62: ' Down' @ 206.9306s
+    Token 63: ' the' @ 210.2697s
+    Token 64: ' Mov' @ 213.6085s
+    Token 65: 'ements' @ 216.9520s
+    Token 66: ':' @ 220.2916s
+    Token 67: '**\n' @ 223.6337s
+    Token 68: '  ' @ 226.9736s
+    Token 69: ' -' @ 230.3140s
+    Token 70: ' **' @ 233.6551s
+    Token 71: '3' @ 236.9966s
+    Token 72: ' blocks' @ 240.3361s
+    Token 73: ' north' @ 243.6757s
+    Token 74: ':**' @ 247.0160s
+    Token 75: ' Start' @ 250.3557s
+    Token 76: ' by' @ 253.6958s
+    Token 77: ' moving' @ 257.0341s
+    Token 78: ' north' @ 260.3746s
+    Token 79: '.\n' @ 263.7147s
+    Token 80: '  ' @ 267.0550s
+    Token 81: ' -' @ 270.3955s
+    Token 82: ' **' @ 273.7357s
+    Token 83: '2' @ 277.0759s
+    Token 84: ' blocks' @ 280.4158s
+    Token 85: ' east' @ 283.7547s
+    Token 86: ':**' @ 287.0935s
+    Token 87: ' After' @ 290.4324s
+    Token 88: ' moving' @ 293.7741s
+    Token 89: ' north' @ 297.1137s
+    Token 90: ',' @ 300.4547s
+    Token 91: ' turn' @ 303.7958s
+    Token 92: ' east' @ 307.1339s
+    Token 93: '.\n' @ 310.4749s
+    Token 94: '  ' @ 313.8147s
+    Token 95: ' -' @ 317.1548s
+    Token 96: ' **' @ 320.4946s
+    Token 97: '1' @ 323.8335s
+    Token 98: ' block' @ 327.1738s
+    Token 99: ' south' @ 330.5128s
+    Token 100: ':**' @ 333.8536s
+    Token 101: ' After' @ 337.1947s
+    Token 102: ' moving' @ 340.5361s
+    Token 103: ' east' @ 343.8772s
+    Token 104: ',' @ 347.2170s
+    Token 105: ' turn' @ 350.5567s
+    Token 106: ' south' @ 353.8965s
+    Token 107: '.\n\n' @ 357.2377s
+    Token 108: '3' @ 360.5770s
+    Token 109: '.' @ 363.9159s
+    Token 110: ' **' @ 367.2567s
+    Token 111: 'D' @ 370.5986s
+    Token 112: 'etermine' @ 373.9408s
+    Token 113: ' the' @ 377.2809s
+    Token 114: ' Starting' @ 380.6216s
+    Token 115: ' Direction' @ 383.9616s
+    Token 116: ':' @ 387.3020s
+    Token 117: '**\n' @ 390.6427s
+    Token 118: '  ' @ 393.9835s
+    Token 119: ' -' @ 397.3229s
+    Token 120: ' The' @ 400.6629s
+    Token 121: ' first' @ 404.0030s
+    Token 122: ' movement' @ 407.3426s
+    Token 123: ' is' @ 410.6827s
+    Token 124: ' ' @ 414.0226s
+    Token 125: '3' @ 417.3637s
+    Token 126: ' blocks' @ 420.7026s
+    Token 127: ' north' @ 424.0440s
+    Token 128: '.' @ 427.3843s
+    Token 129: ' Therefore' @ 430.7237s
+    Token 130: ',' @ 434.0641s
+    Token 131: ' you' @ 437.4048s
+    Token 132: ' should' @ 440.7446s
+    Token 133: ' start' @ 444.0850s
+    Token 134: ' walking' @ 447.4262s
+    Token 135: ' **' @ 450.7668s
+    Token 136: 'north' @ 454.1067s
+    Token 137: '**' @ 457.4476s
+    Token 138: '.\n\n' @ 460.7868s
+    Token 139: '**' @ 464.1268s
+    Token 140: 'Answer' @ 467.4667s
+    Token 141: ':**' @ 470.8085s
+    Token 142: ' You' @ 474.1497s
+    Token 143: ' should' @ 477.4907s
+    Token 144: ' start' @ 480.8307s
+    Token 145: ' walking' @ 484.1706s
+    Token 146: ' north' @ 487.5105s
+    Token 147: '.' @ 490.8525s
+  完成: 总时间=494.1935s, TTFT=3.2207s, TPOT=3.3399s, Tokens=147
+
+=== 请求 10/10 - 任务: navigate ===
+📝 Prompt (length=2110):
+
+Task: 导航任务
+Task Name: navigate
+
+Instructions: Please solve the following problem step by step. Think carefully and provide a clear, logical answer.
+
+Problem: Starting from home, you walk 2 blocks west, then 3 blocks north, then 1 block east. How many blocks are you from home?
+
+Please provide your answer and explain your reasoning process.
+
+
+Additional Context:
+This is a complex reasoning task that requires careful analysis. You should:
+1. Read the problem carefully
+2. Identify the key information
+3. Apply logical reasoning
+4. Consider alternative interpretations
+5. Provide a well-reasoned answer
+
+The problem involves multiple steps of reasoning and may require you to consider various factors before arriving at the correct answer. Take your time to think through each step carefully.
+
+Remember to:
+- Break down complex problems into smaller parts
+- Consider all given information
+- Apply logical rules consistently
+- Check your reasoning for errors
+- Provide clear explanations for your answer
+
+Now, please solve the problem:
+
+
+Additional reasoning guidelines:
+- Pay attention to details in the problem statement
+- Consider edge cases and exceptions
+- Use systematic approaches to problem-solving
+- Verify your answer makes logical sense
+- Consider alternative interpretations of the problem
+
+The key to solving this type of problem is to be methodical and thorough in your analysis.
+
+
+Additional reasoning guidelines:
+- Pay attention to details in the problem statement
+- Consider edge cases and exceptions
+- Use systematic approaches to problem-solving
+- Verify your answer makes logical sense
+- Consider alternative interpretations of the problem
+
+The key to solving this type of problem is to be methodical and thorough in your analysis.
+
+
+Additional reasoning guidelines:
+- Pay attention to details in the problem statement
+- Consider edge cases and exceptions
+- Use systematic approaches to problem-solving
+- Verify your answer makes logical sense
+- Consider alternative interpretations of the problem
+
+The key to solving this type of problem is to be methodical and thorough in your analysis.
+
+    Token 1: '</think>' @ 3.3533s
+    Token 2: '\n\n' @ 6.6933s
+    Token 3: 'To' @ 10.0334s
+    Token 4: ' solve' @ 13.3731s
+    Token 5: ' the' @ 16.7129s
+    Token 6: ' problem' @ 20.0533s
+    Token 7: ',' @ 23.3930s
+    Token 8: ' let' @ 26.7321s
+    Token 9: ''s' @ 30.0710s
+    Token 10: ' break' @ 33.4110s
+    Token 11: ' it' @ 36.7500s
+    Token 12: ' down' @ 40.0888s
+    Token 13: ' step' @ 43.4281s
+    Token 14: ' by' @ 46.7684s
+    Token 15: ' step' @ 50.1095s
+    Token 16: ':\n\n' @ 53.4491s
+    Token 17: '1' @ 56.7873s
+    Token 18: '.' @ 60.1274s
+    Token 19: ' **' @ 63.4680s
+    Token 20: 'Starting' @ 66.8069s
+    Token 21: ' Point' @ 70.1459s
+    Token 22: '**:' @ 73.4863s
+    Token 23: ' Home' @ 76.8249s
+    Token 24: '.\n\n' @ 80.1639s
+    Token 25: '2' @ 83.5053s
+    Token 26: '.' @ 86.8460s
+    Token 27: ' **' @ 90.1861s
+    Token 28: 'First' @ 93.5270s
+    Token 29: ' Movement' @ 96.8676s
+    Token 30: '**:' @ 100.2077s
+    Token 31: ' Walk' @ 103.5471s
+    Token 32: ' ' @ 106.8861s
+    Token 33: '2' @ 110.2261s
+    Token 34: ' blocks' @ 113.5643s
+    Token 35: ' west' @ 116.9062s
+    Token 36: '.\n' @ 120.2461s
+    Token 37: '  ' @ 123.5861s
+    Token 38: ' -' @ 126.9250s
+    Token 39: ' This' @ 130.2644s
+    Token 40: ' takes' @ 133.6030s
+    Token 41: ' you' @ 136.9421s
+    Token 42: ' ' @ 140.2801s
+    Token 43: '2' @ 143.6204s
+    Token 44: ' blocks' @ 146.9596s
+    Token 45: ' away' @ 150.3003s
+    Token 46: ' from' @ 153.6411s
+    Token 47: ' home' @ 156.9804s
+    Token 48: ' in' @ 160.3208s
+    Token 49: ' the' @ 163.6610s
+    Token 50: ' west' @ 166.9999s
+    Token 51: ' direction' @ 170.3403s
+    Token 52: '.\n\n' @ 173.6791s
+    Token 53: '3' @ 177.0179s
+    Token 54: '.' @ 180.3564s
+    Token 55: ' **' @ 183.6963s
+    Token 56: 'Second' @ 187.0341s
+    Token 57: ' Movement' @ 190.3743s
+    Token 58: '**:' @ 193.7145s
+    Token 59: ' Then' @ 197.0529s
+    Token 60: ',' @ 200.3921s
+    Token 61: ' walk' @ 203.7330s
+    Token 62: ' ' @ 207.0709s
+    Token 63: '3' @ 210.4102s
+    Token 64: ' blocks' @ 213.7504s
+    Token 65: ' north' @ 217.0901s
+    Token 66: '.\n' @ 220.4288s
+    Token 67: '  ' @ 223.7684s
+    Token 68: ' -' @ 227.1077s
+    Token 69: ' From' @ 230.4461s
+    Token 70: ' the' @ 233.7861s
+    Token 71: ' current' @ 237.1299s
+    Token 72: ' position' @ 240.4703s
+    Token 73: ',' @ 243.8094s
+    Token 74: ' moving' @ 247.1494s
+    Token 75: ' north' @ 250.4899s
+    Token 76: ' doesn' @ 253.8290s
+    Token 77: ''t' @ 257.1680s
+    Token 78: ' affect' @ 260.5090s
+    Token 79: ' the' @ 263.8471s
+    Token 80: ' east' @ 267.1863s
+    Token 81: '-west' @ 270.5260s
+    Token 82: ' distance' @ 273.8663s
+    Token 83: ' from' @ 277.2060s
+    Token 84: ' home' @ 280.5461s
+    Token 85: ',' @ 283.8852s
+    Token 86: ' so' @ 287.2252s
+    Token 87: ' you' @ 290.5659s
+    Token 88: ''re' @ 293.9057s
+    Token 89: ' still' @ 297.2445s
+    Token 90: ' ' @ 300.5841s
+    Token 91: '2' @ 303.9248s
+    Token 92: ' blocks' @ 307.2646s
+    Token 93: ' west' @ 310.6046s
+    Token 94: ' but' @ 313.9436s
+    Token 95: ' now' @ 317.2831s
+    Token 96: ' ' @ 320.6231s
+    Token 97: '3' @ 323.9633s
+    Token 98: ' blocks' @ 327.3031s
+    Token 99: ' north' @ 330.6426s
+    Token 100: '.\n\n' @ 333.9823s
+    Token 101: '4' @ 337.3228s
+    Token 102: '.' @ 340.6621s
+    Token 103: ' **' @ 344.0015s
+    Token 104: 'Third' @ 347.3403s
+    Token 105: ' Movement' @ 350.6795s
+    Token 106: '**:' @ 354.0193s
+    Token 107: ' Then' @ 357.3604s
+    Token 108: ',' @ 360.7030s
+    Token 109: ' walk' @ 364.0418s
+    Token 110: ' ' @ 367.3806s
+    Token 111: '1' @ 370.7211s
+    Token 112: ' block' @ 374.0599s
+    Token 113: ' east' @ 377.3993s
+    Token 114: '.\n' @ 380.7384s
+    Token 115: '  ' @ 384.0763s
+    Token 116: ' -' @ 387.4167s
+    Token 117: ' Moving' @ 390.7558s
+    Token 118: ' east' @ 394.0953s
+    Token 119: ' reduces' @ 397.4359s
+    Token 120: ' the' @ 400.7749s
+    Token 121: ' west' @ 404.1147s
+    Token 122: 'ward' @ 407.4553s
+    Token 123: ' distance' @ 410.7970s
+    Token 124: '.' @ 414.1384s
+    Token 125: ' Since' @ 417.4790s
+    Token 126: ' you' @ 420.8194s
+    Token 127: ' were' @ 424.1603s
+    Token 128: ' ' @ 427.5021s
+    Token 129: '2' @ 430.8442s
+    Token 130: ' blocks' @ 434.1851s
+    Token 131: ' west' @ 437.5269s
+    Token 132: ',' @ 440.8701s
+    Token 133: ' moving' @ 444.2131s
+    Token 134: ' ' @ 447.5532s
+    Token 135: '1' @ 450.8925s
+    Token 136: ' block' @ 454.2321s
+    Token 137: ' east' @ 457.5710s
+    Token 138: ' brings' @ 460.9111s
+    Token 139: ' you' @ 464.2511s
+    Token 140: ' to' @ 467.5911s
+    Token 141: ' ' @ 470.9311s
+    Token 142: '1' @ 474.2710s
+    Token 143: ' block' @ 477.6111s
+    Token 144: ' west' @ 480.9513s
+    Token 145: ' of' @ 484.2911s
+    Token 146: ' home' @ 487.6314s
+    Token 147: '.\n\n' @ 490.9723s
+    Token 148: '5' @ 494.3119s
+    Token 149: '.' @ 497.6523s
+    Token 150: ' **' @ 500.9905s
+    Token 151: 'Final' @ 504.3308s
+    Token 152: ' Position' @ 507.6690s
+    Token 153: '**' @ 511.0094s
+    Token 154: ':\n' @ 514.3491s
+    Token 155: '  ' @ 517.6892s
+    Token 156: ' -' @ 521.0281s
+    Token 157: ' You' @ 524.3680s
+    Token 158: ' are' @ 527.7074s
+    Token 159: ' ' @ 531.0471s
+    Token 160: '1' @ 534.3880s
+    Token 161: ' block' @ 537.7279s
+    Token 162: ' west' @ 541.0680s
+    Token 163: ' and' @ 544.4081s
+    Token 164: ' ' @ 547.7466s
+    Token 165: '3' @ 551.0850s
+    Token 166: ' blocks' @ 554.4251s
+    Token 167: ' north' @ 557.7662s
+    Token 168: ' from' @ 561.1060s
+    Token 169: ' home' @ 564.4459s
+    Token 170: '.\n\n' @ 567.7859s
+    Token 171: '6' @ 571.1260s
+    Token 172: '.' @ 574.4657s
+    Token 173: ' **' @ 577.8062s
+    Token 174: 'Calcul' @ 581.1460s
+    Token 175: 'ating' @ 584.4868s
+    Token 176: ' Distance' @ 587.8260s
+    Token 177: ' from' @ 591.1661s
+    Token 178: ' Home' @ 594.5060s
+    Token 179: '**' @ 597.8444s
+    Token 180: ':\n' @ 601.1841s
+    Token 181: '  ' @ 604.5232s
+    Token 182: ' -' @ 607.8639s
+    Token 183: ' Use' @ 611.2024s
+    Token 184: ' the' @ 614.5430s
+    Token 185: ' Py' @ 617.8815s
+    Token 186: 'thag' @ 621.2195s
+    Token 187: 'orean' @ 624.5585s
+    Token 188: ' theorem' @ 627.8973s
+    Token 189: ' to' @ 631.2364s
+    Token 190: ' find' @ 634.5741s
+    Token 191: ' the' @ 637.9111s
+    Token 192: ' straight' @ 641.2511s
+    Token 193: '-line' @ 644.5904s
+    Token 194: ' distance' @ 647.9314s
+    Token 195: '.\n' @ 651.2697s
+    Token 196: '  ' @ 654.6098s
+    Token 197: ' -' @ 657.9490s
+    Token 198: ' Distance' @ 661.2883s
+    Token 199: ' =' @ 664.6276s
+    Token 200: ' √' @ 671.3053s
+    Token 201: '(' @ 674.6449s
+    Token 202: '1' @ 677.9831s
+    Token 203: '²' @ 681.3229s
+    Token 204: ' +' @ 684.6638s
+    Token 205: ' ' @ 688.0025s
+    Token 206: '3' @ 691.3421s
+    Token 207: '²' @ 694.6831s
+    Token 208: ')' @ 698.0242s
+    Token 209: ' =' @ 701.3647s
+    Token 210: ' √' @ 708.0423s
+    Token 211: '(' @ 711.3810s
+    Token 212: '1' @ 714.7183s
+    Token 213: ' +' @ 718.0629s
+    Token 214: ' ' @ 721.4037s
+    Token 215: '9' @ 724.7438s
+    Token 216: ')' @ 728.0830s
+    Token 217: ' =' @ 731.4204s
+    Token 218: ' √' @ 738.0987s
+    Token 219: '1' @ 741.4398s
+    Token 220: '0' @ 744.7789s
+    Token 221: ' ≈' @ 751.4595s
+    Token 222: ' ' @ 754.8003s
+    Token 223: '3' @ 758.1418s
+    Token 224: '.' @ 761.4818s
+    Token 225: '1' @ 764.8229s
+    Token 226: '6' @ 768.1627s
+    Token 227: ' blocks' @ 771.5026s
+    Token 228: '.\n\n' @ 774.8430s
+    Token 229: 'However' @ 778.1902s
+    Token 230: ',' @ 781.5310s
+    Token 231: ' since' @ 784.8702s
+    Token 232: ' the' @ 788.2110s
+    Token 233: ' problem' @ 791.5499s
+    Token 234: ' asks' @ 794.8900s
+    Token 235: ' for' @ 798.2310s
+    Token 236: ' the' @ 801.5703s
+    Token 237: ' number' @ 804.9110s
+    Token 238: ' of' @ 808.2501s
+    Token 239: ' blocks' @ 811.5890s
+    Token 240: ' away' @ 814.9284s
+    Token 241: ',' @ 818.2679s
+    Token 242: ' and' @ 821.6069s
+    Token 243: ' typically' @ 824.9461s
+    Token 244: ' in' @ 828.2850s
+    Token 245: ' such' @ 831.6252s
+    Token 246: ' contexts' @ 834.9641s
+    Token 247: ',' @ 838.3030s
+    Token 248: ' we' @ 841.6413s
+    Token 249: ' consider' @ 844.9804s
+    Token 250: ' the' @ 848.3200s
+    Token 251: ' Manhattan' @ 851.6595s
+    Token 252: ' distance' @ 854.9993s
+    Token 253: ' (' @ 858.3375s
+    Token 254: 'sum' @ 861.6789s
+    Token 255: ' of' @ 865.0173s
+    Token 256: ' the' @ 868.3559s
+    Token 257: ' absolute' @ 871.6952s
+    Token 258: ' differences' @ 875.0353s
+    Token 259: ' of' @ 878.3744s
+    Token 260: ' their' @ 881.7131s
+    Token 261: ' coordinates' @ 885.0511s
+    Token 262: ')' @ 888.3920s
+    Token 263: ' rather' @ 891.7312s
+    Token 264: ' than' @ 895.0720s
+    Token 265: ' the' @ 898.4111s
+    Token 266: ' straight' @ 901.7506s
+    Token 267: '-line' @ 905.0908s
+    Token 268: ' distance' @ 908.4310s
+    Token 269: '.' @ 911.7711s
+    Token 270: ' \n\n' @ 915.1100s
+    Token 271: '-' @ 918.4491s
+    Token 272: ' **' @ 921.7871s
+    Token 273: 'Man' @ 925.1307s
+    Token 274: 'hattan' @ 928.4729s
+    Token 275: ' Distance' @ 931.8133s
+    Token 276: '**:' @ 935.1530s
+    Token 277: ' ' @ 938.4950s
+    Token 278: '1' @ 941.8351s
+    Token 279: ' (' @ 945.1763s
+    Token 280: 'west' @ 948.5170s
+    Token 281: ')' @ 951.8573s
+    Token 282: ' +' @ 955.1973s
+    Token 283: ' ' @ 958.5393s
+    Token 284: '3' @ 961.8809s
+    Token 285: ' (' @ 965.2218s
+    Token 286: 'north' @ 968.5610s
+    Token 287: ')' @ 971.9009s
+    Token 288: ' =' @ 975.2409s
+    Token 289: ' ' @ 978.5810s
+    Token 290: '4' @ 981.9219s
+    Token 291: ' blocks' @ 985.2622s
+    Token 292: '.\n\n' @ 988.6023s
+    Token 293: 'But' @ 991.9419s
+    Token 294: ' wait' @ 995.2810s
+    Token 295: ',' @ 998.6213s
+    Token 296: ' no' @ 1001.9631s
+    Token 297: '—' @ 1005.3051s
+    Token 298: 'Man' @ 1008.6477s
+    Token 299: 'hattan' @ 1011.9889s
+    Token 300: ' distance' @ 1015.3303s
+    Token 301: ' is' @ 1018.6708s
+    Token 302: ' the' @ 1022.0110s
+    Token 303: ' sum' @ 1025.3533s
+    Token 304: ' of' @ 1028.6933s
+    Token 305: ' the' @ 1032.0330s
+    Token 306: ' horizontal' @ 1035.3720s
+    Token 307: ' and' @ 1038.7120s
+    Token 308: ' vertical' @ 1042.0520s
+    Token 309: ' distances' @ 1045.3938s
+    Token 310: '.' @ 1048.7360s
+    Token 311: ' However' @ 1052.0769s
+    Token 312: ',' @ 1055.4188s
+    Token 313: ' in' @ 1058.7588s
+    Token 314: ' this' @ 1062.0989s
+    Token 315: ' case' @ 1065.4380s
+    Token 316: ',' @ 1068.7769s
+    Token 317: ' the' @ 1072.1164s
+    Token 318: ' person' @ 1075.4570s
+    Token 319: ' is' @ 1078.7960s
+    Token 320: ' ' @ 1082.1352s
+    Token 321: '1' @ 1085.4757s
+    Token 322: ' block' @ 1088.8143s
+    Token 323: ' west' @ 1092.1540s
+    Token 324: ' and' @ 1095.4940s
+    Token 325: ' ' @ 1098.8331s
+    Token 326: '3' @ 1102.1712s
+    Token 327: ' blocks' @ 1105.5110s
+    Token 328: ' north' @ 1108.8502s
+    Token 329: ',' @ 1112.1892s
+    Token 330: ' so' @ 1115.5283s
+    Token 331: ' the' @ 1118.8669s
+    Token 332: ' Manhattan' @ 1122.2069s
+    Token 333: ' distance' @ 1125.5459s
+    Token 334: ' is' @ 1128.8869s
+    Token 335: ' indeed' @ 1132.2253s
+    Token 336: ' ' @ 1135.5643s
+    Token 337: '1' @ 1138.9032s
+    Token 338: ' +' @ 1142.2436s
+    Token 339: ' ' @ 1145.5809s
+    Token 340: '3' @ 1148.9199s
+    Token 341: ' =' @ 1152.2593s
+    Token 342: ' ' @ 1155.6006s
+    Token 343: '4' @ 1158.9390s
+    Token 344: ' blocks' @ 1162.2837s
+    Token 345: '.\n\n' @ 1165.6252s
+    Token 346: 'But' @ 1168.9668s
+    Token 347: ' another' @ 1172.3070s
+    Token 348: ' way' @ 1175.6488s
+    Token 349: ' to' @ 1178.9885s
+    Token 350: ' think' @ 1182.3311s
+    Token 351: ' about' @ 1185.6710s
+    Token 352: ' it' @ 1189.0103s
+    Token 353: ' is' @ 1192.3500s
+    Token 354: ',' @ 1195.6908s
+    Token 355: ' how' @ 1199.0349s
+    Token 356: ' far' @ 1202.3751s
+    Token 357: ' are' @ 1205.7151s
+    Token 358: ' you' @ 1209.0530s
+    Token 359: ' in' @ 1212.3926s
+    Token 360: ' terms' @ 1215.7311s
+    Token 361: ' of' @ 1219.0683s
+    Token 362: ' blocks' @ 1222.4074s
+    Token 363: ' in' @ 1225.7474s
+    Token 364: ' the' @ 1229.0873s
+    Token 365: ' grid' @ 1232.4268s
+    Token 366: '.' @ 1235.7671s
+    Token 367: ' If' @ 1239.1069s
+    Token 368: ' you' @ 1242.4466s
+    Token 369: ' were' @ 1245.7857s
+    Token 370: ' to' @ 1249.1289s
+    Token 371: ' return' @ 1252.4689s
+    Token 372: ' home' @ 1255.8098s
+    Token 373: ',' @ 1259.1496s
+    Token 374: ' you' @ 1262.4898s
+    Token 375: ''d' @ 1265.8291s
+    Token 376: ' need' @ 1269.1691s
+    Token 377: ' to' @ 1272.5078s
+    Token 378: ' walk' @ 1275.8459s
+    Token 379: ' ' @ 1279.1840s
+    Token 380: '1' @ 1282.5228s
+    Token 381: ' block' @ 1285.8620s
+    Token 382: ' east' @ 1289.2009s
+    Token 383: ' and' @ 1292.5417s
+    Token 384: ' ' @ 1295.8807s
+    Token 385: '3' @ 1299.2199s
+    Token 386: ' blocks' @ 1302.5579s
+    Token 387: ' south' @ 1305.8969s
+    Token 388: ',' @ 1309.2359s
+    Token 389: ' totaling' @ 1312.5739s
+    Token 390: ' ' @ 1315.9161s
+    Token 391: '4' @ 1319.2580s
+    Token 392: ' blocks' @ 1322.5989s
+    Token 393: '.' @ 1325.9398s
+    Token 394: ' So' @ 1329.2803s
+    Token 395: ',' @ 1332.6218s
+    Token 396: ' in' @ 1335.9629s
+    Token 397: ' terms' @ 1339.3019s
+    Token 398: ' of' @ 1342.6423s
+    Token 399: ' blocks' @ 1345.9829s
+    Token 400: ' from' @ 1349.3219s
+    Token 401: ' home' @ 1352.6618s
+    Token 402: ',' @ 1355.9999s
+    Token 403: ' it' @ 1359.3406s
+    Token 404: ''s' @ 1362.6809s
+    Token 405: ' ' @ 1366.0200s
+    Token 406: '4' @ 1369.3597s
+    Token 407: ' blocks' @ 1372.7008s
+    Token 408: '.\n\n' @ 1376.0400s
+    Token 409: 'Wait' @ 1379.3788s
+    Token 410: ',' @ 1382.7186s
+    Token 411: ' but' @ 1386.0587s
+    Token 412: ' the' @ 1389.3981s
+    Token 413: ' straight' @ 1392.7380s
+    Token 414: '-line' @ 1396.0788s
+    Token 415: ' distance' @ 1399.4178s
+    Token 416: ' is' @ 1402.7589s
+    Token 417: ' √' @ 1409.4369s
+    Token 418: '1' @ 1412.7752s
+    Token 419: '0' @ 1416.1148s
+    Token 420: ',' @ 1419.4539s
+    Token 421: ' which' @ 1422.7931s
+    Token 422: ' is' @ 1426.1329s
+    Token 423: ' approximately' @ 1429.4718s
+    Token 424: ' ' @ 1432.8108s
+    Token 425: '3' @ 1436.1510s
+    Token 426: '.' @ 1439.4917s
+    Token 427: '1' @ 1442.8338s
+    Token 428: '6' @ 1446.1728s
+    Token 429: ' blocks' @ 1449.5118s
+    Token 430: '.' @ 1452.8518s
+    Token 431: ' But' @ 1456.1912s
+    Token 432: ' since' @ 1459.5317s
+    Token 433: ' the' @ 1462.8718s
+    Token 434: ' question' @ 1466.2107s
+    Token 435: ' doesn' @ 1469.5502s
+    Token 436: ''t' @ 1472.8881s
+    Token 437: ' specify' @ 1476.2269s
+    Token 438: ' whether' @ 1479.5673s
+    Token 439: ' it' @ 1482.9059s
+    Token 440: ''s' @ 1486.2458s
+    Token 441: ' straight' @ 1489.5848s
+    Token 442: '-line' @ 1492.9239s
+    Token 443: ' or' @ 1496.2629s
+    Token 444: ' Manhattan' @ 1499.6009s
+    Token 445: ' distance' @ 1502.9400s
+    Token 446: ',' @ 1506.2787s
+    Token 447: ' but' @ 1509.6178s
+    Token 448: ' typically' @ 1512.9561s
+    Token 449: ' in' @ 1516.2977s
+    Token 450: ' such' @ 1519.6361s
+    Token 451: ' grid' @ 1522.9748s
+    Token 452: '-based' @ 1526.3136s
+    Token 453: ' problems' @ 1529.6527s
+    Token 454: ',' @ 1532.9917s
+    Token 455: ' unless' @ 1536.3298s
+    Token 456: ' specified' @ 1539.6691s
+    Token 457: ' otherwise' @ 1543.0081s
+    Token 458: ',' @ 1546.3460s
+    Token 459: ' it' @ 1549.6838s
+    Token 460: ''s' @ 1553.0219s
+    Token 461: ' the' @ 1556.3638s
+    Token 462: ' straight' @ 1559.7027s
+    Token 463: '-line' @ 1563.0409s
+    Token 464: ' distance' @ 1566.3789s
+    Token 465: '.\n\n' @ 1569.7187s
+    Token 466: 'Wait' @ 1573.0567s
+    Token 467: ',' @ 1576.3959s
+    Token 468: ' no' @ 1579.7349s
+    Token 469: ',' @ 1583.0748s
+    Token 470: ' actually' @ 1586.4141s
+    Token 471: ',' @ 1589.7529s
+    Token 472: ' in' @ 1593.0919s
+    Token 473: ' navigation' @ 1596.4318s
+    Token 474: ' problems' @ 1599.7720s
+    Token 475: ' like' @ 1603.1206s
+    Token 476: ' this' @ 1606.4607s
+    Token 477: ',' @ 1609.8013s
+    Token 478: ' unless' @ 1613.1418s
+    Token 479: ' stated' @ 1616.4810s
+    Token 480: ' otherwise' @ 1619.8216s
+    Token 481: ',' @ 1623.1599s
+    Token 482: ' the' @ 1626.4981s
+    Token 483: ' answer' @ 1629.8370s
+    Token 484: ' is' @ 1633.1758s
+    Token 485: ' usually' @ 1636.5161s
+    Token 486: ' the' @ 1639.8569s
+    Token 487: ' straight' @ 1643.1999s
+    Token 488: '-line' @ 1646.5418s
+    Token 489: ' distance' @ 1649.8819s
+    Token 490: '.' @ 1653.2225s
+    Token 491: ' So' @ 1656.5639s
+    Token 492: ',' @ 1659.9021s
+    Token 493: ' the' @ 1663.2418s
+    Token 494: ' answer' @ 1666.5806s
+    Token 495: ' should' @ 1669.9189s
+    Token 496: ' be' @ 1673.2599s
+    Token 497: ' √' @ 1679.9399s
+    Token 498: '1' @ 1683.2777s
+    Token 499: '0' @ 1686.6177s
+    Token 500: ' blocks' @ 1689.9561s
+    Token 501: ',' @ 1693.2948s
+    Token 502: ' which' @ 1696.6338s
+    Token 503: ' is' @ 1699.9731s
+    Token 504: ' approximately' @ 1703.3119s
+    Token 505: ' ' @ 1706.6509s
+    Token 506: '3' @ 1709.9897s
+  完成: 总时间=1709.9898s, TTFT=3.3533s, TPOT=3.3795s, Tokens=506
+停止监控GPU 0
+Traceback (most recent call last):
+  File "/home/user/LLM-dvfs/server/traditional/test_bbh_dataset.py", line 644, in <module>
+    print(f"  最大利用率: {analysis['gpu_analysis']['max_utilization']:.1f}%")
+^^^^^^
+  File "/home/user/LLM-dvfs/server/traditional/test_bbh_dataset.py", line 616, in main
+    print("✅ VLLM 服务器运行正常")
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/LLM-dvfs/server/traditional/test_bbh_dataset.py", line 519, in run_bbh_test
+    
+AttributeError: 'GPUMonitor' object has no attribute 'get_data'

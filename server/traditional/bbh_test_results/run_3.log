@@ -1,0 +1,1077 @@
+⚠️  datasets库未安装，将使用内置示例数据
+   安装命令: pip install datasets
+🧠 BIG-Bench Hard (BBH) 数据集测试
+==================================================
+✅ VLLM 服务器运行正常
+🧠 开始BBH数据集测试...
+📚 使用内置BBH任务示例数据...
+📚 加载了 10 个BBH任务
+🔢 将测试 10 条数据（上限 10）
+开始监控GPU 0，采样间隔: 0.1s
+
+=== 请求 1/10 - 任务: date_understanding ===
+📝 Prompt (length=2064):
+
+Task: 日期理解任务
+Task Name: date_understanding
+
+Instructions: Please solve the following problem step by step. Think carefully and provide a clear, logical answer.
+
+Problem: If today is March 15th, 2023, what was the date 2 weeks ago?
+
+Please provide your answer and explain your reasoning process.
+
+
+Additional Context:
+This is a complex reasoning task that requires careful analysis. You should:
+1. Read the problem carefully
+2. Identify the key information
+3. Apply logical reasoning
+4. Consider alternative interpretations
+5. Provide a well-reasoned answer
+
+The problem involves multiple steps of reasoning and may require you to consider various factors before arriving at the correct answer. Take your time to think through each step carefully.
+
+Remember to:
+- Break down complex problems into smaller parts
+- Consider all given information
+- Apply logical rules consistently
+- Check your reasoning for errors
+- Provide clear explanations for your answer
+
+Now, please solve the problem:
+
+
+Additional reasoning guidelines:
+- Pay attention to details in the problem statement
+- Consider edge cases and exceptions
+- Use systematic approaches to problem-solving
+- Verify your answer makes logical sense
+- Consider alternative interpretations of the problem
+
+The key to solving this type of problem is to be methodical and thorough in your analysis.
+
+
+Additional reasoning guidelines:
+- Pay attention to details in the problem statement
+- Consider edge cases and exceptions
+- Use systematic approaches to problem-solving
+- Verify your answer makes logical sense
+- Consider alternative interpretations of the problem
+
+The key to solving this type of problem is to be methodical and thorough in your analysis.
+
+
+Additional reasoning guidelines:
+- Pay attention to details in the problem statement
+- Consider edge cases and exceptions
+- Use systematic approaches to problem-solving
+- Verify your answer makes logical sense
+- Consider alternative interpretations of the problem
+
+The key to solving this type of problem is to be methodical and thorough in your analysis.
+
+  处理流式响应时出错: HTTPConnectionPool(host='localhost', port=8000): Read timed out.
+  完成: 总时间=120.0130s, TTFT=0.0000s, TPOT=0.0000s, Tokens=0
+
+=== 请求 2/10 - 任务: date_understanding ===
+📝 Prompt (length=2077):
+
+Task: 日期理解任务
+Task Name: date_understanding
+
+Instructions: Please solve the following problem step by step. Think carefully and provide a clear, logical answer.
+
+Problem: Today is the 1st of January, 2023. What will be the date 3 days from now?
+
+Please provide your answer and explain your reasoning process.
+
+
+Additional Context:
+This is a complex reasoning task that requires careful analysis. You should:
+1. Read the problem carefully
+2. Identify the key information
+3. Apply logical reasoning
+4. Consider alternative interpretations
+5. Provide a well-reasoned answer
+
+The problem involves multiple steps of reasoning and may require you to consider various factors before arriving at the correct answer. Take your time to think through each step carefully.
+
+Remember to:
+- Break down complex problems into smaller parts
+- Consider all given information
+- Apply logical rules consistently
+- Check your reasoning for errors
+- Provide clear explanations for your answer
+
+Now, please solve the problem:
+
+
+Additional reasoning guidelines:
+- Pay attention to details in the problem statement
+- Consider edge cases and exceptions
+- Use systematic approaches to problem-solving
+- Verify your answer makes logical sense
+- Consider alternative interpretations of the problem
+
+The key to solving this type of problem is to be methodical and thorough in your analysis.
+
+
+Additional reasoning guidelines:
+- Pay attention to details in the problem statement
+- Consider edge cases and exceptions
+- Use systematic approaches to problem-solving
+- Verify your answer makes logical sense
+- Consider alternative interpretations of the problem
+
+The key to solving this type of problem is to be methodical and thorough in your analysis.
+
+
+Additional reasoning guidelines:
+- Pay attention to details in the problem statement
+- Consider edge cases and exceptions
+- Use systematic approaches to problem-solving
+- Verify your answer makes logical sense
+- Consider alternative interpretations of the problem
+
+The key to solving this type of problem is to be methodical and thorough in your analysis.
+
+  处理流式响应时出错: HTTPConnectionPool(host='localhost', port=8000): Read timed out.
+  完成: 总时间=120.1089s, TTFT=0.0000s, TPOT=0.0000s, Tokens=0
+
+=== 请求 3/10 - 任务: ruin_names ===
+📝 Prompt (length=2058):
+
+Task: 名字推理任务
+Task Name: ruin_names
+
+Instructions: Please solve the following problem step by step. Think carefully and provide a clear, logical answer.
+
+Problem: What word can be formed by rearranging the letters in 'HEART'?
+
+Please provide your answer and explain your reasoning process.
+
+
+Additional Context:
+This is a complex reasoning task that requires careful analysis. You should:
+1. Read the problem carefully
+2. Identify the key information
+3. Apply logical reasoning
+4. Consider alternative interpretations
+5. Provide a well-reasoned answer
+
+The problem involves multiple steps of reasoning and may require you to consider various factors before arriving at the correct answer. Take your time to think through each step carefully.
+
+Remember to:
+- Break down complex problems into smaller parts
+- Consider all given information
+- Apply logical rules consistently
+- Check your reasoning for errors
+- Provide clear explanations for your answer
+
+Now, please solve the problem:
+
+
+Additional reasoning guidelines:
+- Pay attention to details in the problem statement
+- Consider edge cases and exceptions
+- Use systematic approaches to problem-solving
+- Verify your answer makes logical sense
+- Consider alternative interpretations of the problem
+
+The key to solving this type of problem is to be methodical and thorough in your analysis.
+
+
+Additional reasoning guidelines:
+- Pay attention to details in the problem statement
+- Consider edge cases and exceptions
+- Use systematic approaches to problem-solving
+- Verify your answer makes logical sense
+- Consider alternative interpretations of the problem
+
+The key to solving this type of problem is to be methodical and thorough in your analysis.
+
+
+Additional reasoning guidelines:
+- Pay attention to details in the problem statement
+- Consider edge cases and exceptions
+- Use systematic approaches to problem-solving
+- Verify your answer makes logical sense
+- Consider alternative interpretations of the problem
+
+The key to solving this type of problem is to be methodical and thorough in your analysis.
+
+  处理流式响应时出错: HTTPConnectionPool(host='localhost', port=8000): Read timed out.
+  完成: 总时间=120.0200s, TTFT=0.0000s, TPOT=0.0000s, Tokens=0
+
+=== 请求 4/10 - 任务: ruin_names ===
+📝 Prompt (length=2059):
+
+Task: 名字推理任务
+Task Name: ruin_names
+
+Instructions: Please solve the following problem step by step. Think carefully and provide a clear, logical answer.
+
+Problem: If you rearrange the letters in 'LISTEN', what word do you get?
+
+Please provide your answer and explain your reasoning process.
+
+
+Additional Context:
+This is a complex reasoning task that requires careful analysis. You should:
+1. Read the problem carefully
+2. Identify the key information
+3. Apply logical reasoning
+4. Consider alternative interpretations
+5. Provide a well-reasoned answer
+
+The problem involves multiple steps of reasoning and may require you to consider various factors before arriving at the correct answer. Take your time to think through each step carefully.
+
+Remember to:
+- Break down complex problems into smaller parts
+- Consider all given information
+- Apply logical rules consistently
+- Check your reasoning for errors
+- Provide clear explanations for your answer
+
+Now, please solve the problem:
+
+
+Additional reasoning guidelines:
+- Pay attention to details in the problem statement
+- Consider edge cases and exceptions
+- Use systematic approaches to problem-solving
+- Verify your answer makes logical sense
+- Consider alternative interpretations of the problem
+
+The key to solving this type of problem is to be methodical and thorough in your analysis.
+
+
+Additional reasoning guidelines:
+- Pay attention to details in the problem statement
+- Consider edge cases and exceptions
+- Use systematic approaches to problem-solving
+- Verify your answer makes logical sense
+- Consider alternative interpretations of the problem
+
+The key to solving this type of problem is to be methodical and thorough in your analysis.
+
+
+Additional reasoning guidelines:
+- Pay attention to details in the problem statement
+- Consider edge cases and exceptions
+- Use systematic approaches to problem-solving
+- Verify your answer makes logical sense
+- Consider alternative interpretations of the problem
+
+The key to solving this type of problem is to be methodical and thorough in your analysis.
+
+  处理流式响应时出错: HTTPConnectionPool(host='localhost', port=8000): Read timed out.
+  完成: 总时间=120.0279s, TTFT=0.0000s, TPOT=0.0000s, Tokens=0
+
+=== 请求 5/10 - 任务: geometric_shapes ===
+📝 Prompt (length=2102):
+
+Task: 几何形状任务
+Task Name: geometric_shapes
+
+Instructions: Please solve the following problem step by step. Think carefully and provide a clear, logical answer.
+
+Problem: A square has 4 sides of equal length. If one side is 5 cm long, what is the perimeter of the square?
+
+Please provide your answer and explain your reasoning process.
+
+
+Additional Context:
+This is a complex reasoning task that requires careful analysis. You should:
+1. Read the problem carefully
+2. Identify the key information
+3. Apply logical reasoning
+4. Consider alternative interpretations
+5. Provide a well-reasoned answer
+
+The problem involves multiple steps of reasoning and may require you to consider various factors before arriving at the correct answer. Take your time to think through each step carefully.
+
+Remember to:
+- Break down complex problems into smaller parts
+- Consider all given information
+- Apply logical rules consistently
+- Check your reasoning for errors
+- Provide clear explanations for your answer
+
+Now, please solve the problem:
+
+
+Additional reasoning guidelines:
+- Pay attention to details in the problem statement
+- Consider edge cases and exceptions
+- Use systematic approaches to problem-solving
+- Verify your answer makes logical sense
+- Consider alternative interpretations of the problem
+
+The key to solving this type of problem is to be methodical and thorough in your analysis.
+
+
+Additional reasoning guidelines:
+- Pay attention to details in the problem statement
+- Consider edge cases and exceptions
+- Use systematic approaches to problem-solving
+- Verify your answer makes logical sense
+- Consider alternative interpretations of the problem
+
+The key to solving this type of problem is to be methodical and thorough in your analysis.
+
+
+Additional reasoning guidelines:
+- Pay attention to details in the problem statement
+- Consider edge cases and exceptions
+- Use systematic approaches to problem-solving
+- Verify your answer makes logical sense
+- Consider alternative interpretations of the problem
+
+The key to solving this type of problem is to be methodical and thorough in your analysis.
+
+  处理流式响应时出错: HTTPConnectionPool(host='localhost', port=8000): Read timed out.
+  完成: 总时间=120.1105s, TTFT=0.0000s, TPOT=0.0000s, Tokens=0
+
+=== 请求 6/10 - 任务: geometric_shapes ===
+📝 Prompt (length=2079):
+
+Task: 几何形状任务
+Task Name: geometric_shapes
+
+Instructions: Please solve the following problem step by step. Think carefully and provide a clear, logical answer.
+
+Problem: A circle has a radius of 3 cm. What is the area of the circle? (Use π ≈ 3.14)
+
+Please provide your answer and explain your reasoning process.
+
+
+Additional Context:
+This is a complex reasoning task that requires careful analysis. You should:
+1. Read the problem carefully
+2. Identify the key information
+3. Apply logical reasoning
+4. Consider alternative interpretations
+5. Provide a well-reasoned answer
+
+The problem involves multiple steps of reasoning and may require you to consider various factors before arriving at the correct answer. Take your time to think through each step carefully.
+
+Remember to:
+- Break down complex problems into smaller parts
+- Consider all given information
+- Apply logical rules consistently
+- Check your reasoning for errors
+- Provide clear explanations for your answer
+
+Now, please solve the problem:
+
+
+Additional reasoning guidelines:
+- Pay attention to details in the problem statement
+- Consider edge cases and exceptions
+- Use systematic approaches to problem-solving
+- Verify your answer makes logical sense
+- Consider alternative interpretations of the problem
+
+The key to solving this type of problem is to be methodical and thorough in your analysis.
+
+
+Additional reasoning guidelines:
+- Pay attention to details in the problem statement
+- Consider edge cases and exceptions
+- Use systematic approaches to problem-solving
+- Verify your answer makes logical sense
+- Consider alternative interpretations of the problem
+
+The key to solving this type of problem is to be methodical and thorough in your analysis.
+
+
+Additional reasoning guidelines:
+- Pay attention to details in the problem statement
+- Consider edge cases and exceptions
+- Use systematic approaches to problem-solving
+- Verify your answer makes logical sense
+- Consider alternative interpretations of the problem
+
+The key to solving this type of problem is to be methodical and thorough in your analysis.
+
+    Token 1: '</think>' @ 79.4395s
+    Token 2: '\n\n' @ 82.6553s
+    Token 3: 'To' @ 85.8686s
+    Token 4: ' determine' @ 89.0876s
+    Token 5: ' the' @ 92.3121s
+    Token 6: ' area' @ 95.5258s
+    Token 7: ' of' @ 98.7380s
+    Token 8: ' a' @ 101.9616s
+    Token 9: ' circle' @ 105.1815s
+    Token 10: ' with' @ 108.4016s
+    Token 11: ' a' @ 111.6213s
+    Token 12: ' radius' @ 114.8353s
+    Token 13: ' of' @ 118.0516s
+    Token 14: ' ' @ 121.2666s
+    Token 15: '3' @ 124.4844s
+    Token 16: ' cm' @ 127.7008s
+    Token 17: ',' @ 130.9224s
+    Token 18: ' we' @ 134.1434s
+    Token 19: ' can' @ 137.3623s
+    Token 20: ' use' @ 140.5818s
+    Token 21: ' the' @ 143.8022s
+    Token 22: ' formula' @ 147.0208s
+    Token 23: ' for' @ 150.2404s
+    Token 24: ' the' @ 153.4621s
+    Token 25: ' area' @ 156.6826s
+    Token 26: ' of' @ 159.9013s
+    Token 27: ' a' @ 163.1185s
+    Token 28: ' circle' @ 166.3360s
+    Token 29: ',' @ 169.5563s
+    Token 30: ' which' @ 172.7768s
+    Token 31: ' is' @ 175.9966s
+    Token 32: ' A' @ 179.2164s
+    Token 33: ' =' @ 182.4313s
+    Token 34: ' π' @ 185.6506s
+    Token 35: 'r' @ 188.8708s
+    Token 36: '²' @ 192.0895s
+    Token 37: '.' @ 195.3096s
+    Token 38: ' Here' @ 198.5289s
+    Token 39: ',' @ 201.7480s
+    Token 40: ' π' @ 204.9667s
+    Token 41: ' is' @ 208.1860s
+    Token 42: ' approximately' @ 211.4053s
+    Token 43: ' ' @ 214.6275s
+    Token 44: '3' @ 217.8454s
+    Token 45: '.' @ 221.0646s
+    Token 46: '1' @ 224.2828s
+    Token 47: '4' @ 227.5016s
+    Token 48: ',' @ 230.7238s
+    Token 49: ' and' @ 233.9415s
+    Token 50: ' the' @ 237.1606s
+    Token 51: ' radius' @ 240.3794s
+    Token 52: ' (' @ 243.6023s
+    Token 53: 'r' @ 246.8224s
+    Token 54: ')' @ 250.0428s
+    Token 55: ' is' @ 253.2647s
+    Token 56: ' ' @ 256.4856s
+    Token 57: '3' @ 259.7070s
+    Token 58: ' cm' @ 262.9295s
+    Token 59: '.\n\n' @ 266.1505s
+    Token 60: '1' @ 269.3733s
+    Token 61: '.' @ 272.5965s
+    Token 62: ' **' @ 275.8178s
+    Token 63: 'Square' @ 279.0380s
+    Token 64: ' the' @ 282.2578s
+    Token 65: ' radius' @ 285.4778s
+    Token 66: '**:' @ 288.6978s
+    Token 67: ' ' @ 291.9136s
+    Token 68: '3' @ 295.1279s
+    Token 69: ' cm' @ 298.3433s
+    Token 70: ' ×' @ 301.5620s
+    Token 71: ' ' @ 304.7825s
+    Token 72: '3' @ 308.0029s
+    Token 73: ' cm' @ 311.2252s
+    Token 74: ' =' @ 314.4447s
+    Token 75: ' ' @ 317.6637s
+    Token 76: '9' @ 320.8816s
+    Token 77: ' cm' @ 324.1017s
+    Token 78: '²' @ 327.3200s
+    Token 79: '.\n' @ 330.5398s
+    Token 80: '2' @ 333.7604s
+    Token 81: '.' @ 336.9805s
+    Token 82: ' **' @ 340.2024s
+    Token 83: 'Multiply' @ 343.4215s
+    Token 84: ' by' @ 346.6418s
+    Token 85: ' π' @ 349.8630s
+    Token 86: '**:' @ 353.0800s
+    Token 87: ' ' @ 356.2943s
+    Token 88: '9' @ 359.5103s
+    Token 89: ' cm' @ 362.7259s
+    Token 90: '²' @ 365.9405s
+    Token 91: ' ×' @ 369.1564s
+    Token 92: ' ' @ 372.3764s
+    Token 93: '3' @ 375.5968s
+    Token 94: '.' @ 378.8179s
+    Token 95: '1' @ 382.0389s
+    Token 96: '4' @ 385.2584s
+    Token 97: ' ≈' @ 391.6984s
+    Token 98: ' ' @ 394.9189s
+    Token 99: '2' @ 398.1379s
+    Token 100: '8' @ 401.3555s
+    Token 101: '.' @ 404.5766s
+    Token 102: '2' @ 407.7970s
+    Token 103: '6' @ 411.0149s
+    Token 104: ' cm' @ 414.2363s
+    Token 105: '²' @ 417.4535s
+    Token 106: '.\n\n' @ 420.6740s
+    Token 107: 'Therefore' @ 423.8938s
+    Token 108: ',' @ 427.1158s
+    Token 109: ' the' @ 430.3324s
+    Token 110: ' area' @ 433.5518s
+    Token 111: ' of' @ 436.7733s
+    Token 112: ' the' @ 439.9936s
+    Token 113: ' circle' @ 443.2120s
+    Token 114: ' is' @ 446.4323s
+    Token 115: ' approximately' @ 449.6524s
+    Token 116: ' ' @ 452.8736s
+    Token 117: '2' @ 456.0954s
+    Token 118: '8' @ 459.3146s
+    Token 119: '.' @ 462.5326s
+    Token 120: '2' @ 465.7514s
+    Token 121: '6' @ 468.9713s
+    Token 122: ' cm' @ 472.1899s
+    Token 123: '²' @ 475.4096s
+    Token 124: '.' @ 478.6304s
+    Token 125: ' \n\n' @ 481.8502s
+    Token 126: '**' @ 485.0694s
+    Token 127: 'Step' @ 488.2878s
+    Token 128: '-by' @ 491.5066s
+    Token 129: '-' @ 494.7270s
+    Token 130: 'Step' @ 497.9468s
+    Token 131: ' Explanation' @ 501.1673s
+    Token 132: ':' @ 504.3856s
+    Token 133: '**\n\n' @ 507.6046s
+    Token 134: '1' @ 510.8235s
+    Token 135: '.' @ 514.0432s
+    Token 136: ' **' @ 517.2621s
+    Token 137: 'Ident' @ 520.4835s
+    Token 138: 'ify' @ 523.7018s
+    Token 139: ' the' @ 526.9221s
+    Token 140: ' formula' @ 530.1391s
+    Token 141: '**:' @ 533.3634s
+    Token 142: ' The' @ 536.5845s
+    Token 143: ' area' @ 539.8040s
+    Token 144: ' of' @ 543.0235s
+    Token 145: ' a' @ 546.2458s
+    Token 146: ' circle' @ 549.4659s
+    Token 147: ' is' @ 552.6865s
+    Token 148: ' calculated' @ 555.9068s
+    Token 149: ' using' @ 559.1264s
+    Token 150: ' the' @ 562.3470s
+    Token 151: ' formula' @ 565.5684s
+    Token 152: ' A' @ 568.7887s
+    Token 153: ' =' @ 572.0094s
+    Token 154: ' π' @ 575.2301s
+    Token 155: 'r' @ 578.4511s
+    Token 156: '²' @ 581.6727s
+    Token 157: ',' @ 584.8924s
+    Token 158: ' where' @ 588.1133s
+    Token 159: ' A' @ 591.3340s
+    Token 160: ' is' @ 594.5495s
+    Token 161: ' the' @ 597.7649s
+    Token 162: ' area' @ 600.9805s
+    Token 163: ',' @ 604.1962s
+    Token 164: ' π' @ 607.4109s
+    Token 165: ' is' @ 610.6265s
+    Token 166: ' a' @ 613.8415s
+    Token 167: ' constant' @ 617.0663s
+    Token 168: ' approximately' @ 620.2860s
+    Token 169: ' equal' @ 623.5077s
+    Token 170: ' to' @ 626.7283s
+    Token 171: ' ' @ 629.9475s
+    Token 172: '3' @ 633.1678s
+    Token 173: '.' @ 636.3873s
+    Token 174: '1' @ 639.6094s
+    Token 175: '4' @ 642.8272s
+    Token 176: ',' @ 646.0466s
+    Token 177: ' and' @ 649.2665s
+    Token 178: ' r' @ 652.4849s
+    Token 179: ' is' @ 655.7078s
+    Token 180: ' the' @ 658.9317s
+    Token 181: ' radius' @ 662.1519s
+    Token 182: ' of' @ 665.3734s
+    Token 183: ' the' @ 668.5925s
+    Token 184: ' circle' @ 671.8119s
+    Token 185: '.\n\n' @ 675.0335s
+    Token 186: '2' @ 678.2534s
+    Token 187: '.' @ 681.4735s
+    Token 188: ' **' @ 684.6929s
+    Token 189: 'Sub' @ 687.9132s
+    Token 190: 'stitute' @ 691.1351s
+    Token 191: ' the' @ 694.3577s
+    Token 192: ' given' @ 697.5795s
+    Token 193: ' value' @ 700.7999s
+    Token 194: '**:' @ 704.0175s
+    Token 195: ' The' @ 707.2372s
+    Token 196: ' radius' @ 710.4592s
+    Token 197: ' (' @ 713.6805s
+    Token 198: 'r' @ 716.9006s
+    Token 199: ')' @ 720.1215s
+    Token 200: ' provided' @ 723.3415s
+    Token 201: ' is' @ 726.5620s
+    Token 202: ' ' @ 729.7828s
+    Token 203: '3' @ 733.0018s
+    Token 204: ' cm' @ 736.2244s
+    Token 205: '.' @ 739.4454s
+    Token 206: ' Pl' @ 742.6683s
+    Token 207: 'ugging' @ 745.8904s
+    Token 208: ' this' @ 749.1134s
+    Token 209: ' into' @ 752.3360s
+    Token 210: ' the' @ 755.5560s
+    Token 211: ' formula' @ 758.7771s
+    Token 212: ' gives' @ 761.9974s
+    Token 213: ' A' @ 765.2177s
+    Token 214: ' =' @ 768.4398s
+    Token 215: ' ' @ 771.6603s
+    Token 216: '3' @ 774.8820s
+    Token 217: '.' @ 778.1013s
+    Token 218: '1' @ 781.3221s
+    Token 219: '4' @ 784.5423s
+    Token 220: ' ×' @ 787.7629s
+    Token 221: ' (' @ 790.9836s
+    Token 222: '3' @ 794.2048s
+    Token 223: ' cm' @ 797.4269s
+    Token 224: ')' @ 800.6494s
+    Token 225: '²' @ 803.8702s
+    Token 226: '.\n\n' @ 807.0923s
+    Token 227: '3' @ 810.3156s
+    Token 228: '.' @ 813.5373s
+    Token 229: ' **' @ 816.7580s
+    Token 230: 'Calculate' @ 819.9786s
+    Token 231: ' the' @ 823.1985s
+    Token 232: ' square' @ 826.4198s
+    Token 233: ' of' @ 829.6397s
+    Token 234: ' the' @ 832.8598s
+    Token 235: ' radius' @ 836.0794s
+    Token 236: '**:' @ 839.3000s
+    Token 237: ' Squ' @ 842.5192s
+    Token 238: 'aring' @ 845.7414s
+    Token 239: ' the' @ 848.9621s
+    Token 240: ' radius' @ 852.1825s
+    Token 241: ' means' @ 855.4023s
+    Token 242: ' multiplying' @ 858.6225s
+    Token 243: ' the' @ 861.8440s
+    Token 244: ' radius' @ 865.0668s
+    Token 245: ' by' @ 868.2868s
+    Token 246: ' itself' @ 871.5097s
+    Token 247: '.' @ 874.7286s
+    Token 248: ' So' @ 877.9488s
+    Token 249: ',' @ 881.1692s
+    Token 250: ' ' @ 884.3914s
+    Token 251: '3' @ 887.6118s
+    Token 252: ' cm' @ 890.8318s
+    Token 253: ' ×' @ 894.0525s
+    Token 254: ' ' @ 897.2759s
+    Token 255: '3' @ 900.4970s
+    Token 256: ' cm' @ 903.7162s
+    Token 257: ' =' @ 906.9358s
+    Token 258: ' ' @ 910.1574s
+    Token 259: '9' @ 913.3793s
+    Token 260: ' cm' @ 916.5997s
+    Token 261: '²' @ 919.8216s
+    Token 262: '.\n\n' @ 923.0439s
+    Token 263: '4' @ 926.2654s
+    Token 264: '.' @ 929.4921s
+    Token 265: ' **' @ 932.7140s
+    Token 266: 'Multiply' @ 935.9386s
+    Token 267: ' by' @ 939.1633s
+    Token 268: ' π' @ 942.3845s
+    Token 269: '**:' @ 945.6062s
+    Token 270: ' Now' @ 968.2835s
+    Token 271: ',' @ 971.5094s
+    Token 272: ' multiply' @ 974.7328s
+    Token 273: ' the' @ 977.9553s
+    Token 274: ' squared' @ 981.1754s
+    Token 275: ' radius' @ 984.3966s
+    Token 276: ' by' @ 987.6196s
+    Token 277: ' π' @ 990.8407s
+    Token 278: '.' @ 994.0626s
+    Token 279: ' This' @ 997.2869s
+    Token 280: ' gives' @ 1000.5075s
+    Token 281: ' ' @ 1003.7288s
+    Token 282: '9' @ 1006.9496s
+    Token 283: ' cm' @ 1010.1695s
+    Token 284: '²' @ 1013.3900s
+    Token 285: ' ×' @ 1016.6125s
+    Token 286: ' ' @ 1019.8349s
+    Token 287: '3' @ 1023.0559s
+    Token 288: '.' @ 1026.2776s
+    Token 289: '1' @ 1029.5006s
+    Token 290: '4' @ 1032.7203s
+    Token 291: ' =' @ 1035.9396s
+    Token 292: ' ' @ 1039.1586s
+    Token 293: '2' @ 1042.3773s
+    Token 294: '8' @ 1045.5966s
+    Token 295: '.' @ 1048.8174s
+    Token 296: '2' @ 1052.0411s
+    Token 297: '6' @ 1055.2622s
+    Token 298: ' cm' @ 1058.4804s
+    Token 299: '²' @ 1061.7015s
+    Token 300: '.\n\n' @ 1064.9208s
+    Token 301: '5' @ 1068.1433s
+    Token 302: '.' @ 1071.3625s
+    Token 303: ' **' @ 1074.5828s
+    Token 304: 'State' @ 1077.8031s
+    Token 305: ' the' @ 1081.0217s
+    Token 306: ' final' @ 1084.2446s
+    Token 307: ' answer' @ 1087.4666s
+    Token 308: '**:' @ 1090.6866s
+    Token 309: ' The' @ 1093.9056s
+    Token 310: ' area' @ 1097.1277s
+    Token 311: ' of' @ 1100.3485s
+    Token 312: ' the' @ 1103.5695s
+    Token 313: ' circle' @ 1106.7895s
+    Token 314: ' is' @ 1110.0105s
+    Token 315: ' approximately' @ 1113.2294s
+    Token 316: ' ' @ 1116.4494s
+    Token 317: '2' @ 1119.6713s
+    Token 318: '8' @ 1122.8926s
+    Token 319: '.' @ 1126.1122s
+    Token 320: '2' @ 1129.3314s
+    Token 321: '6' @ 1132.5514s
+    Token 322: ' square' @ 1135.7724s
+    Token 323: ' cent' @ 1138.9928s
+    Token 324: 'imeters' @ 1142.2123s
+    Token 325: '.\n\n' @ 1145.4325s
+    Token 326: '**' @ 1148.6533s
+    Token 327: 'Verification' @ 1151.8726s
+    Token 328: ':' @ 1155.0932s
+    Token 329: '**\n\n' @ 1158.3123s
+    Token 330: 'To' @ 1161.5344s
+    Token 331: ' ensure' @ 1164.7550s
+    Token 332: ' the' @ 1167.9755s
+    Token 333: ' calculation' @ 1171.1965s
+    Token 334: ' is' @ 1174.4178s
+    Token 335: ' correct' @ 1177.6373s
+    Token 336: ',' @ 1180.8584s
+    Token 337: ' we' @ 1184.0798s
+    Token 338: ' can' @ 1187.3005s
+    Token 339: ' re' @ 1190.5204s
+    Token 340: 'check' @ 1193.7414s
+    Token 341: ' each' @ 1196.9628s
+    Token 342: ' step' @ 1200.1825s
+    Token 343: ':\n\n' @ 1203.4018s
+    Token 344: '-' @ 1206.6226s
+    Token 345: ' The' @ 1209.8427s
+    Token 346: ' radius' @ 1213.0624s
+    Token 347: ' is' @ 1216.2828s
+    Token 348: ' correctly' @ 1219.5059s
+    Token 349: ' given' @ 1222.7279s
+    Token 350: ' as' @ 1225.9468s
+    Token 351: ' ' @ 1229.1688s
+    Token 352: '3' @ 1232.3896s
+    Token 353: ' cm' @ 1235.6110s
+    Token 354: '.\n' @ 1238.8312s
+    Token 355: '-' @ 1242.0523s
+    Token 356: ' Squ' @ 1245.2746s
+    Token 357: 'aring' @ 1248.4958s
+    Token 358: ' ' @ 1251.7145s
+    Token 359: '3' @ 1254.9378s
+    Token 360: ' cm' @ 1258.1600s
+    Token 361: ' gives' @ 1261.3786s
+    Token 362: ' ' @ 1264.5975s
+    Token 363: '9' @ 1267.8170s
+    Token 364: ' cm' @ 1271.0376s
+    Token 365: '²' @ 1274.2591s
+    Token 366: '.\n' @ 1277.4805s
+    Token 367: '-' @ 1280.7023s
+    Token 368: ' Multip' @ 1283.9223s
+    Token 369: 'lying' @ 1287.1431s
+    Token 370: ' ' @ 1290.3682s
+    Token 371: '9' @ 1293.5894s
+    Token 372: ' cm' @ 1296.8102s
+    Token 373: '²' @ 1300.0328s
+    Token 374: ' by' @ 1303.2556s
+    Token 375: ' ' @ 1306.4779s
+    Token 376: '3' @ 1309.6996s
+    Token 377: '.' @ 1312.9197s
+    Token 378: '1' @ 1316.1419s
+    Token 379: '4' @ 1319.3626s
+    Token 380: ' yields' @ 1322.5840s
+    Token 381: ' ' @ 1325.8040s
+    Token 382: '2' @ 1329.0244s
+    Token 383: '8' @ 1332.2454s
+    Token 384: '.' @ 1335.4660s
+    Token 385: '2' @ 1338.6844s
+    Token 386: '6' @ 1341.9068s
+    Token 387: ' cm' @ 1345.1316s
+    Token 388: '²' @ 1348.3556s
+    Token 389: '.\n\n' @ 1351.5783s
+    Token 390: 'All' @ 1354.7994s
+    Token 391: ' steps' @ 1358.0194s
+    Token 392: ' are' @ 1361.2436s
+    Token 393: ' consistent' @ 1364.4637s
+    Token 394: ' with' @ 1367.6829s
+    Token 395: ' the' @ 1370.9034s
+    Token 396: ' formula' @ 1374.1225s
+    Token 397: ' and' @ 1377.3437s
+    Token 398: ' the' @ 1380.5642s
+    Token 399: ' given' @ 1383.7843s
+    Token 400: ' values' @ 1387.0058s
+    Token 401: ',' @ 1390.2254s
+    Token 402: ' confirming' @ 1393.4474s
+    Token 403: ' the' @ 1396.6696s
+    Token 404: ' solution' @ 1399.8883s
+    Token 405: ' is' @ 1403.1103s
+    Token 406: ' accurate' @ 1406.3273s
+    Token 407: '.' @ 1409.5478s
+  完成: 总时间=1412.7701s, TTFT=79.4395s, TPOT=3.2761s, Tokens=407
+
+=== 请求 7/10 - 任务: navigate ===
+📝 Prompt (length=2110):
+
+Task: 导航任务
+Task Name: navigate
+
+Instructions: Please solve the following problem step by step. Think carefully and provide a clear, logical answer.
+
+Problem: Starting from home, you walk 2 blocks west, then 3 blocks north, then 1 block east. How many blocks are you from home?
+
+Please provide your answer and explain your reasoning process.
+
+
+Additional Context:
+This is a complex reasoning task that requires careful analysis. You should:
+1. Read the problem carefully
+2. Identify the key information
+3. Apply logical reasoning
+4. Consider alternative interpretations
+5. Provide a well-reasoned answer
+
+The problem involves multiple steps of reasoning and may require you to consider various factors before arriving at the correct answer. Take your time to think through each step carefully.
+
+Remember to:
+- Break down complex problems into smaller parts
+- Consider all given information
+- Apply logical rules consistently
+- Check your reasoning for errors
+- Provide clear explanations for your answer
+
+Now, please solve the problem:
+
+
+Additional reasoning guidelines:
+- Pay attention to details in the problem statement
+- Consider edge cases and exceptions
+- Use systematic approaches to problem-solving
+- Verify your answer makes logical sense
+- Consider alternative interpretations of the problem
+
+The key to solving this type of problem is to be methodical and thorough in your analysis.
+
+
+Additional reasoning guidelines:
+- Pay attention to details in the problem statement
+- Consider edge cases and exceptions
+- Use systematic approaches to problem-solving
+- Verify your answer makes logical sense
+- Consider alternative interpretations of the problem
+
+The key to solving this type of problem is to be methodical and thorough in your analysis.
+
+
+Additional reasoning guidelines:
+- Pay attention to details in the problem statement
+- Consider edge cases and exceptions
+- Use systematic approaches to problem-solving
+- Verify your answer makes logical sense
+- Consider alternative interpretations of the problem
+
+The key to solving this type of problem is to be methodical and thorough in your analysis.
+
+  处理流式响应时出错: HTTPConnectionPool(host='localhost', port=8000): Read timed out.
+  完成: 总时间=120.1165s, TTFT=0.0000s, TPOT=0.0000s, Tokens=0
+
+=== 请求 8/10 - 任务: navigate ===
+📝 Prompt (length=2142):
+
+Task: 导航任务
+Task Name: navigate
+
+Instructions: Please solve the following problem step by step. Think carefully and provide a clear, logical answer.
+
+Problem: You are at point A. To get to point B, you need to go 3 blocks north, then 2 blocks east, then 1 block south. What direction should you start walking?
+
+Please provide your answer and explain your reasoning process.
+
+
+Additional Context:
+This is a complex reasoning task that requires careful analysis. You should:
+1. Read the problem carefully
+2. Identify the key information
+3. Apply logical reasoning
+4. Consider alternative interpretations
+5. Provide a well-reasoned answer
+
+The problem involves multiple steps of reasoning and may require you to consider various factors before arriving at the correct answer. Take your time to think through each step carefully.
+
+Remember to:
+- Break down complex problems into smaller parts
+- Consider all given information
+- Apply logical rules consistently
+- Check your reasoning for errors
+- Provide clear explanations for your answer
+
+Now, please solve the problem:
+
+
+Additional reasoning guidelines:
+- Pay attention to details in the problem statement
+- Consider edge cases and exceptions
+- Use systematic approaches to problem-solving
+- Verify your answer makes logical sense
+- Consider alternative interpretations of the problem
+
+The key to solving this type of problem is to be methodical and thorough in your analysis.
+
+
+Additional reasoning guidelines:
+- Pay attention to details in the problem statement
+- Consider edge cases and exceptions
+- Use systematic approaches to problem-solving
+- Verify your answer makes logical sense
+- Consider alternative interpretations of the problem
+
+The key to solving this type of problem is to be methodical and thorough in your analysis.
+
+
+Additional reasoning guidelines:
+- Pay attention to details in the problem statement
+- Consider edge cases and exceptions
+- Use systematic approaches to problem-solving
+- Verify your answer makes logical sense
+- Consider alternative interpretations of the problem
+
+The key to solving this type of problem is to be methodical and thorough in your analysis.
+
+  处理流式响应时出错: HTTPConnectionPool(host='localhost', port=8000): Read timed out.
+  完成: 总时间=120.1112s, TTFT=0.0000s, TPOT=0.0000s, Tokens=0
+
+=== 请求 9/10 - 任务: logical_deduction ===
+📝 Prompt (length=2077):
+
+Task: 逻辑推理任务
+Task Name: logical_deduction
+
+Instructions: Please solve the following problem step by step. Think carefully and provide a clear, logical answer.
+
+Problem: If it's raining, then the ground is wet. The ground is wet. Is it raining?
+
+Please provide your answer and explain your reasoning process.
+
+
+Additional Context:
+This is a complex reasoning task that requires careful analysis. You should:
+1. Read the problem carefully
+2. Identify the key information
+3. Apply logical reasoning
+4. Consider alternative interpretations
+5. Provide a well-reasoned answer
+
+The problem involves multiple steps of reasoning and may require you to consider various factors before arriving at the correct answer. Take your time to think through each step carefully.
+
+Remember to:
+- Break down complex problems into smaller parts
+- Consider all given information
+- Apply logical rules consistently
+- Check your reasoning for errors
+- Provide clear explanations for your answer
+
+Now, please solve the problem:
+
+
+Additional reasoning guidelines:
+- Pay attention to details in the problem statement
+- Consider edge cases and exceptions
+- Use systematic approaches to problem-solving
+- Verify your answer makes logical sense
+- Consider alternative interpretations of the problem
+
+The key to solving this type of problem is to be methodical and thorough in your analysis.
+
+
+Additional reasoning guidelines:
+- Pay attention to details in the problem statement
+- Consider edge cases and exceptions
+- Use systematic approaches to problem-solving
+- Verify your answer makes logical sense
+- Consider alternative interpretations of the problem
+
+The key to solving this type of problem is to be methodical and thorough in your analysis.
+
+
+Additional reasoning guidelines:
+- Pay attention to details in the problem statement
+- Consider edge cases and exceptions
+- Use systematic approaches to problem-solving
+- Verify your answer makes logical sense
+- Consider alternative interpretations of the problem
+
+The key to solving this type of problem is to be methodical and thorough in your analysis.
+
+  处理流式响应时出错: HTTPConnectionPool(host='localhost', port=8000): Read timed out.
+  完成: 总时间=120.1090s, TTFT=0.0000s, TPOT=0.0000s, Tokens=0
+
+=== 请求 10/10 - 任务: logical_deduction ===
+📝 Prompt (length=2059):
+
+Task: 逻辑推理任务
+Task Name: logical_deduction
+
+Instructions: Please solve the following problem step by step. Think carefully and provide a clear, logical answer.
+
+Problem: All birds can fly. Penguins are birds. Can penguins fly?
+
+Please provide your answer and explain your reasoning process.
+
+
+Additional Context:
+This is a complex reasoning task that requires careful analysis. You should:
+1. Read the problem carefully
+2. Identify the key information
+3. Apply logical reasoning
+4. Consider alternative interpretations
+5. Provide a well-reasoned answer
+
+The problem involves multiple steps of reasoning and may require you to consider various factors before arriving at the correct answer. Take your time to think through each step carefully.
+
+Remember to:
+- Break down complex problems into smaller parts
+- Consider all given information
+- Apply logical rules consistently
+- Check your reasoning for errors
+- Provide clear explanations for your answer
+
+Now, please solve the problem:
+
+
+Additional reasoning guidelines:
+- Pay attention to details in the problem statement
+- Consider edge cases and exceptions
+- Use systematic approaches to problem-solving
+- Verify your answer makes logical sense
+- Consider alternative interpretations of the problem
+
+The key to solving this type of problem is to be methodical and thorough in your analysis.
+
+
+Additional reasoning guidelines:
+- Pay attention to details in the problem statement
+- Consider edge cases and exceptions
+- Use systematic approaches to problem-solving
+- Verify your answer makes logical sense
+- Consider alternative interpretations of the problem
+
+The key to solving this type of problem is to be methodical and thorough in your analysis.
+
+
+Additional reasoning guidelines:
+- Pay attention to details in the problem statement
+- Consider edge cases and exceptions
+- Use systematic approaches to problem-solving
+- Verify your answer makes logical sense
+- Consider alternative interpretations of the problem
+
+The key to solving this type of problem is to be methodical and thorough in your analysis.
+
+  处理流式响应时出错: HTTPConnectionPool(host='localhost', port=8000): Read timed out.
+  完成: 总时间=120.1085s, TTFT=0.0000s, TPOT=0.0000s, Tokens=0
+停止监控GPU 0
+Traceback (most recent call last):
+  File "/home/user/LLM-dvfs/server/traditional/test_bbh_dataset.py", line 644, in <module>
+    print(f"  最大利用率: {analysis['gpu_analysis']['max_utilization']:.1f}%")
+^^^^^^
+  File "/home/user/LLM-dvfs/server/traditional/test_bbh_dataset.py", line 616, in main
+    print("✅ VLLM 服务器运行正常")
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/LLM-dvfs/server/traditional/test_bbh_dataset.py", line 519, in run_bbh_test
+    
+AttributeError: 'GPUMonitor' object has no attribute 'get_data'

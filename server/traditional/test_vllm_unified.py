@@ -33,7 +33,7 @@ class VLLMClient:
     def generate_stream(self, prompt, max_tokens=16, temperature=0.7):
         """发送流式生成请求"""
         payload = {
-            "model": "/share-data/wzk-1/model/deepseek-v2-lite",
+            "model": "/share-data/wzk-1/model/DeepSeek-R1-Distill-Qwen-32B",
             "prompt": prompt,
             "max_tokens": max_tokens,
             "temperature": temperature,

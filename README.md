@@ -2,6 +2,137 @@
 
 这个项目用于测试大语言模型（LLM）在不同阶段的功耗和性能，支持传统单实例和分离式 Prefill+Decode 两种架构的对比测试。
 
+## 🔥 快速开始 - GPU功耗监控工具
+
+### 多GPU功耗监控 (`multi_gpu_monitor.py`)
+
+实时监控多个GPU的功耗、温度、利用率等数据，支持100ms高精度采样。
+
+#### 基本使用
+
+```bash
+# 监控4个GPU（默认），100ms间隔
+python3 multi_gpu_monitor.py
+
+# 指定GPU和采样间隔
+python3 multi_gpu_monitor.py --gpu-ids "0,1,2,3" --interval 0.1
+
+# 保存数据到CSV文件
+python3 multi_gpu_monitor.py --output gpu_power_data.csv
+
+# 同时保存CSV和JSON格式数据
+python3 multi_gpu_monitor.py --output gpu_power.csv --json gpu_power.json
+
+# 定时监控（例如监控60秒）
+python3 multi_gpu_monitor.py --duration 60 --output gpu_power_60s.csv
+```
+
+#### 参数说明
+
+- `--gpu-ids`: 要监控的GPU ID列表，用逗号分隔（默认: "0,1,2,3"）
+- `--interval`: 采样间隔秒数（默认: 0.1，即100ms）
+- `--output`: CSV输出文件路径
+- `--json`: JSON详细数据输出文件路径
+- `--duration`: 监控持续时间（秒），不指定则持续监控直到手动停止
+
+#### 输出数据格式
+
+CSV文件包含以下列：
+- `timestamp`: Unix时间戳
+- `datetime`: 可读时间格式
+- `gpu_X_power`: GPU X的功耗（W）
+- `gpu_X_utilization`: GPU X的利用率（%）
+- `gpu_X_temperature`: GPU X的温度（°C）
+- `gpu_X_memory_used`: GPU X的已用显存（MB）
+- `gpu_X_memory_total`: GPU X的总显存（MB）
+- `gpu_X_graphics_clock`: GPU X的图形频率（MHz）
+- `gpu_X_memory_clock`: GPU X的显存频率（MHz）
+
+### GPU功耗数据可视化 (`plot_gpu_power.py`)
+
+将监控数据转换为直观的图表，支持多种可视化方式。
+
+#### 基本使用
+
+```bash
+# 生成所有图表
+python3 plot_gpu_power.py gpu_power_data.csv
+
+# 指定输出目录
+python3 plot_gpu_power.py gpu_power_data.csv --output-dir ./plots
+
+# 不显示图表，只保存文件
+python3 plot_gpu_power.py gpu_power_data.csv --no-show
+
+# 生成统计报告
+python3 plot_gpu_power.py gpu_power_data.csv --report power_report.txt
+```
+
+#### 生成的图表
+
+1. **GPU功耗变化图** (`gpu_power_consumption.png`)
+   - 每个GPU的功耗时间序列
+   - 包含利用率背景填充
+
+2. **多GPU功耗对比图** (`gpu_power_comparison.png`)
+   - 所有GPU功耗曲线对比
+   - 显示总功耗曲线
+
+3. **利用率和功耗关系图** (`gpu_utilization_vs_power.png`)
+   - 散点图显示利用率和功耗的线性关系
+   - 包含趋势线
+
+4. **GPU温度变化图** (`gpu_temperature.png`)
+   - 所有GPU的温度时间序列
+
+#### 参数说明
+
+- `csv_file`: 输入的CSV数据文件路径
+- `--output-dir`: 图表输出目录（默认: ./plots）
+- `--no-show`: 不显示图表，只保存文件
+- `--report`: 生成统计报告文件
+
+### 快速启动
+
+```bash
+# 使用交互式快速启动脚本
+./quick_start.sh
+
+# 或者直接运行测试验证工具
+python3 test_gpu_monitor.py
+```
+
+### 完整使用示例
+
+```bash
+# 1. 开始监控GPU功耗（60秒）
+python3 multi_gpu_monitor.py --duration 60 --output gpu_test.csv --json gpu_test.json
+
+# 2. 生成可视化图表
+python3 plot_gpu_power.py gpu_test.csv --output-dir ./test_plots --report test_report.txt
+
+# 3. 查看结果
+ls -la test_plots/
+cat test_report.txt
+```
+
+### 依赖安装
+
+```bash
+# 安装Python依赖
+pip install pandas matplotlib numpy
+
+# 确保nvidia-smi可用
+nvidia-smi
+```
+
+### 注意事项
+
+1. 需要NVIDIA驱动和nvidia-smi工具
+2. 确保指定的GPU ID存在且可访问
+3. 高频率监控（100ms）会产生大量数据，注意磁盘空间
+4. 图表生成需要matplotlib，建议在图形环境中运行
+
 ## 🏗️ 项目架构
 
 ### 传统单实例架构
@@ -215,6 +346,64 @@ python3 compare_performance.py
 - 支持跨机器分离式部署
 - 网络带宽优化
 - 分布式性能分析
+
+## 🦙 Llama.cpp 运行指令
+
+### RTX 4080 16GB显存优化配置
+
+#### 基础运行指令：
+```bash
+~/offload/llama.cpp/build/bin/llama-cli \
+  -m /share-data/wzk-1/model/DeepSeek-R1-Distill-Qwen-32B/model.gguf \
+  -ngl 35 \
+  -c 4096 \
+  -b 512 \
+  -t 8 \
+  --mlock \
+  --no-mmap
+```
+
+#### 详细参数说明：
+
+**显存优化参数：**
+- `-ngl 50`: 将50层加载到GPU（约占用13-15GB显存，为系统预留1-3GB）
+- `-c 4096`: 上下文长度4096 tokens
+- `-b 512`: 批处理大小512
+- `--mlock`: 锁定内存，防止交换到磁盘
+- `--no-mmap`: 禁用内存映射，减少内存碎片
+
+#### 最大化显存利用版本（推荐）：
+```bash
+~/offload/llama.cpp/build/bin/llama-cli \
+  -m /share-data/wzk-1/model/DeepSeek-R1-Distill-Qwen-32B/model.gguf \
+  -ngl 50 \
+  -c 16384 \
+  -b 2048 \
+  -t 16 \
+  --mlock \
+  --no-mmap
+```
+### 建议的测试流程：
+
+1. **先测试保守配置**，确保模型能正常加载
+2. **逐步增加`-ngl`值**（30→40→50），监控显存使用
+3. **使用`nvidia-smi`监控显存占用**：
+   ```bash
+   watch -n 1 nvidia-smi
+   ```
+
+### 显存使用估算：
+- **35层**: ~11-13GB显存  
+- **40层**: ~13-15GB显存
+- **50层**: ~15-18GB显存（接近极限）
+
+### 根据您的实际显存使用情况：
+- **当前使用**: 8-10GB显存
+- **可用空间**: 6-8GB显存
+- **建议配置**: `-ngl 50` 可以充分利用剩余显存
+- **极限测试**: `-ngl 60` 可以测试显存上限
+
+**推荐从`-ngl 50`开始测试**，充分利用您的16GB显存。
 
 ## 📄 许可证
 

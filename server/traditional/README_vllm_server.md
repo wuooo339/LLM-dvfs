@@ -19,7 +19,7 @@
 ./start_vllm_server.sh
 
 # 方法2: 手动启动
-vllm serve /share-data/wzk-1/model/deepseek-v2-lite \
+vllm serve /share-data/wzk-1/model/DeepSeek-R1-Distill-Qwen-32B \
     --host 0.0.0.0 \
     --port 8000 \
     --cpu-offload-gb 20 \
@@ -70,7 +70,7 @@ python3 analyze_server_results.py
 
 ## 服务器配置参数
 
-- **模型**: deepseek-v2-lite
+- **模型**: DeepSeek-R1-Distill-Qwen-32B
 - **端口**: 8000
 - **CPU Offload**: 20GB
 - **GPU 内存利用率**: 95%
