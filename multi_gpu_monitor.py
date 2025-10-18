@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-多GPU功耗监控脚本
-以100ms间隔监控4个GPU的功耗、温度、利用率等数据
+多GPU和CPU功耗监控脚本
+以100ms间隔监控4个GPU和CPU的功耗、温度、利用率等数据
 """
 
 import subprocess
@@ -16,13 +16,15 @@ from pathlib import Path
 from typing import List, Dict, Any, Optional
 from datetime import datetime
 import argparse
+from cpu_monitor import CPUMonitor
 
 class MultiGPUMonitor:
-    """多GPU功耗监控器"""
+    """多GPU和CPU功耗监控器"""
     
-    def __init__(self, gpu_ids: List[int] = [0, 1, 2, 3], interval: float = 0.1):
+    def __init__(self, gpu_ids: List[int] = [0, 1, 2, 3], interval: float = 0.1, monitor_cpu: bool = True):
         self.gpu_ids = gpu_ids
         self.interval = interval
+        self.monitor_cpu = monitor_cpu
         self.monitoring = False
         self.data = []
         self.monitor_thread = None
@@ -32,6 +34,12 @@ class MultiGPUMonitor:
         self.csv_writer = None
         self.csv_file = None
         self.display_counter = 0  # 用于控制显示频率
+        
+        # 初始化CPU监控器
+        if self.monitor_cpu:
+            self.cpu_monitor = CPUMonitor(interval=interval)
+        else:
+            self.cpu_monitor = None
         
         # 设置信号处理
         signal.signal(signal.SIGINT, self._signal_handler)
@@ -47,10 +55,10 @@ class MultiGPUMonitor:
     def get_gpu_info(self, gpu_id: int) -> Dict[str, Any]:
         """获取指定GPU的信息"""
         try:
-            # 使用更高效的查询，减少字段数量
+            # 使用更高效的查询，包含频率信息
             cmd = [
                 "nvidia-smi", 
-                "--query-gpu=index,power.draw,temperature.gpu,utilization.gpu,memory.used,memory.total",
+                "--query-gpu=index,power.draw,temperature.gpu,utilization.gpu,memory.used,memory.total,clocks.gr,clocks.mem",
                 "--format=csv,noheader,nounits",
                 f"--id={gpu_id}"
             ]
@@ -60,13 +68,13 @@ class MultiGPUMonitor:
                 return None
             
             parts = result.stdout.strip().split(', ')
-            if len(parts) >= 6:
+            if len(parts) >= 8:
                 return {
                     "gpu_id": gpu_id,
                     "timestamp": time.time(),
                     "datetime": datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")[:-3],
-                    "graphics_clock": 0,  # 暂时不查询，减少延迟
-                    "memory_clock": 0,    # 暂时不查询，减少延迟
+                    "graphics_clock": int(parts[6]) if parts[6] != 'N/A' else 0,
+                    "memory_clock": int(parts[7]) if parts[7] != 'N/A' else 0,
                     "power_draw": float(parts[1]) if parts[1] != 'N/A' else 0.0,
                     "temperature": int(parts[2]) if parts[2] != 'N/A' else 0,
                     "gpu_utilization": int(parts[3]) if parts[3] != 'N/A' else 0,
@@ -84,11 +92,11 @@ class MultiGPUMonitor:
         datetime_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")[:-3]
         
         try:
-            # 单次查询所有GPU，提高效率
+            # 单次查询所有GPU，提高效率，包含频率信息
             gpu_list = ','.join(map(str, self.gpu_ids))
             cmd = [
                 "nvidia-smi", 
-                "--query-gpu=index,power.draw,temperature.gpu,utilization.gpu,memory.used,memory.total",
+                "--query-gpu=index,power.draw,temperature.gpu,utilization.gpu,memory.used,memory.total,clocks.gr,clocks.mem",
                 "--format=csv,noheader,nounits",
                 f"--id={gpu_list}"
             ]
@@ -103,14 +111,14 @@ class MultiGPUMonitor:
             for line in lines:
                 if line.strip():
                     parts = line.strip().split(', ')
-                    if len(parts) >= 6:
+                    if len(parts) >= 8:
                         gpu_id = int(parts[0])
                         gpu_data[f"gpu_{gpu_id}"] = {
                             "gpu_id": gpu_id,
                             "timestamp": timestamp,
                             "datetime": datetime_str,
-                            "graphics_clock": 0,  # 暂时不查询
-                            "memory_clock": 0,    # 暂时不查询
+                            "graphics_clock": int(parts[6]) if parts[6] != 'N/A' else 0,
+                            "memory_clock": int(parts[7]) if parts[7] != 'N/A' else 0,
                             "power_draw": float(parts[1]) if parts[1] != 'N/A' else 0.0,
                             "temperature": int(parts[2]) if parts[2] != 'N/A' else 0,
                             "gpu_utilization": int(parts[3]) if parts[3] != 'N/A' else 0,
@@ -157,24 +165,36 @@ class MultiGPUMonitor:
             "gpus": gpu_data
         }
     
+    def get_cpu_info(self) -> Dict[str, Any]:
+        """获取CPU信息"""
+        if self.cpu_monitor:
+            return self.cpu_monitor.get_cpu_info()
+        return {}
+    
     def _monitor_loop(self):
         """监控循环"""
         while self.monitoring and self.running:
             start_time = time.time()
             
             all_gpu_data = self.get_all_gpus_info()
-            if all_gpu_data:
-                self.data.append(all_gpu_data)
-                
-                # 写入CSV文件
-                if self.csv_writer:
-                    self._write_csv_row(all_gpu_data)
-                
-                # 控制显示频率，每10次采样显示一次（约1秒显示一次）
-                self.display_counter += 1
-                if self.display_counter >= 10:
-                    self._display_current_status(all_gpu_data)
-                    self.display_counter = 0
+            cpu_data = self.get_cpu_info()
+            
+            # 合并GPU和CPU数据
+            combined_data = all_gpu_data.copy() if all_gpu_data else {"timestamp": time.time(), "datetime": datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")[:-3], "gpus": {}}
+            if cpu_data:
+                combined_data["cpu"] = cpu_data
+            
+            self.data.append(combined_data)
+            
+            # 写入CSV文件
+            if self.csv_writer:
+                self._write_csv_row(combined_data)
+            
+            # 控制显示频率，每10次采样显示一次（约1秒显示一次）
+            self.display_counter += 1
+            if self.display_counter >= 10:
+                self._display_current_status(combined_data)
+                self.display_counter = 0
             
             # 计算剩余时间，确保精确的采样间隔
             elapsed = time.time() - start_time
@@ -190,6 +210,7 @@ class MultiGPUMonitor:
                 'datetime': data['datetime']
             }
             
+            # 写入GPU数据
             for gpu_id in self.gpu_ids:
                 gpu_key = f"gpu_{gpu_id}"
                 if gpu_key in data['gpus']:
@@ -215,19 +236,61 @@ class MultiGPUMonitor:
                         f'gpu_{gpu_id}_memory_clock': 0
                     })
             
+            # 写入CPU数据（仅在启用CPU监控时）
+            if self.monitor_cpu:
+                if 'cpu' in data and data['cpu']:
+                    cpu_data = data['cpu']
+                    row.update({
+                        'cpu_power': cpu_data.get('cpu_power_w', 0.0),  # 使用正确的字段名
+                        'cpu_energy': cpu_data.get('cpu_energy_j', 0.0),
+                        'cpu_temperature': cpu_data.get('cpu_temperature_c', 0.0)
+                    })
+                    # 只记录Socket 0和1的温度与PkgWatt
+                    for idx in range(2):
+                        row[f'cpu_socket{idx}_temperature'] = cpu_data.get(f'cpu_socket{idx}_temperature_c', 0.0)
+                        row[f'cpu_socket{idx}_pkg_watt'] = cpu_data.get(f'cpu_socket{idx}_pkg_watt', 0.0)
+                else:
+                    # 如果CPU数据不可用，填入0
+                    row.update({
+                        'cpu_power': 0.0,
+                        'cpu_energy': 0.0,
+                        'cpu_temperature': 0.0
+                    })
+                    for idx in range(2):
+                        row[f'cpu_socket{idx}_temperature'] = 0.0
+                        row[f'cpu_socket{idx}_pkg_watt'] = 0.0
+            
             self.csv_writer.writerow(row)
             self.csv_file.flush()
         except Exception as e:
             print(f"写入CSV数据失败: {e}")
     
     def _display_current_status(self, data: Dict[str, Any]):
-        """显示当前所有GPU状态"""
+        """显示当前所有GPU和CPU状态"""
         # 清屏
         os.system('clear' if os.name == 'posix' else 'cls')
         
         print("=" * 100)
-        print(f"多GPU实时功耗监控 - {data['datetime']}")
+        print(f"多GPU和CPU实时功耗监控 - {data['datetime']}")
         print("=" * 100)
+        
+        # 显示CPU状态（仅在启用CPU监控时）
+        if self.monitor_cpu:
+            if 'cpu' in data and data['cpu']:
+                cpu_data = data['cpu']
+                temp = cpu_data.get('cpu_temperature_c', 0)
+                s0_t = cpu_data.get('cpu_socket0_temperature_c', 0)
+                s1_t = cpu_data.get('cpu_socket1_temperature_c', 0)
+                s0_w = cpu_data.get('cpu_socket0_pkg_watt', 0)
+                s1_w = cpu_data.get('cpu_socket1_pkg_watt', 0)
+                print(f"CPU: 功耗 {cpu_data.get('cpu_power_w', 0):6.1f}W | "
+                      f"能量增量 {cpu_data.get('cpu_energy_j', 0):6.2f}J | "
+                      f"温度 平均{temp:5.1f}°C / S0 {s0_t:5.1f}°C / S1 {s1_t:5.1f}°C | "
+                      f"PkgWatt S0 {s0_w:6.2f}W / S1 {s1_w:6.2f}W")
+            else:
+                print("CPU: 数据不可用")
+        
+        print("-" * 100)
         
         # 显示每个GPU的状态
         for gpu_id in self.gpu_ids:
@@ -248,12 +311,18 @@ class MultiGPUMonitor:
             print(f"\n监控时长: {duration:.1f}秒 | 采样次数: {len(self.data)}")
             
             # 计算总功耗
-            total_power = 0.0
+            total_gpu_power = 0.0
             for gpu_id in self.gpu_ids:
                 gpu_key = f"gpu_{gpu_id}"
                 if gpu_key in data['gpus']:
-                    total_power += data['gpus'][gpu_key]['power_draw']
-            print(f"总功耗: {total_power:.1f}W")
+                    total_gpu_power += data['gpus'][gpu_key]['power_draw']
+            
+            if self.monitor_cpu:
+                cpu_power = data.get('cpu', {}).get('cpu_power_w', 0) if 'cpu' in data else 0
+                total_power = total_gpu_power + cpu_power
+                print(f"GPU总功耗: {total_gpu_power:.1f}W | CPU功耗: {cpu_power:.1f}W | 总功耗: {total_power:.1f}W")
+            else:
+                print(f"GPU总功耗: {total_gpu_power:.1f}W")
         
         print("\n" + "-" * 100)
         print("按 Ctrl+C 停止监控")
@@ -274,6 +343,8 @@ class MultiGPUMonitor:
             # 创建CSV文件
             self.csv_file = open(output_file, 'w', newline='', encoding='utf-8')
             fieldnames = ['timestamp', 'datetime']
+            
+            # 添加GPU字段
             for gpu_id in self.gpu_ids:
                 fieldnames.extend([
                     f'gpu_{gpu_id}_power',
@@ -284,6 +355,17 @@ class MultiGPUMonitor:
                     f'gpu_{gpu_id}_graphics_clock',
                     f'gpu_{gpu_id}_memory_clock'
                 ])
+            
+            # 添加CPU字段
+            if self.monitor_cpu:
+                fieldnames.extend([
+                    'cpu_power',
+                    'cpu_energy',
+                    'cpu_temperature',
+                    'cpu_socket0_temperature', 'cpu_socket0_pkg_watt',
+                    'cpu_socket1_temperature', 'cpu_socket1_pkg_watt'
+                ])
+            
             self.csv_writer = csv.DictWriter(self.csv_file, fieldnames=fieldnames)
             self.csv_writer.writeheader()
             print(f"数据将保存到: {output_file}")
@@ -291,7 +373,10 @@ class MultiGPUMonitor:
         self.monitor_thread = threading.Thread(target=self._monitor_loop)
         self.monitor_thread.daemon = True
         self.monitor_thread.start()
-        print(f"开始监控GPU {self.gpu_ids}，采样间隔: {self.interval}s")
+        if self.monitor_cpu:
+            print(f"开始监控GPU {self.gpu_ids}和CPU，采样间隔: {self.interval}s")
+        else:
+            print(f"开始监控GPU {self.gpu_ids}，采样间隔: {self.interval}s")
     
     def stop_monitoring(self):
         """停止监控"""
@@ -324,6 +409,48 @@ class MultiGPUMonitor:
         duration = self.data[-1]['timestamp'] - self.data[0]['timestamp'] if len(self.data) > 1 else 0
         print(f"监控时长: {duration:.1f}秒")
         print(f"采样次数: {len(self.data)}")
+        
+        # CPU统计信息
+        if self.monitor_cpu:
+            cpu_power_values = []
+            cpu_util_values = []
+            cpu_temp_values = []
+            cpu_freq_values = []
+            
+            for data_point in self.data:
+                if 'cpu' in data_point and data_point['cpu']:
+                    cpu_data = data_point['cpu']
+                    if cpu_data.get('cpu_power', 0) > 0:
+                        cpu_power_values.append(cpu_data['cpu_power'])
+                    if cpu_data.get('cpu_utilization', 0) > 0:
+                        cpu_util_values.append(cpu_data['cpu_utilization'])
+                    if cpu_data.get('cpu_temperature', 0) > 0:
+                        cpu_temp_values.append(cpu_data['cpu_temperature'])
+                    if cpu_data.get('cpu_frequency', 0) > 0:
+                        cpu_freq_values.append(cpu_data['cpu_frequency'])
+            
+            print(f"\nCPU:")
+            if cpu_power_values:
+                avg_power = sum(cpu_power_values) / len(cpu_power_values)
+                max_power = max(cpu_power_values)
+                min_power = min(cpu_power_values)
+                total_energy = sum(cpu_power_values) * self.interval / 3600  # Wh
+                print(f"  功耗 - 平均: {avg_power:.1f}W, 最大: {max_power:.1f}W, 最小: {min_power:.1f}W, 总能耗: {total_energy:.3f}Wh")
+            
+            if cpu_util_values:
+                avg_util = sum(cpu_util_values) / len(cpu_util_values)
+                max_util = max(cpu_util_values)
+                print(f"  利用率 - 平均: {avg_util:.1f}%, 最大: {max_util:.1f}%")
+            
+            if cpu_temp_values:
+                avg_temp = sum(cpu_temp_values) / len(cpu_temp_values)
+                max_temp = max(cpu_temp_values)
+                print(f"  温度 - 平均: {avg_temp:.1f}°C, 最高: {max_temp:.1f}°C")
+            
+            if cpu_freq_values:
+                avg_freq = sum(cpu_freq_values) / len(cpu_freq_values)
+                max_freq = max(cpu_freq_values)
+                print(f"  频率 - 平均: {avg_freq:.0f}MHz, 最高: {max_freq:.0f}MHz")
         
         # 为每个GPU计算统计信息
         for gpu_id in self.gpu_ids:
@@ -394,7 +521,7 @@ class MultiGPUMonitor:
                 self.save_json_data(json_file)
 
 def main():
-    parser = argparse.ArgumentParser(description="多GPU功耗监控工具")
+    parser = argparse.ArgumentParser(description="多GPU和CPU功耗监控工具")
     parser.add_argument("--gpu-ids", type=str, default="0,1,2,3", 
                        help="要监控的GPU ID列表，用逗号分隔 (默认: 0,1,2,3)")
     parser.add_argument("--interval", type=float, default=0.1, 
@@ -405,6 +532,8 @@ def main():
                        help="JSON详细数据输出文件路径")
     parser.add_argument("--duration", type=int,
                        help="监控持续时间（秒），不指定则持续监控直到手动停止")
+    parser.add_argument("--no-cpu", action="store_true",
+                       help="禁用CPU监控，只监控GPU")
     
     args = parser.parse_args()
     
@@ -419,7 +548,7 @@ def main():
         print("错误: nvidia-smi 未找到，请确保NVIDIA驱动已正确安装")
         sys.exit(1)
     
-    monitor = MultiGPUMonitor(gpu_ids=gpu_ids, interval=args.interval)
+    monitor = MultiGPUMonitor(gpu_ids=gpu_ids, interval=args.interval, monitor_cpu=not args.no_cpu)
     
     try:
         if args.duration:

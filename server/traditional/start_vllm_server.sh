@@ -70,10 +70,10 @@ export TRITON_CACHE_DIR="/tmp/triton_cache"
 echo "🔧 启动 VLLM 服务器..."
 
 # 启动 VLLM 服务器
-vllm serve /share-data/wzk-1/model/DeepSeek-R1-Distill-Qwen-32B \
+vllm serve /share-data/wzk-1/model/deepseek-v2-lite \
     --host 0.0.0.0 \
     --port 8000 \
-    --cpu-offload-gb 56 \
+    --cpu-offload-gb 20 \
     --enforce-eager \
     --gpu-memory-utilization 0.95 \
     --trust-remote-code \

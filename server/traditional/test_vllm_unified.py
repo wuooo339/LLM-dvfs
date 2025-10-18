@@ -33,7 +33,7 @@ class VLLMClient:
     def generate_stream(self, prompt, max_tokens=16, temperature=0.7):
         """发送流式生成请求"""
         payload = {
-            "model": "/share-data/wzk-1/model/DeepSeek-R1-Distill-Qwen-32B",
+            "model": "/share-data/wzk-1/model/deepseek-v2-lite",
             "prompt": prompt,
             "max_tokens": max_tokens,
             "temperature": temperature,
@@ -53,7 +53,7 @@ class VLLMClient:
             print(f"流式生成请求失败: {e}")
             return None
 
-def test_unified_generation(client, prompts, gpu_monitor, max_tokens=32):
+def test_unified_generation(client, prompts, gpu_monitor, max_tokens=512):
     """统一测试 prefill 和 decode 阶段"""
     print("\n=== 统一生成测试 (Prefill + Decode) ===")
     
@@ -432,7 +432,7 @@ def main():
     
     # 执行统一测试
     print(f"\n开始统一生成测试，处理 {len(test_prompts)} 个提示词...")
-    results = test_unified_generation(client, test_prompts, gpu_monitor, max_tokens=32)
+    results = test_unified_generation(client, test_prompts, gpu_monitor, max_tokens=512)
     
     # 停止 GPU 监控
     gpu_monitor.stop_monitoring()
