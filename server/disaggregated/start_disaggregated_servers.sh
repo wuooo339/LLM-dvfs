@@ -111,7 +111,7 @@ precheck
 echo "🔧 启动 Prefill 实例 (GPU 0, 端口 8100)..."
 CUDA_VISIBLE_DEVICES=0 vllm serve $MODEL_NAME \
     --port 8100 \
-    --max-model-len 512 \
+    --max-model-len 2048 \
     --gpu-memory-utilization 0.7 \
     --trust-remote-code \
     --enforce-eager \
@@ -134,7 +134,7 @@ fi
 echo "🔧 启动 Decode 实例 (GPU 1, 端口 8200)..."
 CUDA_VISIBLE_DEVICES=1 vllm serve $MODEL_NAME \
     --port 8200 \
-    --max-model-len 512 \
+    --max-model-len 2048 \
     --gpu-memory-utilization 0.7 \
     --trust-remote-code \
     --enforce-eager \

@@ -22,8 +22,6 @@ CUDA_VISIBLE_DEVICES=0 vllm serve /share-data/wzk-1/model/deepseek-v2-lite \
         "mem_pool_size_gb": 2
       }
     }'
-
-
 # 在 GPU 1 上启动 Consumer  
 export LD_LIBRARY_PATH="/usr/lib/x86_64-linux-gnu:$LD_LIBRARY_PATH"
 export TRITON_CACHE_DIR="/tmp/triton_cache"

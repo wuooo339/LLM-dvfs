@@ -432,7 +432,7 @@ def main():
     
     # 执行统一测试
     print(f"\n开始统一生成测试，处理 {len(test_prompts)} 个提示词...")
-    results = test_unified_generation(client, test_prompts, gpu_monitor, max_tokens=512)
+    results = test_unified_generation(client, test_prompts, gpu_monitor, max_tokens=1024)
     
     # 停止 GPU 监控
     gpu_monitor.stop_monitoring()
