@@ -16,11 +16,14 @@
 ```bash
 ./server/traditional/start_vllm_server.sh
 ```
-运行测试
+运行单批次测试
 ```bash
 ./server/traditional/run_server_test.sh
 ```
-
+增加批量进行测试
+```bash
+./server/traditional/run_batch_test.sh
+```
 ## 📁 项目结构
 
 ```
@@ -40,7 +43,9 @@ LLM-dvfs/
 │   ├── traditional/                  # 传统单实例测试
 │   │   ├── start_vllm_server.sh      # 启动单实例服务器
 │   │   ├── test_vllm_server.py       # 单实例测试脚本
+|   |   ├── simple_batch_test.py      # 批量测试脚本
 │   │   ├── run_server_test.sh        # 单实例测试运行脚本
+│   │   ├── run_batch_test.sh         # 批量测试运行脚本
 │   │   ├── analyze_server_results.py # 单实例结果分析
 │   │   ├── README_vllm_server.md     # 单实例测试说明
 │   │   └── vllm_server_results/      # 单实例测试结果

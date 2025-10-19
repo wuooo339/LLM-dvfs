@@ -70,12 +70,13 @@ export TRITON_CACHE_DIR="/tmp/triton_cache"
 echo "🔧 启动 VLLM 服务器..."
 
 # 启动 VLLM 服务器
+export CUDA_VISIBLE_DEVICES=0,1,2,3  # 设置使用的 GPU
 vllm serve /share-data/wzk-1/model/deepseek-v2-lite \
     --host 0.0.0.0 \
     --port 8000 \
-    --cpu-offload-gb 20 \
+    --cpu-offload-gb  \
     --enforce-eager \
-    --gpu-memory-utilization 0.95 \
+    --gpu-memory-utilization 0.99 \
     --trust-remote-code \
     --max-model-len 8192 \
     --max-num-batched-tokens 32768 \
