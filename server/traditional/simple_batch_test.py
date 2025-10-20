@@ -37,7 +37,7 @@ class SimpleBatchClient:
     def generate_single(self, prompt, max_tokens=128, temperature=0.7, request_id=None):
         """发送单个流式生成请求"""
         payload = {
-            "model": "/share-data/wzk-1/model/deepseek-v2-lite",
+            "model": "/share-data/wzk-1/model/Qwen3-8B",
             "prompt": prompt,
             "max_tokens": max_tokens,
             "temperature": temperature,

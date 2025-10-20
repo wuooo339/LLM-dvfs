@@ -45,6 +45,20 @@ cd traditional
 python3 analyze_server_results.py
 ```
 
+### 传统单实例多批次测试
+
+```bash
+# 进入传统测试目录
+cd traditional
+
+# 1. 启动单实例服务器
+./start_vllm_server.sh
+
+# 2. 运行测试（新终端）
+./run_more_batches_test.sh
+
+```
+
 ### 分离式测试
 
 ```bash
