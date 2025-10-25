@@ -25,10 +25,8 @@ fi
 echo ""
 echo "开始分离式性能测试..."
 echo ""
-
 # 运行分离式性能测试
 python3 test_disaggregated_performance.py
-
 echo ""
 echo "=========================================="
 echo "分离式性能测试完成！"

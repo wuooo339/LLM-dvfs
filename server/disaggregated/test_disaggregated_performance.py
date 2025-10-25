@@ -34,7 +34,7 @@ class DisaggregatedClient:
     def generate(self, prompt, max_tokens=16, temperature=0.7):
         """发送生成请求到分离式服务器"""
         payload = {
-            "model": "/share-data/wzk-1/model/deepseek-v2-lite",
+            "model": "/share-data/wzk-1/model/Qwen3-4B",
             "prompt": prompt,
             "max_tokens": max_tokens,
             "temperature": temperature

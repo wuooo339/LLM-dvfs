@@ -5,11 +5,11 @@
 set -xe
 
 echo "🚀 启动 VLLM 分离式 Prefill+Decode 服务器"
-echo "模型: /share-data/wzk-1/model/opt-1.3b"
+echo "模型: /share-data/wzk-1/model/Qwen3-4B"
 sleep 1
 
 # 模型路径
-MODEL_NAME="/share-data/wzk-1/model/opt-1.3b"
+MODEL_NAME="/share-data/wzk-1/model/Qwen3-4B"
 
 # 预检查函数
 precheck() {
@@ -28,7 +28,7 @@ precheck() {
     fi
     
     # 检查端口占用
-    for port in 8100 8200 8000 29800 29801; do
+    for port in 8100 8200 8000; do
         if lsof -Pi :$port -sTCP:LISTEN -t >/dev/null 2>&1; then
             echo "⚠️  端口 $port 已被占用，尝试清理..."
             lsof -ti:$port | xargs kill -9 2>/dev/null || true
@@ -54,6 +54,8 @@ trap cleanup INT
 # 设置环境变量
 export VLLM_HOST_IP=$(hostname -I | awk '{print $1}')
 export VLLM_USE_MODELSCOPE=False
+export HF_HUB_OFFLINE=1
+export TRANSFORMERS_OFFLINE=1
 export VLLM_WORKER_MULTIPROC_METHOD=spawn
 export VLLM_ENGINE_MULTIPROC_METHOD=spawn
 export CUDA_LAUNCH_BLOCKING=1
@@ -111,14 +113,12 @@ precheck
 echo "🔧 启动 Prefill 实例 (GPU 0, 端口 8100)..."
 CUDA_VISIBLE_DEVICES=0 vllm serve $MODEL_NAME \
     --port 8100 \
-    --max-model-len 2048 \
-    --gpu-memory-utilization 0.7 \
+    --max-model-len 512 \
+    --gpu-memory-utilization 0.9 \
     --trust-remote-code \
     --enforce-eager \
-    --verbose \
     --kv-transfer-config \
-    '{"kv_connector":"P2pNcclConnector","kv_role":"kv_producer","kv_rank":0,"kv_parallel_size":2,"kv_connector_extra_config":{"http_port":29800,"local_node_id":"producer","peer_nodes":["consumer:29801"],"mem_pool_size_gb":2}}' &
-
+    '{"kv_connector":"PyNcclConnector","kv_role":"kv_producer","kv_rank":0,"kv_parallel_size":2}' &
 PREFILL_PID=$!
 echo "Prefill 进程 PID: $PREFILL_PID"
 
@@ -134,13 +134,12 @@ fi
 echo "🔧 启动 Decode 实例 (GPU 1, 端口 8200)..."
 CUDA_VISIBLE_DEVICES=1 vllm serve $MODEL_NAME \
     --port 8200 \
-    --max-model-len 2048 \
-    --gpu-memory-utilization 0.7 \
+    --max-model-len 512 \
+    --gpu-memory-utilization 0.9 \
     --trust-remote-code \
     --enforce-eager \
-    --verbose \
     --kv-transfer-config \
-    '{"kv_connector":"P2pNcclConnector","kv_role":"kv_consumer","kv_rank":1,"kv_parallel_size":2,"kv_connector_extra_config":{"http_port":29801,"local_node_id":"consumer","peer_nodes":["producer:29800"],"mem_pool_size_gb":2}}' &
+    '{"kv_connector":"PyNcclConnector","kv_role":"kv_consumer","kv_rank":1,"kv_parallel_size":2}' &
 
 DECODE_PID=$!
 echo "Decode 进程 PID: $DECODE_PID"
